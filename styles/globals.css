@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
+*/
+
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 120px 24px 160px 24px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* .main:before {
+  background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
+  position: absolute;
+  content: "";
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+} */
+
+.main:after {
+  content: "";
+  background-image: url("/assets/images/grid.svg");
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.4;
+  filter: invert(1);
+}
+
+.gradient {
+  height: fit-content;
+  z-index: 3;
+  width: 100%;
+  max-width: 640px;
+  background-image: radial-gradient(
+      at 27% 37%,
+      hsla(215, 98%, 61%, 1) 0px,
+      transparent 0%
+    ),
+    radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
+    radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
+    radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  filter: blur(100px) saturate(150%);
+  top: 80px;
+  opacity: 0.15;
+}
+
+@media screen and (max-width: 640px) {
+  .main {
+    padding: 0;
+  }
+}
+
+/* Tailwind Styles */
+
+.app {
+  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
+} 
+
+.menu_link_text{
+  @apply text-xl cursor-pointer hover:drop-shadow-md font-bold text-gray-600 hover:text-gray-700 active:underline-offset-8  hover:bg-gray-100 p-1 uppercase
+}
+
+.green{
+  @apply bg-green-100
+}
+
+.red{
+  @apply bg-red-100
+}
+
+.yellow{
+  @apply bg-yellow-500
+}
+
+.text-yellow{
+  @apply text-yellow-500
+}
+
+.black{
+  @apply text-gray-600 hover:text-gray-700
+}
+
+.screen{
+  @apply w-screen h-screen
+}
+
+.flex-center{
+  @apply flex justify-center items-center
+}
+
+.flex-col-center{
+  @apply flex flex-col justify-center items-center
+}
+
+.flex-row-center{
+  @apply flex flex-row justify-center items-center
+}
+
+.flex-col-between{
+  @apply flex flex-col justify-between items-center
+}
+
+.flex-row-between{
+  @apply flex flex-row justify-between items-center
+}
+
+.flex-row-around{
+  @apply flex flex-row justify-around items-center
+}
+
+.flex-row-evenly{
+  @apply flex flex-row justify-evenly items-center
+}
+
+.flex-col-evenly{
+  @apply flex flex-col justify-evenly items-center
+}
+
+.border-buttom{
+  @apply border-b border-gray-200 border-b-8
+}
+
+.after-underline{
+  @apply after:border-b border-black border-b-2 
+}
+
+.flex-col-end{
+  @apply flex flex-col justify-end items-center
+}
