@@ -37,7 +37,7 @@ const Cart = ({show,set}) => {
                         className=' w-fit hover:bg-gray-300 cursor-pointer rounded-full '
                         onClick={() => {
                         decreaseQuantity() 
-                        removeItem(item.name)
+                        removeItem(item.partNumber || '',item.name)
                         }}> 
                         <img src='/assets/icons/close.png' alt='add icon' className='w-4 h-4'/>
                     </button>

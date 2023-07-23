@@ -58,7 +58,7 @@ const quote = () => {
         <div className="w-screen h-fit flex lg:flex-row flex-col items-center justify-center" key={uuidv4()}>
             <div // cart content
                 className={`${cart?.length > 0
-                    ? 'lg:w-2/3 w-screen flex flex-col items-center justify-center'
+                    ? 'lg:w-2/3 w-screen flex flex-col self-start'
                     : 'hidden'} h-fit flex flex-col p-10`}>
                 {cartItems}
             </div>

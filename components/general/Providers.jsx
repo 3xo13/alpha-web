@@ -1,20 +1,16 @@
 "use client";
 
 import React from 'react'
-import ProgressBar from 'next-nprogress-bar';
+// import ProgressBar from 'next-nprogress-bar';
+// import NextProgress from "next-progress";
 
 
 const Providers = ({ children }) => {
   return (
-    <><ProgressBar
-        height="4px"
-        color="#e2a42c"
-        options={{ showSpinner: true, easing: 'ease', speed: 1000 }}
-        shallowRouting
-        appDirectory
-      />
+    <div>
+      {/* <NextProgress delay={300} options={{ showSpinner: false }} color='red' height={5}/> */}
       {children}
-    </>
+    </div>
   )
 }
 

@@ -6,6 +6,7 @@ import useBasketData from '@/dataMangment/basketData';
 import SingleProductTable from '@/components/product/tables/SingleProductTable';
 import MultipleProductTable from '@/components/product/tables/MultipleProductTable';
 import SingleColMultiRowsTable from '@/components/product/tables/SingleColMultiRowsTable';
+import AddSingleProductToBaskit from '@/components/product/AddSingleProductToBaskit';
 import {v4 as uuidv4} from 'uuid';
 
 const Product = ({params}) => {
@@ -15,14 +16,13 @@ const Product = ({params}) => {
     const [isLoading, setIsLoading] = useState(true)
     const [error, setError] = useState(null)
     const [mainImg, setMainImg] = useState('');
+    const [singleProductBtn, setUseSingleProductBtn] = useState(false);
 
     // destructure & variables
     const {name, images, details, options, partNumber} = product || {};
     const tables = options
         ?.tables || [];
-    // console.log(tables);
-
-    // wait for the product to be fetched from the server
+    // console.log(tables); wait for the product to be fetched from the server
     const fetchHandler = async () => {
         try {
             const {category, productName} = params;
@@ -40,12 +40,14 @@ const Product = ({params}) => {
             setIsLoading(false)
         }
     }
-
+    // call the setch handler
     useEffect(() => {
         fetchHandler()
     }, [])
 
-    const detailedText = details?.map((obj, index) => {
+    // create the UI for each text
+    const detailedText = details
+        ?.map((obj, index) => {
             if (obj === []) 
                 return false;
             const tagName = obj.tagName;
@@ -65,9 +67,13 @@ const Product = ({params}) => {
             return (<p key={uuidv4()} className='m-5 text-gray-700 text-lg'>{obj.text}</p>)
         })
 
+
+
+    // add the product data to the Baskit ( data mangment store from zustand )
     const addToBasketHandler = (inputValue) => {
-       
-        if (inputValue == 0) return;
+
+        if (inputValue == 0) 
+            return;
         const basketProduct = {
             name: name
                 .split('-')
@@ -79,36 +85,77 @@ const Product = ({params}) => {
             id: product._id,
             image: mainImg
         }
-        
+
         addItem(basketProduct);
         increaseQuantity(basketProduct);
 
+        // add to the baskit if it's a sinle product page
+        useEffect(() => {
+            if (
+                options
+                    ?.tableStyle === 'single multiple' || options
+                        ?.tableStyle === 'single'
+            ) {
+                setUseSingleProductBtn(true)
+            }
+        }, [options])
+        const addToBasketBtn = product
+            ?.name
+                ? <AddSingleProductToBaskit
+                        productName={name
+                            .split('-')
+                            .join(' ')}
+                        addToBaskit={addToBasketHandler}/>
+                : ''
+
     }
 
-
-    let optionsTable;
-    if (options?.tableStyle === 'multiple multiple') {
-
-        optionsTable = tables.map(table => <MultipleProductTable key={uuidv4()} table={table}/>)
-
-    }else if(options?.tableStyle === 'single multiple'){
-        optionsTable = tables.map(table => <SingleColMultiRowsTable key={uuidv4()} table={table}/>)
-    } else {
-
-        optionsTable = tables.map(table => {
-            return (
-                <SingleProductTable
-                    key={uuidv4()}
-                    table={table
-                        ? table
-                        : false}
-                    addToBaskit={addToBasketHandler}
-                    productName={name?.split('-').join(' ') || ''}
-                />
-            )
+    // add to baskit if it's a multi-product-page
+    const addProductFromMultiTable = (e) => {
+        const selectedOption = e.target.parentNode.parentNode.childNodes;
+        const selectedOptionValues = [];
+        selectedOption.forEach((option, index) => {
+            if (index !== selectedOption.length - 1) {
+                if (index === selectedOption.length - 2) {
+                    selectedOptionValues.push(option.childNodes[0].value);
+                } else {
+                    selectedOptionValues.push(option.innerHTML);
+                }
+            }
         })
+        if (selectedOptionValues.at(-1) == 0) 
+            return;
+        const basketProduct = {
+            name: name
+                .split('-')
+                .join(' '),
+            quantity: parseInt(selectedOptionValues.at(-1)),
+            partNumber: selectedOptionValues.at(-2),
+            id: product._id,
+            image: mainImg
+        }
+        console.log(basketProduct.partNumber);
+        addItem(basketProduct);
+        increaseQuantity(basketProduct);
     }
-    console.log(options?.tableStyle);
+
+    // decides which table (if any) to render and create a list of table elements
+    // from table array
+    let optionsTable;
+    if (
+        options
+            ?.tableStyle === 'multiple multiple'
+    ) {
+        optionsTable = tables.map(
+            table => <MultipleProductTable key={uuidv4()} table={table} addToBasket={addProductFromMultiTable}/>
+        )
+    } else {
+        optionsTable = tables.map(
+            table => <SingleColMultiRowsTable key={uuidv4()} table={table}/>
+        )
+    }
+
+
     return (
         <div key={uuidv4()} className='flex flex-col items-center w-screeen'>
 
@@ -147,12 +194,18 @@ const Product = ({params}) => {
                                                 .split('-')
                                                 .join(' ')
                                         }</h1>
-                                        <h2 className='text-lg black mt-3'>{partNumber}</h2>
+                                    <h2 className='text-lg black mt-3'>{partNumber}</h2>
                                 </div>
                             </div>
                             <div className='flex flex-col w-screen '>
                                 <div
                                     className='w-screen flex flex-col items-start justify-center overflow-x-scroll lg:overflow-x-hidden pt-10 '>
+                                    {
+                                        singleProductBtn
+                                            ? addToBasketBtn
+                                            : 'hi'
+                                    }
+
                                     {optionsTable}
                                 </div>
                                 <div className='w-11/12 flex flex-col p-10'>
@@ -169,34 +222,3 @@ const Product = ({params}) => {
 }
 
 export default Product
-
-
-
-// const selectedOption = e.target.parentNode.parentNode.childNodes;
-//         const selectedOptionValues = [];
-//         selectedOption.forEach((option, index) => {
-//             if (index !== selectedOption.length - 1) {
-//                 if (index === selectedOption.length - 2) {
-//                     selectedOptionValues.push(option.childNodes[0].value);
-//                 } else {
-//                     selectedOptionValues.push(option.innerHTML);
-
-//                 }
-//             }
-//         })
-//         if (selectedOptionValues.at(-1) == 0) 
-//             return;
-//         const basketProduct = {
-//             name: name
-//                 .split('-')
-//                 .join(' '),
-//             headers: headers,
-//             options: selectedOptionValues.slice(0, -1),
-//             quantity: parseInt(selectedOptionValues.at(-1)),
-//             part_number: selectedOptionValues.at(-2),
-//             id: product._id,
-//             image: mainImg
-//         }
-//         console.log(basketProduct.part_number);
-//         addItem(basketProduct);
-//         increaseQuantity(basketProduct);
