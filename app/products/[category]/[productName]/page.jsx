@@ -16,7 +16,7 @@ const Product = ({params}) => {
     const [isLoading, setIsLoading] = useState(true)
     const [error, setError] = useState(null)
     const [mainImg, setMainImg] = useState('');
-    const [singleProductBtn, setUseSingleProductBtn] = useState(false);
+    const [useSingleProductBtn, setUseSingleProductBtn] = useState(false);
 
     // destructure & variables
     const {name, images, details, options, partNumber} = product || {};
@@ -88,14 +88,10 @@ const Product = ({params}) => {
 
         addItem(basketProduct);
         increaseQuantity(basketProduct);
-
+    }
         // add to the baskit if it's a sinle product page
         useEffect(() => {
-            if (
-                options
-                    ?.tableStyle === 'single multiple' || options
-                        ?.tableStyle === 'single'
-            ) {
+            if (options?.tableStyle === 'single multiple' || options?.tableStyle === 'single') {
                 setUseSingleProductBtn(true)
             }
         }, [options])
@@ -106,9 +102,9 @@ const Product = ({params}) => {
                             .split('-')
                             .join(' ')}
                         addToBaskit={addToBasketHandler}/>
-                : ''
+                : 'error  loading'
 
-    }
+
 
     // add to baskit if it's a multi-product-page
     const addProductFromMultiTable = (e) => {
@@ -142,20 +138,12 @@ const Product = ({params}) => {
     // decides which table (if any) to render and create a list of table elements
     // from table array
     let optionsTable;
-    if (
-        options
-            ?.tableStyle === 'multiple multiple'
-    ) {
-        optionsTable = tables.map(
-            table => <MultipleProductTable key={uuidv4()} table={table} addToBasket={addProductFromMultiTable}/>
-        )
+    if (options?.tableStyle === 'multiple multiple') {
+        optionsTable = tables.map(table => <MultipleProductTable key={uuidv4()} table={table} addToBasket={addProductFromMultiTable}/>)
     } else {
-        optionsTable = tables.map(
-            table => <SingleColMultiRowsTable key={uuidv4()} table={table}/>
-        )
+        optionsTable = tables.map(table => <SingleColMultiRowsTable key={uuidv4()} table={table}/>)
     }
-
-
+ 
     return (
         <div key={uuidv4()} className='flex flex-col items-center w-screeen'>
 
@@ -201,9 +189,7 @@ const Product = ({params}) => {
                                 <div
                                     className='w-screen flex flex-col items-start justify-center overflow-x-scroll lg:overflow-x-hidden pt-10 '>
                                     {
-                                        singleProductBtn
-                                            ? addToBasketBtn
-                                            : 'hi'
+                                        useSingleProductBtn ? addToBasketBtn : 'hi'
                                     }
 
                                     {optionsTable}

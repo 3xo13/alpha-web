@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react'
-// import ProgressBar from 'next-nprogress-bar';
+// import ProgressBar from 'next-progress-bar';
 // import NextProgress from "next-progress";
 
 
