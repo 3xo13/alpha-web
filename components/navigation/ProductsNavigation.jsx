@@ -8,9 +8,9 @@ const  ProductsNavigation = async ({TreeData}) => {
  const categories = TreeData.map((category, index) => {
   // console.log(category);
     return (
-      <div className="group w-1/4 h-12 text-center flex justify-evenly 
-      items-center text-lg cursor-pointer hover:bg-gray-100 hidden lg:flex" 
-      key={uuidv4()}>
+      <div key={uuidv4()} className="group w-1/4 h-12 text-center flex justify-evenly 
+      items-center text-lg cursor-pointer hover:bg-gray-100 lg:flex" 
+     >
         <Link href={`/categories/${category.name}`} key={uuidv4()}>
           <p className="flex capitalize">{category.name.split('-').join(' ')}</p>
         </Link>
@@ -65,9 +65,9 @@ const  ProductsNavigation = async ({TreeData}) => {
                                                     ">
                                                 {subCategory.subSubCategories.map((subSub, i) => {
                                                   return(
-                                                    <>
-                                                      <ClickableCategory key={uuidv4()} catName={category.name} subName={subCategory.name} subSubName={subSub.name} />
-                                                    </> 
+                                                    <div key={uuidv4()}>
+                                                      <ClickableCategory catName={category.name} subName={subCategory.name} subSubName={subSub.name} />
+                                                    </div> 
                                                   )
                                                 })}</div>
                                               </div>
@@ -86,7 +86,7 @@ const  ProductsNavigation = async ({TreeData}) => {
 
   
   return (
-        <div className=" flex flex-col" key={uuidv4()}>
+        <div className="group flex flex-col" key={uuidv4()}>
             <div key={uuidv4()} className="w-screen flex drop-shadow-2xl mt-2">
                 {categories}
             </div>

@@ -139,9 +139,9 @@ const Product = ({params}) => {
     // from table array
     let optionsTable;
     if (options?.tableStyle === 'multiple multiple') {
-        optionsTable = tables.map(table => <MultipleProductTable key={uuidv4()} table={table} addToBasket={addProductFromMultiTable}/>)
+        optionsTable = tables.map(table => <MultipleProductTable table={table} addToBasket={addProductFromMultiTable}/>)
     } else {
-        optionsTable = tables.map(table => <SingleColMultiRowsTable key={uuidv4()} table={table}/>)
+        optionsTable = tables.map(table => <SingleColMultiRowsTable table={table}/>)
     }
  
     return (

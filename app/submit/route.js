@@ -1,4 +1,4 @@
-import Quote from '@models/quote.js';
+import Quote from '@/utils/models/quote.js';
 import {connectToDB} from '@/utils/database.js';
 import nodemailer from "nodemailer";
 import createTemplate from '@/functions/template';

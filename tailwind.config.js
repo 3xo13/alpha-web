@@ -60,6 +60,11 @@ module.exports = {
         'cables-dark': "url('/assets/images/backgrounds/cables-dark.png')",
         'cables-orange': "url('/assets/images/backgrounds/cables-orange.png')",
         'earth-connect': "url('/assets/images/backgrounds/earth-connect.png')",
+        'cloud-infrastrucure':  "url('/assets/images/categoriesCarousel/cloud_infrastrucure.png')",
+        'UPS':  "url('/assets/images/categoriesCarousel/UPS.png')",
+        'road-blockers':  "url('/assets/images/categoriesCarousel/road_blockers.png')",
+        'lightning-protection':  "url('/assets/images/categoriesCarousel/lightning_protection.png')",
+        'earthing':  "url('/assets/images/categoriesCarousel/earthing.png')",
       },
       minWidth: {
         'inherit': 'inherit',

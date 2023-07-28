@@ -18,7 +18,7 @@ const AddSingleProductToBaskit = ({productName, addToBaskit}) => {
             <h3 key={uuidv4()} className='capitalize text-3xl mb-10 text-center mx-4'>
                 <span>Add </span> 
                 <span key={uuidv4()} className='text-yellow-500'>{productName}</span>
-                <span> to Bakit :</span>
+                <span> to Cart :</span>
             </h3>
             <input
                 ref={inputRef}

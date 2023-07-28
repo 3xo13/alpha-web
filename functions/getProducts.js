@@ -1,4 +1,4 @@
-import { Product } from '@/utils/productModel';
+import { Product } from '@/utils/models/productModel';
 
 const getProducts = async (query) => {
         

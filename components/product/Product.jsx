@@ -43,7 +43,7 @@ const Product = ({productObject}) => {
     const detailedText = details.split('.').map((text, index) => {
         return (
             <div key={uuidv4()}>
-            <p key={uuidv4()}>{text}</p> <br />
+            <p>{text}</p> <br />
             </div>
         )
     })

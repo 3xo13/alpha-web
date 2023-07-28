@@ -1,4 +1,4 @@
- const links = [
+ const ProjectLinks = [
     '/assets/projects/albawani/kaust_housing.jpg',
     '/assets/projects/alorini/Schools_projects.jpg',
     '/assets/projects/kaden/riyadh_front.jpg',
@@ -14,4 +14,4 @@
     '/assets/projects/mobco/kaust_hotel.jpg',
 ]
 
-export default links;
+export default ProjectLinks;

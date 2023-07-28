@@ -53,7 +53,7 @@ const quote = () => {
     };
 
     const cartItems = Basket.map((item) => ProductReviwe({item, removeItem, decreaseQuantity, setPruductQuantity}));
-    console.log('page rerendered');
+    
     return (
         <div className="w-screen h-fit flex lg:flex-row flex-col items-center justify-center" key={uuidv4()}>
             <div // cart content

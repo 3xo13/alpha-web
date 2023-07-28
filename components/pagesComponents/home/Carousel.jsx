@@ -6,7 +6,7 @@ const Carousel = ({links, title, bg, displayName}) => {
     const images = links.map(link => {
         const name = link.slice(link.lastIndexOf('/')+1,-4).split('_').join(' ');
     return(
-        <div className='w-40 h-40 mx-3 flex-col-center'>
+        <div className='w-40 h-40 mx-3 flex-col-center' key={uuidv4()}>
             <img src={link} alt="project reference image"  className='w-40 h-32 mx-2 '/>
             <p className='capitalize text-slate-100 text-lg w-full text-center'>{name}</p>
         </div>

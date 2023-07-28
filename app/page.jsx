@@ -2,17 +2,20 @@ import {QuoteBtn} from "@/components/pagesComponents/home/QuoteBtn";
 import Link from 'next/link';
 import Carousel from "@/components/pagesComponents/home/Carousel";
 import {v4 as uuidv4} from 'uuid';
-import links from "@/public/links/projectsLinks";
+import projectsLinks from "@/public/links/projectsLinks";
 import partnersLinks from "@/public/links/partnersLinks";
+import HeroCarousel from "@/components/pagesComponents/home/HeroCarousel";
+import CategoryCarousel from "@/components/pagesComponents/home/CategoryCarousel";
 
 export default async function Home() {
-
+ 
     return (
 
         <div className="w-screen" key={uuidv4()}> 
 
             <section key={uuidv4()} className="lg:screen ">
-                <div
+                <HeroCarousel />
+                {/* <div
                     className='hero w-screen lg:h-screen h-120 bg-city-lightning bg-fixed bg-cover bg-no-repeat bg-center flex items-center justify-start mt-5 '>
                     <div
                         className="w-screen h-fit my-10 p-5 flex flex-col items-center justify-center bg-white bg-opacity-80  ">
@@ -20,7 +23,7 @@ export default async function Home() {
                         <p className="uppercase mt-5 ml-10 drop-shadow-sm black text-2xl">trading and contractig</p>
                         
                     </div>
-                    {/* <div className="w-screen h-fit flex-col-center py-16">
+                    <div className="w-screen h-fit flex-col-center py-16">
                 <video
                     src="/assets/video/electricalBG.mp4"
                     type="video/mp4"
@@ -33,8 +36,12 @@ export default async function Home() {
                     <p className="uppercase mt-5 ml-10 drop-shadow-sm black text-2xl">trading and contractig</p>
 
                     </div>
-            </div> */}
-                </div>
+            </div>
+                </div> */}
+
+            </section>
+            <section className="w-screen h-90 ">
+                <CategoryCarousel />
             </section>
             <div className="w-screen h-fit flex-col-center py-16">
                 <video
@@ -68,7 +75,7 @@ export default async function Home() {
                 </div>
             </section>
             <section className="w-screen h-fit mb-10" >
-                <Carousel links={links} title='our projects' bg='bg-cables-orange'/>
+                <Carousel links={projectsLinks} title='our projects' bg='bg-cables-orange'/>
                 <Carousel links={partnersLinks} title='our partners' bg='bg-earth-connect' />
             </section>
             <section

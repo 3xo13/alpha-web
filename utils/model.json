@@ -1,0 +1,70 @@
+{
+    "_id": {
+        "$oid": "64b82b8bce5b004662f1f9fb"
+    },
+    "name": "Galaxy-VM-200-kVA-UPS-Single-400-400-V-with-Backfeed-protection,-Start-up-5x8",
+    "category": "UPS-(Uninterruptable-Power-Supply)",
+    "subCategory": "three-phase-UPS",
+    "subSubCategory": null,
+    "partNumber": "GVMSB200KHS",
+    "images": [
+        "https://download.schneider-electric.com/files?p_Doc_Ref=SPD_EWAR-98NR65_FS_V&p_File_Type=rendition_64_gif&default_image=DefaultProductImage.png", "https://download.schneider-electric.com/files?p_Doc_Ref=SPD_EWAR-98NR65_FR_V&p_File_Type=rendition_64_gif&default_image=DefaultProductImage.png", "https://download.schneider-electric.com/files?p_Doc_Ref=SPD_EWAR-98RJ88_B_V&p_File_Type=rendition_64_gif&default_image=DefaultProductImage.png", "https://download.schneider-electric.com/files?p_Doc_Ref=SPD_EWAR-98RJ88_A_V&p_File_Type=rendition_64_gif&default_image=DefaultProductImage.png", "https://download.schneider-electric.com/files?p_Doc_Ref=SPD_EWAR-98RHHU_FR_V&p_File_Type=rendition_64_gif&default_image=DefaultProductImage.png"
+    ],
+    "details": [],
+    "options": {
+        "tableStyle": "single multiple",
+        "tables": [
+            {
+                "caption": "Overview",
+                "tableContent": [
+                    {
+                        "header": "Presentation",
+                        "values": ["Kit includes parts and fasteners to achieve Seismic level 2 certification"]
+                    }, {
+                        "header": "Lead time",
+                        "values": ["Usually in Stock"]
+                    }
+                ]
+            }, {
+                "caption": "Physical",
+                "tableContent": [
+                    {
+                        "header": "Height",
+                        "values": ["10.6 cm"]
+                    }, {
+                        "header": "Width",
+                        "values": ["37 cm"]
+                    }, {
+                        "header": "Depth",
+                        "valuse": ["81.7 cm"]
+                    }, {
+                        "header": "Product weight",
+                        "values": ["17 kg"]
+                    }
+                ]
+            }, {
+                "caption": "Conformance",
+                "tableContent": [
+                    {
+                        "header": "Product certifications",
+                        "values": ["C-Tick", "RCM"]
+                    }, {
+                        "header": "Standards",
+                        "values": ["EN/IEC 62040-1", "EN/IEC 62040-2", "EN/IEC 62040-3", "UL 1778"]
+                    }
+                ]
+            }, {
+                "caption": "Contractual warranty",
+                "tableContent": [
+                    {
+                        "header": "Warranty",
+                        "values": ["1 year (parts only)"]
+                    }
+                ]
+            }
+        ],
+        "_id": {
+            "$oid": "64b82e4e6740de4d9e51e929"
+        }
+    }
+}

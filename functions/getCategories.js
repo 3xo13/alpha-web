@@ -1,4 +1,4 @@
-import { Category } from '@/utils/categoreyModel';
+import { Category } from '@/utils/models/categoreyModel';
 
 
   const getCategories = async (query) => {
