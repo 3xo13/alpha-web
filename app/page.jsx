@@ -15,29 +15,7 @@ export default async function Home() {
 
             <section key={uuidv4()} className="lg:screen ">
                 <HeroCarousel />
-                {/* <div
-                    className='hero w-screen lg:h-screen h-120 bg-city-lightning bg-fixed bg-cover bg-no-repeat bg-center flex items-center justify-start mt-5 '>
-                    <div
-                        className="w-screen h-fit my-10 p-5 flex flex-col items-center justify-center bg-white bg-opacity-80  ">
-                        <h1 className="text-7xl font-bold text-yellow-600/90 ml-10 min-w-fit">ALPHA LIMIT</h1>
-                        <p className="uppercase mt-5 ml-10 drop-shadow-sm black text-2xl">trading and contractig</p>
-                        
-                    </div>
-                    <div className="w-screen h-fit flex-col-center py-16">
-                <video
-                    src="/assets/video/electricalBG.mp4"
-                    type="video/mp4"
-                    autoPlay="autoPlay"
-                    loop="loop"
-                    className="w-120%"
-                    ></video>
-                    <div className="flex-col-center absolute">
-                    <h1 className="text-7xl font-bold text-yellow-600/90 ml-10 min-w-fit">ALPHA LIMIT</h1>
-                    <p className="uppercase mt-5 ml-10 drop-shadow-sm black text-2xl">trading and contractig</p>
 
-                    </div>
-            </div>
-                </div> */}
 
             </section>
             <section className="w-screen h-90 ">

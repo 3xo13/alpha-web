@@ -2,7 +2,7 @@
 import {useState} from "react";
 import links from "@/public/links/projectsLinks";
 import {v4 as uuidv4} from 'uuid';
-
+ 
 const HeroCarousel = () => {
     const [imgCount, setImgCount] = useState(0);
     const ponits = links.map((link, index) => {

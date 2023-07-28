@@ -6,6 +6,7 @@ import Link from "next/link";
 
 const CategoryCarousel = () => {
     const [count, setCount] = useState(0)
+    const [objectsArray, setObjectsArray] = useState()
     const ponits = categorriesObjects.map((link, index) => {
         return (
             <div
@@ -22,11 +23,11 @@ const CategoryCarousel = () => {
             name = e.target.parentNode.className;
         } else {
             name = e.target.className;
-        }
+        };
 
         if (name === 'left' && count === 0) 
             return;
-        if (name === 'right' && count === objectsArray.length - 1) 
+        if (name === 'right' && count === categorriesObjects.length - 1) 
             return;
         if (name === 'left') {
             setCount(prevCount => prevCount - 1)
@@ -34,11 +35,9 @@ const CategoryCarousel = () => {
         } else {
             setCount(prevCount => prevCount + 1)
 
-        }
-        console.log("handleClick ~ name:", name, 'count', count)
+        };
+    };
 
-    }
-    console.log('count', count);
     return (
         <section
             style={{
@@ -56,10 +55,12 @@ const CategoryCarousel = () => {
                         <p className="my-5 mx-10 cinzel text-2xl capitalize">{categorriesObjects[count].text}</p>
                         <div>
                             <Link href={categorriesObjects[count].pageLink}>
-                                <button className="bg-yellow-500 hover:bg-yellow-600 rounded-lg m-3 p-2 text-xl capitalize cinzel ">{categorriesObjects[count].title}</button>
+                                <button
+                                    className="bg-yellow-500 hover:bg-yellow-600 rounded-lg m-3 p-2 text-xl capitalize cinzel ">{categorriesObjects[count].title}</button>
                             </Link>
                             <Link href={categorriesObjects[count].formLink}>
-                                <button className="bg-yellow-500 hover:bg-yellow-600 rounded-lg m-3 p-2 text-xl capitalize cinzel ">contact us</button>
+                                <button
+                                    className="bg-yellow-500 hover:bg-yellow-600 rounded-lg m-3 p-2 text-xl capitalize cinzel ">contact us</button>
                             </Link>
                         </div>
                     </div>
