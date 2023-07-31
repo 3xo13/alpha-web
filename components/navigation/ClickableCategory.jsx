@@ -9,11 +9,11 @@ const ClickableCategory = ({catName, subName, subSubName}) => {
     return (
         <Link href={`/category/${catName}/${subName}/${subSubName ? subSubName : ''}`} key={uuidv4()}>
             <div className="flex flex-row w-full items-center" key={uuidv4()}>
-                <p className="text-start capitalize" key={uuidv4()}>
+                <h4 className=" capitalize text-lg" key={uuidv4()}>
                     {
                         subSubName ? subSubName.split('-').join(' ') : subName.split('-').join(' ')
                     }
-                </p>
+                </h4>
 
             </div>
         </Link>

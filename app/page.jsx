@@ -52,12 +52,11 @@ export default async function Home() {
                     </div>
                 </div>
             </section>
-            <section className="w-screen h-fit mb-10" >
-                <Carousel links={projectsLinks} title='our projects' bg='bg-cables-orange'/>
-                <Carousel links={partnersLinks} title='our partners' bg='bg-earth-connect' />
+            <section className="w-screen h-fit mb-10 bg-earth-connect bg-cover bg-no-repeat bg-center bg-fixed" >
+                <Carousel links={projectsLinks} title='our projects' />
+                <Carousel links={partnersLinks} title='our partners'  />
             </section>
             <section
-                key={uuidv4()}
                 className="projects w-screen h-fit p-5 flex items-center justify-center mb-10 lg:mb-0">
                 <QuoteBtn/>
             </section>

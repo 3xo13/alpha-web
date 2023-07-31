@@ -5,7 +5,7 @@ import createTree from "@/functions/createTree";
 // import Providers from "@/components/general/Providers";
 import Footer from "@/components/headerFooter/Footer";
 import AnouncmentBar from "@/components/headerFooter/AnouncmentBar";
-
+import MegaMenu from '@/components/navigation/MegaMenu';
 
 export const metadata = {
     title: 'ALPHA LIMIT',
@@ -23,19 +23,29 @@ export default async function RootLayout({children}) {
 
     return (
         <html lang="en">
+            <head>
+
+                <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"/>
+                <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/>
+                <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/>
+                <link rel="manifest" href="/favicon/site.webmanifest"/>
+                <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5"/>
+                <meta name="msapplication-TileColor" content="#da532c"/>
+                <meta name="theme-color" content="#ffffff"/>
+
+            </head>
             <body className="overflow-x-hidden">
-            <div className='main'>
-                <div className='gradiant'/>
-            </div> 
+                <div className='main'>
+                    <div className='gradiant'/>
+                </div>
                 <AnouncmentBar/>
-            <Nav/>
+                <Nav/>
                 <main className='app '>
                     <div className="flex flex-col items-center ">
-                        
-                        <ProductsNavigation TreeData={tree}/>
-                        
-                            {children}
-                        
+
+                        {/* <ProductsNavigation TreeData={tree}/> */}
+                        <MegaMenu TreeData={tree}/> {children}
+
                         <Footer/>
                     </div>
                 </main>
@@ -44,5 +54,5 @@ export default async function RootLayout({children}) {
 
         </html>
     )
+} {/* <Providers></Providers> */
 }
-{/* <Providers></Providers> */}

@@ -22,8 +22,8 @@ const Cart = ({show,set}) => {
     const cart = Basket.map(item => {
         return (
             <div
-                key={uuidv4()}>
-                className={`flex items-center justify-between lg:w-110 w-fit border-2 border-solid m-2 ml-5 rounded-md `}
+                key={uuidv4()}
+                className={`flex items-center justify-between lg:w-110 w-fit border-2 border-solid m-2 ml-5 rounded-md `}>
                 <img
                     src={item.image}
                     alt={item.name}

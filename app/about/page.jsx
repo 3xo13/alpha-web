@@ -22,7 +22,7 @@ export default function About() {
                         innovative and competitive solution.
                     </p>
                 </div>
-                <div className="w-1/2 h-full flex-center py-10 px-20">
+                <div className="w-1/2 h-full flex-center py-20 px-32">
                     <img
                         src="/assets/images/about/photos/containers.jpg"
                         alt="about us section image"
