@@ -15,8 +15,6 @@ export default async function Home() {
 
             <section key={uuidv4()} className="lg:screen ">
                 <HeroCarousel />
-
-
             </section>
             <section className="w-screen h-90 ">
                 <CategoryCarousel />
