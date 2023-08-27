@@ -40,7 +40,7 @@ const MegaMenu = ({TreeData}) => {
     })
 
     return (
-        <div className='group w-screen h-fit flex-col-center absolute pt-3 z-50'>
+        <div className='group w-screen h-fit flex-col-center absolute top-[150px] z-50 '>
             <img
                 src="/assets/icons/down-arrow.png"
                 alt=""
@@ -50,7 +50,7 @@ const MegaMenu = ({TreeData}) => {
                 className='w-5 group-hover:hidden animate-ping'/>
 
             <div
-                className='w-screen h-fit flex flex-row items-start justify-evenly flex-no-wrap hidden group-hover:flex bg-white p-5'>
+                className='w-screen h-fit flex flex-row items-start justify-evenly flex-no-wrap hidden group-hover:flex bg-white/80 p-5 pt-0'>
                 {menu}
             </div>
         </div>

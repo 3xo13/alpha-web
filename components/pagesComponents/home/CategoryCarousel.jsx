@@ -20,9 +20,9 @@ const CategoryCarousel = () => {
     const handleClick = (e) => {
         let name;
         if (e.target.tagName.toLowerCase() === 'img') {
-            name = e.target.parentNode.className;
+            name = e.target.parentNode.id;
         } else {
-            name = e.target.className;
+            name = e.target.id;
         };
 
         if (name === 'left' && count === 0) 
@@ -41,22 +41,31 @@ const CategoryCarousel = () => {
     return (
         <section
             style={{
-                backgroundImage: `url(${categorriesObjects[count].image})`
+                backgroundImage: `url(${categorriesObjects[count].image})` 
             }}
-            className='group w-screen h-120 bg-cover bg-no-repeat bg-center flex justify-between'>
-            <div
-                className="group-hover:opacity-100 opacity-0 flex-row-center cursor-pointer w-10 h-full bg-slate-100/50 ">
-                <button className="left" onClick={e => handleClick(e)}><img src="/assets/icons/left-arrow.png" alt="" className="w-8 h-8"/></button>
+            className='group w-screen h-90% bg-cover bg-no-repeat bg-center flex justify-between'>
+            <div className="flex-row-center w-14 h-full">
+                <button
+                    id="left"
+                    className="left cursor-pointer group-hover:opacity-100  
+                    opacity-0 bg-black/50 backdrop-lg h-[65px] rounded-xl 
+                    ml-5 flex-center"
+                    onClick={e => handleClick(e)}><img src="/assets/icons/arrows/left_white.svg" 
+                    alt="left arrow" className="w-8 h-8"/>
+                </button>
             </div>
             <div className="w-90% h-full flex flex-col items-center justify-between">
                 <div className="w-full h-full flex-center">
-                    <div className="w-fit h-max my-10 bg-slate-100/80 rounded-xl flex-col-evenly">
-                        <h4 className="my-5 mx-10 cinzel text-3xl capitalize">{categorriesObjects[count].title}</h4>
-                        <p className="my-5 mx-10 cinzel text-2xl capitalize">{categorriesObjects[count].text}</p>
+                    <div className="w-fit h-max my-10 bg-black/50 backdrop-lg rounded-xl flex-col-evenly">
+                        <h4 className="my-5 mx-10 cinzel text-4xl capitalize text-yellow-500 font-bold text-center">{categorriesObjects[count].title}</h4>
+                        <p className="my-5 mx-10 cinzel text-2xl capitalize text-white font-bold text-center">{categorriesObjects[count].text}</p>
                         <div>
                             <Link href={categorriesObjects[count].pageLink}>
                                 <button
-                                    className="bg-yellow-500 hover:bg-yellow-600 rounded-lg m-3 p-2 text-xl capitalize cinzel ">{categorriesObjects[count].title}</button>
+                                    className="bg-yellow-500 hover:bg-yellow-600 rounded-lg m-3 p-2 text-xl capitalize cinzel ">
+                                        {/* {categorriesObjects[count].title} */}
+                                        display products
+                                    </button>
                             </Link>
                             <Link href={categorriesObjects[count].formLink}>
                                 <button
@@ -70,9 +79,15 @@ const CategoryCarousel = () => {
                     {ponits}
                 </div>
             </div>
-            <div
-                className="group-hover:opacity-100 opacity-0 flex-row-center cursor-pointer w-10 h-full bg-slate-100/50 ">
-                <button className="right" onClick={e => handleClick(e)}><img src="/assets/icons/right-arrow.png" alt="" className="w-8 h-8"/></button>
+            <div className="flex-row-center w-14 h-full">
+                <button
+                    id="right"
+                    className="right cursor-pointer
+                    group-hover:opacity-100  opacity-0
+                    h-[65px] rounded-xl mr-5 bg-black/50 backdrop-lg "
+                    onClick={e => handleClick(e)}>
+                    <img src="/assets/icons/arrows/right_white.svg" alt="right arrow" className="w-8 h-8"/>
+                </button>
             </div>
 
         </section>

@@ -11,12 +11,12 @@ export default async function Home() {
  
     return (
 
-        <div className="w-screen" key={uuidv4()}> 
+        <div className="w-screen cinzel" key={uuidv4()}> 
 
             <section key={uuidv4()} className="lg:screen ">
                 <HeroCarousel />
             </section>
-            <section className="w-screen h-90 ">
+            <section className="w-screen h-90 flex-center">
                 <CategoryCarousel />
             </section>
             <div className="w-screen h-fit flex-col-center py-16">
@@ -50,7 +50,7 @@ export default async function Home() {
                     </div>
                 </div>
             </section>
-            <section className="w-screen h-fit mb-10 bg-earth-connect bg-cover bg-no-repeat bg-center bg-fixed" >
+            <section className="w-screen h-fit mb-10 bg-switch-box bg-cover bg-no-repeat bg-center bg-fixed" >
                 <Carousel links={projectsLinks} title='our projects' />
                 <Carousel links={partnersLinks} title='our partners'  />
             </section>

@@ -22,11 +22,11 @@ const SearchBar = () => {
         router.push(`/search/${searchQuery}`)
     }
   return (
-    <form key={uuidv4()} className='w-72 h-10 bg-white flex-row-between shadow rounded-2xl p-1' onSubmit={e => handleSubmit(e)} >
+    <form key={uuidv4()} className='w-72 h-10 bg-white flex-row-between shadow rounded-2xl p-1 ' onSubmit={e => handleSubmit(e)} >
     <button >
         <img src="/assets/icons/search.png" alt="search" className='w-5 h-5 m-1' />
     </button>
-    <input type="text" className='w-5/6'
+    <input type="text" className='w-5/6 focus:outline-none'
         onChange={ e => handleChange(e)} 
         placeholder='Search by Part NO. or Name'
     />

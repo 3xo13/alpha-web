@@ -6,7 +6,7 @@ export default function About() {
         <div className='about-page-wrapper' key={uuidv4()}>
             <section className="w-screen h-[80dvh] flex-row-center mt-5">
                 <div className="w-1/2 h-full flex-col-center">
-                    <h1 className="text-4xl capitalize cinzel">who we are</h1>
+                    <h1 className="text-4xl capitalize cinzel">about the company</h1>
                     <p
                         className='black lg:text-xl text-justify pl-20 lg:pl-10 pt-0 lg:pt-10 relative lg:static bottom-10 ml-14'>Alpha
                         Limit Company is the distributor in the Middle East for electrical construction

@@ -34,17 +34,18 @@ export default async function RootLayout({children}) {
                 <meta name="theme-color" content="#ffffff"/>
 
             </head>
-            <body className="overflow-x-hidden">
+            <body className="overflow-x-hidden ">
                 <div className='main'>
                     <div className='gradiant'/>
                 </div>
-                <AnouncmentBar/>
-                <Nav/>
+                {/* <AnouncmentBar/> */}
+                <Nav />
                 <main className='app '>
                     <div className="flex flex-col items-center ">
 
                         {/* <ProductsNavigation TreeData={tree}/> */}
-                        <MegaMenu TreeData={tree}/> {children}
+                        <MegaMenu TreeData={tree}/> 
+                        {children}
 
                         <Footer/>
                     </div>
