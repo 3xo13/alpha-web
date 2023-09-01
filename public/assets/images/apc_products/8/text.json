@@ -1,0 +1,114 @@
+{
+    "name": "Galaxy-VM-Level-2-Seismic-Kit-for-Narrow-Modular-Battery-Cabinet",
+    "category": "Uninterruptible Power Supply (UPS)",
+    "subCategory": "Three-Phase-UPS",
+    "subSubCategory": null,
+    "partNumber": "GVML2MBCN-KIT",
+    "images": [],
+    "details": [
+        {
+            "tagName": "h4",
+            "text": "Presentation"
+        }, {
+            "tagName": "p",
+            "text": "Kit includes parts and fasteners to achieve Seismic level 2 certification"
+        }
+    ],
+    "options": {
+        "tableStyle": "single multiple",
+        "tables": [
+            {
+                "caption": "Overview",
+                "tableContent": [
+                    {
+                        "header": "Lead time",
+                        "values": ["Usually in Stock"]
+                    }
+                ]
+            }, {
+                "caption": "Physical",
+                "tableContent": [
+                    {
+                        "header": "Height",
+                        "values": ["10.6 cm"]
+                    }, {
+                        "header": "Width",
+                        "values": ["37 cm"]
+                    }, {
+                        "header": "Depth",
+                        "values": ["81.7 cm"]
+                    }, {
+                        "header": "Product weight",
+                        "values": ["17 kg"]
+                    }
+                ]
+            }, {
+                "caption": "Conformance",
+                "tableContent": [
+                    {
+                        "header": "Product certifications",
+                        "values": ["C-Tick", "RCM"]
+                    }, {
+                        "header": "standards",
+                        "values": ["EN/IEC 62040-1", "EN/IEC 62040-2", "EN/IEC 62040-3", "UL 1778"]
+                    }
+                ]
+            }, {
+                "caption": "Environmental",
+                "tableContent": [
+                    {
+                        "header": "Ambient air temperature for operation",
+                        "values": ["0…40 °C"]
+                    }, {
+                        "header": "Operating altitude",
+                        "values": ["0...3333 ft"]
+                    }, {
+                        "header": "Relative humidity",
+                        "values": ["0…95 %"]
+                    }, {
+                        "header": "Ambient air temperature for storage",
+                        "values": ["-25…65 °C"]
+                    }, {
+                        "header": "Storage altitude",
+                        "values": ["0.00…14999.82 m"]
+                    }, {
+                        "header": "Storage Relative Humidity",
+                        "values": ["0…95 %"]
+                    }
+                ]
+            }, {
+                "caption": "Packing Units",
+                "tableContent": [
+                    {
+                        "header": "Unit Type of Package 1",
+                        "values": ["PCE"]
+                    }, {
+                        "header": "Number of Units in Package 1",
+                        "values": ["1"]
+                    }, {
+                        "header": "Package 1 Height",
+                        "values": ["20.3 cm"]
+                    }, {
+                        "header": "Package 1 Width",
+                        "values": ["86.4 cm"]
+                    }, {
+                        "header": "Package 1 Length",
+                        "values": ["40.6 cm"]
+                    }, {
+                        "header": "Package 1 Weight",
+                        "values": ["18.14 kg"]
+                    }
+                ]
+            }, {
+                "caption": "Contractual warranty",
+                "tableContent": [
+                    {
+                        "header": "Warranty",
+                        "values": ["1 year (parts only)"]
+                    }
+                ]
+            }
+        ]
+    }
+
+}

@@ -17,7 +17,7 @@ const categories = async () => {
     });
 
     return (
-        <div key={uuidv4()} className="w-screen h-fit flex flex-row flex-wrap p-10">
+        <div key={uuidv4()} className="w-screen h-fit flex flex-row flex-wrap p-10 pt-36">
             {cards}
         </div>
     )

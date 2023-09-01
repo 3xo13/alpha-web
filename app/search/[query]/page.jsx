@@ -33,7 +33,7 @@ function searchquery({params}) {
 
     return (
         <div
-            className="w-screen h-fit min-h-120 flex flex-row flex-wrap items-center justify-center">
+            className="w-screen h-fit min-h-120 flex flex-row flex-wrap items-center justify-center mt-36">
             {
                 products
                     ?.length

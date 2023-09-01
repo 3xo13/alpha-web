@@ -91,7 +91,7 @@ const Product = ({params}) => {
     }
         // add to the baskit if it's a sinle product page
         useEffect(() => {
-            if (options?.tableStyle === 'single multiple' || options?.tableStyle === 'single') {
+            if (options?.tableStyle === 'single multiple' || options?.tableStyle === 'single' || !options) {
                 setUseSingleProductBtn(true)
             }
         }, [options])
@@ -145,7 +145,7 @@ const Product = ({params}) => {
     }
  
     return (
-        <div key={uuidv4()} className='flex flex-col items-center w-screeen'>
+        <div key={uuidv4()} className='flex flex-col items-center w-screeen pt-24'>
 
             {
                 isLoading

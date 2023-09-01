@@ -1,0 +1,287 @@
+{
+    "name": "Galaxy-VS-UPS-40kW-400V-for-External-Batteries,-Start-up-5x8",
+    "category": "Uninterruptible Power Supply (UPS)",
+    "subCategory": "Three-Phase-UPS",
+    "subSubCategory": null,
+    "partNumber": "GVSUPS40KHS",
+    "images": [],
+    "details": [
+        {
+            "tagName": "h4",
+            "text": "presentation"
+        }, {
+            "tagName": "p",
+            "text": "Highly efficient, easy-to-deploy 40kW, 400V 3-phase uninterruptible power supply (UPS) that brings best-in-class power protection to edge, small and medium data centers, as well as to critical infrastructure in commercial and industrial applications. Compact design, high-density technology and modular architecture keep total cost of ownership low and operational efficiency at the highest levels. Galaxy VS reduces your energy losses by up to 66% with the patented ECOnversion mode – reaching up to 99% efficiency levels and delivering more energy savings than even our industry-leading 97% efficiency in normal operating mode. The UPS is EcoStruxure-ready to give you peace of mind with cloud-based remote monitoring and management via your smartphone. Includes 5x8 start-up service. For battery runtime details, see the runtime charts published under the Documents tab."
+        }
+    ],
+    "options": {
+        "tableStyle": "single multiple",
+        "tables": [
+            {
+                "caption": "Overview",
+                "tableContent": [
+                    {
+                        "header": "Lead time",
+                        "values": ["Usually Ships within 2 Weeks"]
+                    }
+                ]
+            }, {
+                "caption": "Main",
+                "tableContent": [
+                    {
+                        "header": "Main Input Voltage",
+                        "values": ["400 V 3 phases"]
+                    }, {
+                        "header": "Other Input Voltage",
+                        "values": ["380 V", "415 V"]
+                    }, {
+                        "header": "Main Output Voltage",
+                        "values": ["400 V 3 phases"]
+                    }, {
+                        "header": "Other Output Voltage",
+                        "values": ["380 V", "415 V"]
+                    }, {
+                        "header": "rated power in W",
+                        "values": ["40 kW"]
+                    }, {
+                        "header": "Rated power in VA",
+                        "values": ["40 kVA"]
+                    }, {
+                        "header": "Output connector type",
+                        "values": ["Hard wire 5-wire (3P + N + E) 1"]
+                    }, {
+                        "header": "Battery type",
+                        "values": ["External battery system", "Li-Ion (Lithium-Ion)", "VRLA"]
+                    }, {
+                        "header": "Provided equipment",
+                        "values": [
+                            "Dust filter",
+                            "Installation guide",
+                            "Integrated network management",
+                            "Power modules ship installed",
+                            "Start-up service",
+                            "Top and bottom cable entry"
+                        ]
+                    }
+                ]
+            }, {
+                "caption": "Batteries & Runtime",
+                "tableContent": [
+                    {
+                        "header": "Number of battery filled slots",
+                        "values": ["0"]
+                    }, {
+                        "header": "Number of battery free slots",
+                        "values": ["0"]
+                    }, {
+                        "header": "Battery voltage",
+                        "values": ["384...576 V DC"]
+                    }, {
+                        "header": "Discharge battery voltage",
+                        "values": ["307 V DC"]
+                    }, {
+                        "header": "Max current discharge",
+                        "values": ["136 A"]
+                    }, {
+                        "header": "Battery power in VAH",
+                        "values": ["0 VAh runtime"]
+                    }, {
+                        "header": "Extended runtime",
+                        "values": ["0"]
+                    }
+                ]
+            }, {
+                "caption": "Generale",
+                "tableContent": [
+                    {
+                        "header": "Bypass voltage tolerance",
+                        "values": ["+/- 10 %"]
+                    }, {
+                        "header": "Max bypass input current",
+                        "values": ["64 A"]
+                    }, {
+                        "header": "Redundant",
+                        "values": ["No"]
+                    }
+                ]
+            }, {
+                "caption": "Physical",
+                "tableContent": [
+                    {
+                        "header": "Colour",
+                        "values": ["White"]
+                    }, {
+                        "header": "Height",
+                        "values": ["148.5 cm"]
+                    }, {
+                        "header": "Width",
+                        "values": ["52.1 cm"]
+                    }, {
+                        "header": "Depth",
+                        "values": ["84.7 cm"]
+                    }, {
+                        "header": "Product weight",
+                        "values": ["206 kg"]
+                    }, {
+                        "header": "USB compatible",
+                        "values": ["No"]
+                    }
+                ]
+            }, {
+                "caption": "Input",
+                "tableContent": [
+                    {
+                        "header": "Network frequency",
+                        "values": ["40...70 Hz"]
+                    }, {
+                        "header": "Number of input connectors",
+                        "values": ["1 hard wire 4-wire (3P + E)", "1 hard wire 5-wire (3P + N + E)"]
+                    }, {
+                        "header": "Input voltage limits",
+                        "values": ["340...460 V 400 V"]
+                    }, {
+                        "header": "Maximum input current",
+                        "values": ["74 A"]
+                    }, {
+                        "header": "Max short time withstand current",
+                        "values": ["65 kA"]
+                    }, {
+                        "header": "Input harmonic distortion",
+                        "values": ["Less than 3 % for full load"]
+                    }, {
+                        "header": "Load power factor",
+                        "values": ["From 0.7 leading to 0.7 lagging without any derating"]
+                    }, {
+                        "header": "Input Power Factor at Full Load",
+                        "values": ["0.99"]
+                    }
+                ]
+            }, {
+                "caption": "Output",
+                "tableContent": [
+                    {
+                        "header": "Maximum configurable power in W",
+                        "values": ["40 kW"]
+                    }, {
+                        "header": "Harmonic distortion",
+                        "values": ["Less than 3 %"]
+                    }, {
+                        "header": "Output frequency",
+                        "values": ["50 Hz sync to mains", "60 Hz sync to mains", "60 Hz +/- 0.1 % for 60 Hz nominal unsynchronised", "50 Hz +/- 0.1 % for 50 Hz nominal unsynchronised"]
+                    }, {
+                        "header": "Crest factor",
+                        "values": ["2.5"]
+                    }, {
+                        "header": "Wave type",
+                        "values": ["Sine wave"]
+                    }, {
+                        "header": "Output voltage tolerance",
+                        "values": ["+/-1% after 50ms"]
+                    }, {
+                        "header": "Output harmonic distortion",
+                        "values": ["< 1% linear load and < 3% non-linear load"]
+                    }, {
+                        "header": "Output overload operation",
+                        "values": ["10 minutes at 125% and 60 seconds at 150%"]
+                    }, {
+                        "header": "bypass type",
+                        "values": ["Built-in static bypass"]
+                    }, {
+                        "header": "Maximum configurable power in VA",
+                        "values": ["40 kVA"]
+                    }
+                ]
+            }, {
+                "caption": "Conformance",
+                "tableContent": [
+                    {
+                        "header": "standards",
+                        "values": [
+                            "CSA C22.2 No 107.3",
+                            "EN/IEC 62040-1",
+                            "EN/IEC 62040-2",
+                            "EN/IEC 62040-3",
+                            "FCC part 15 class A",
+                            "IEC 60721-4-2 level 2M2",
+                            "UL 1778 5th edition"
+                        ]
+                    }
+                ]
+            }, {
+                "caption": "Environmental",
+                "tableContent": [
+                    {
+                        "header": "Ambient air temperature for operation",
+                        "values": ["0…40 °C"]
+                    }, {
+                        "header": "Relative humidity",
+                        "values": ["0…95 % non-condensing"]
+                    }, {
+                        "header": "Operating altitude",
+                        "values": ["0...3281 ft"]
+                    }, {
+                        "header": "Ambient air temperature for storage",
+                        "values": ["-25…55 °C"]
+                    }, {
+                        "header": "Storage Relative Humidity",
+                        "values": ["10…80 % non-condensing"]
+                    }, {
+                        "header": "Storage altitude",
+                        "values": ["0.00…15240.00 m"]
+                    }, {
+                        "header": "Acoustic level",
+                        "values": ["65 dBA"]
+                    }, {
+                        "header": "Heat dissipation",
+                        "values": ["3845.4 Btu/h"]
+                    }, {
+                        "header": "IP degree of protection",
+                        "values": ["IP21"]
+                    }
+                ]
+            }, {
+                "caption": "Communications & Management",
+                "tableContent": [
+                    {
+                        "header": "Free slots",
+                        "values": ["1"]
+                    }, {
+                        "header": "Control panel",
+                        "values": ["Touch screen LCD user interface"]
+                    }
+                ]
+            }, {
+                "caption": "Packing Units",
+                "tableContent": [
+                    {
+                        "header": "Unit Type of Package 1",
+                        "values": ["PCE"]
+                    }, {
+                        "header": "Number of Units in Package 1",
+                        "values": ["1"]
+                    }, {
+                        "header": "Package 1 Height",
+                        "values": ["168 cm"]
+                    }, {
+                        "header": "Package 1 Width",
+                        "values": ["99 cm"]
+                    }, {
+                        "header": "Package 1 Length",
+                        "values": ["64 cm"]
+                    }, {
+                        "header": "Package 1 Weight",
+                        "values": ["235 kg"]
+                    }
+                ]
+            }, {
+                "caption": "Contractual warranty",
+                "tableContent": [
+                    {
+                        "header": "Warranty",
+                        "values": ["1 year on-site repair or replace with factory authorized Start-Up"]
+                    }
+                ]
+            }
+        ]
+    }
+}

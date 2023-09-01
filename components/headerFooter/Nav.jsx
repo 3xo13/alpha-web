@@ -23,7 +23,7 @@ const  Nav = () => {
     }
 
     return (
-        <div className="overflow-x-hidden cinzel flex-col-center w-screen absolute z-40 bg-white/80">
+        <div className="cinzel flex-col-center w-screen absolute z-40 bg-white/80">
             <div>
                 <AnouncmentBar />
             </div>

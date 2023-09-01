@@ -1,0 +1,312 @@
+{
+    "name": "APC-Smart-UPS-SRT-8000VA-230V",
+    "category": "Uninterruptible Power Supply (UPS)",
+    "subCategory": "Single-Phase-UPS",
+    "subSubCategory": null,
+    "partNumber": "SRT8KXLI",
+    "images": [],
+    "details": [
+        {
+            "tagName": "h4",
+            "text": "Presentation"
+        }, {
+            "tagName": "p",
+            "text": "High density, double-conversion on-line power protection with scalable runtime."
+        }
+    ],
+    "options": {
+        "tableStyle": "single multiple",
+        "tables": [
+            {
+                "caption": "Overview",
+                "tableContent": [
+                    {
+                        "header": "Lead time",
+                        "values": ["Usually in Stock"]
+                    }
+                ]
+            }, {
+                "caption": "Main",
+                "tableContent": [
+                    {
+                        "header": "Main Input Voltage",
+                        "values": ["230 V", "400 V 3 phases"]
+                    }, {
+                        "header": "Other Input Voltage",
+                        "values": ["220 V", "240 V", "380 V", "415 V"]
+                    }, {
+                        "header": "Main Output Voltage",
+                        "values": ["230 V"]
+                    }, {
+                        "header": "Other Output Voltage",
+                        "values": ["220 V", "240 V"]
+                    }, {
+                        "header": "rated power in W",
+                        "values": ["8000 W"]
+                    }, {
+                        "header": "Rated power in VA",
+                        "values": ["8000 VA"]
+                    }, {
+                        "header": "output connection type",
+                        "values": ["6 IEC 60320 C13", "3 IEC Jumpers", "4 IEC 60320 C19"]
+                    }, {
+                        "header": "Output connector type",
+                        "values": ["Hard wire 3-wire (H N + E) 1"]
+                    }, {
+                        "header": "Battery type",
+                        "values": ["Lead-acid battery"]
+                    }, {
+                        "header": "Provided equipment",
+                        "values": [
+                            "CD with software",
+                            "Documentation CD",
+                            "Installation guide",
+                            "Temperature probe",
+                            "USB cable",
+                            "Warranty card",
+                            "Web/SNMP management card"
+                        ]
+                    }
+                ]
+            }, {
+                "caption": "Batteries & Runtime",
+                "tableContent": [
+                    {
+                        "header": "Number of battery filled slots",
+                        "values": ["0"]
+                    }, {
+                        "header": "Battery recharge time",
+                        "values": ["1.5 h"]
+                    }, {
+                        "header": "Number of battery replacement quantity",
+                        "values": ["2"]
+                    }, {
+                        "header": "Battery voltage",
+                        "values": ["+/- 192 V (split battery referenced to neutral)"]
+                    }, {
+                        "header": "Battery charger power",
+                        "values": ["876 W rated"]
+                    }, {
+                        "header": "Battery power in VAH",
+                        "values": ["1728 VAh runtime"]
+                    }, {
+                        "header": "Battery life",
+                        "values": ["3…5 year(s)"]
+                    }, {
+                        "header": "Battery option",
+                        "values": [
+                            "SRT192BP2 1 3456 VAh",
+                            "SRT192BP2 2 5184 VAh",
+                            "SRT192BP2 3 6912 VAh",
+                            "SRT192BP2 4 8640 VAh",
+                            "SRT192BP2 5 10368 VAh",
+                            "SRT192BP2 6 12096 VAh",
+                            "SRT192BP2 8 15552 VAh",
+                            "SRT192BP2 10 19008 VAh"
+                        ]
+                    }, {
+                        "header": "Extended runtime",
+                        "values": ["1"]
+                    }
+                ]
+            }, {
+                "caption": "General",
+                "tableContent": [
+                    {
+                        "header": "product web sub-family",
+                        "values": ["High density"]
+                    }, {
+                        "header": "Number of power module free slots",
+                        "values": ["0"]
+                    }, {
+                        "header": "Number of power module filled slots",
+                        "values": ["0"]
+                    }, {
+                        "header": "Redundant",
+                        "values": ["No"]
+                    }
+                ]
+            }, {
+                "caption": "Physical",
+                "tableContent": [
+                    {
+                        "header": "Colour",
+                        "values": ["Black"]
+                    }, {
+                        "header": "Height",
+                        "values": ["43.2 cm"]
+                    }, {
+                        "header": "Width",
+                        "values": ["26.3 cm"]
+                    }, {
+                        "header": "Depth",
+                        "values": ["71.5 cm"]
+                    }, {
+                        "header": "Product weight",
+                        "values": ["111.82 kg"]
+                    }, {
+                        "header": "Mounting location",
+                        "values": ["Front"]
+                    }, {
+                        "header": "Mounting preference",
+                        "values": ["No preference"]
+                    }, {
+                        "header": "Mounting mode",
+                        "values": ["Rack-mounted with kit"]
+                    }, {
+                        "header": "Two post mountable",
+                        "values": ["0"]
+                    }, {
+                        "header": "USB compatible",
+                        "values": ["Yes"]
+                    }
+                ]
+            }, {
+                "caption": "Input",
+                "tableContent": [
+                    {
+                        "header": "Network frequency",
+                        "values": ["40...70 Hz auto-sensing"]
+                    }, {
+                        "header": "Number of input connectors",
+                        "values": ["1 hard wire 3-wire (1P + N + E)", "1 hard wire 5-wire (3P + N + E)"]
+                    }, {
+                        "header": "Input voltage limits",
+                        "values": ["100...275 V adjustable (half load)", "173...476 V adjustable (half load)"]
+                    }
+                ]
+            }, {
+                "caption": "Output",
+                "tableContent": [
+                    {
+                        "header": "Maximum configurable power in W",
+                        "values": ["8000 W"]
+                    }, {
+                        "header": "Harmonic distortion",
+                        "values": ["Less than 2 %"]
+                    }, {
+                        "header": "Output frequency",
+                        "values": ["50/60 Hz +/- 3 Hz sync to mains"]
+                    }, {
+                        "header": "Crest factor",
+                        "values": ["3 : 1"]
+                    }, {
+                        "header": "UPS type",
+                        "values": ["Double conversion online"]
+                    }, {
+                        "header": "Wave type",
+                        "values": ["Sine wave"]
+                    }, {
+                        "header": "bypass type",
+                        "values": ["Internal bypass (automatic and manual)"]
+                    }, {
+                        "header": "Maximum configurable power in VA",
+                        "values": ["8000 VA"]
+                    }
+                ]
+            }, {
+                "caption": "Conformance",
+                "tableContent": [
+                    {
+                        "header": "Product certifications",
+                        "values": ["CE", "EAC", "IRAM", "RCM", "VDE"]
+                    }, {
+                        "header": "marking",
+                        "values": ["CE Mark"]
+                    }, {
+                        "header": "Standards",
+                        "values": ["EN/IEC 62040-1:2019/A11:2021", "EN/IEC 62040-2:2006/AC:2006", "EN/IEC 62040-2:2018"]
+                    }
+                ]
+            }, {
+                "caption": "Environmental",
+                "tableContent": [
+                    {
+                        "header": "Ambient air temperature for operation",
+                        "values": ["0…40 °C"]
+                    }, {
+                        "header": "Relative humidity",
+                        "values": ["0…95 % non-condensing"]
+                    }, {
+                        "header": "Operating altitude",
+                        "values": ["0...10000 ft"]
+                    }, {
+                        "header": "Ambient air temperature for storage",
+                        "values": ["-15…45 °C"]
+                    }, {
+                        "header": "Storage Relative Humidity",
+                        "values": ["0…95 % non-condensing"]
+                    }, {
+                        "header": "Storage altitude",
+                        "values": ["0.00…15240.00 m"]
+                    }, {
+                        "header": "Acoustic level",
+                        "values": ["55 dBA"]
+                    }, {
+                        "header": "Heat dissipation",
+                        "values": ["1497 Btu/h"]
+                    }, {
+                        "header": "IP degree of protection",
+                        "values": ["IP20"]
+                    }
+                ]
+            }, {
+                "caption": "Communications & Management",
+                "tableContent": [
+                    {
+                        "header": "Free slots",
+                        "values": ["1"]
+                    }, {
+                        "header": "Preinstalled device",
+                        "values": ["Network management card 3 with environmental monitoring"]
+                    }, {
+                        "header": "Alarm",
+                        "values": ["Audible and visible alarms : prioritized by severity"]
+                    }, {
+                        "header": "Emergency power off",
+                        "values": ["Yes"]
+                    }
+                ]
+            }, {
+                "caption": "Surge Protection and Filtering",
+                "tableContent": [
+                    {
+                        "header": "Surge energy rate",
+                        "values": ["480 J"]
+                    }
+                ]
+            }, {
+                "caption": "Packing Units",
+                "tableContent": [
+                    {
+                        "header": "Unit Type of Package 1",
+                        "values": ["PCE"]
+                    }, {
+                        "header": "Number of Units in Package 1",
+                        "values": ["1"]
+                    }, {
+                        "header": "Package 1 Height",
+                        "values": ["46.1 cm"]
+                    }, {
+                        "header": "Package 1 Width",
+                        "values": ["60 cm"]
+                    }, {
+                        "header": "Package 1 Length",
+                        "values": ["100 cm"]
+                    }, {
+                        "header": "Package 1 Weight",
+                        "values": ["126.82 kg"]
+                    }
+                ]
+            }, {
+                "caption": "Contractual warranty",
+                "tableContent": [
+                    {
+                        "header": "Warranty",
+                        "values": ["3 years repair or replace (excluding battery) and 2 years for battery"]
+                    }
+                ]
+            }
+        ]
+    }
+}

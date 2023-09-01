@@ -6,16 +6,20 @@ import { v4 as uuidv4 } from 'uuid';
 const subSubCategoriesProducts = async ({params}) => {
   let productCards = [];
   const { category, subCategory, subSubCategory} = params; 
+  const decodedCat = decodeURIComponent(category)
+  const decodedSub = decodeURIComponent(decodeURIComponent(subCategory))
+  const decodedSubSub = decodeURIComponent(decodeURIComponent(subSubCategory))
+  // console.log(decodedCat, decodedSub, decodedSubSub);
 
   if(category && subCategory && subSubCategory){
-    const products = await getProducts({category: category, subCategory: subCategory, subSubCategory: subSubCategory});
+    const products = await getProducts({category: decodedCat, subCategory: decodedSub, subSubCategory: decodedSubSub});
     productCards = products?.map(product => <ProductCard key={uuidv4()} product={product} />)
   }else{
     productCards = (<p  key={uuidv4()}>"Error fitshing Products Data"</p>)
   }
   
 return (
-    <div key={uuidv4()} className="w-screen flex flex-row flex-wrap pl-5">
+    <div key={uuidv4()} className="w-screen flex flex-row flex-wrap pl-5 pt-40">
       {productCards}
     </div>
   )

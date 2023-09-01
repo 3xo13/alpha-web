@@ -1,0 +1,110 @@
+{
+    "name": "Galaxy-VS-Classic-Battery-Cabinet-with-batteries,-IEC,-700mm-wide-Config-A",
+    "category": "Uninterruptible Power Supply (UPS)",
+    "subCategory": "Three-Phase-UPS",
+    "subSubCategory": null,
+    "partNumber": "GVSCBC7A",
+    "images": [],
+    "details": [
+        {
+            "tagName": "h4",
+            "text": "Presentation"
+        }, {
+            "tagName": "p",
+            "text": "Battery cabinet that includes batteries and battery breaker."
+        }
+    ],
+    "options": {
+        "tableStyle": "single multiple",
+        "tables": [
+            {
+                "caption": "Overview",
+                "tableContent": [
+                    {
+                        "header": "Lead time",
+                        "values": ["Usually Ships within 2 Weeks"]
+                    }
+                ]
+            }, {
+                "caption": "Main",
+                "tableContent": [
+                    {
+                        "header": "Battery type",
+                        "values": ["VRLA"]
+                    }
+                ]
+            }, {
+                "caption": "Batteries & Runtime",
+                "tableContent": [
+                    {
+                        "header": "Number of battery free slots",
+                        "values": ["0"]
+                    }, {
+                        "header": "Number of battery filled slots",
+                        "values": ["0"]
+                    }, {
+                        "header": "device mounting",
+                        "values": ["Enclosed battery cabinet"]
+                    }
+                ]
+            }, {
+                "caption": "Physical",
+                "tableContent": [
+                    {
+                        "header": "Colour",
+                        "values": ["White"]
+                    }, {
+                        "header": "Height",
+                        "values": ["190 cm"]
+                    }, {
+                        "header": "Width",
+                        "values": ["71 cm"]
+                    }, {
+                        "header": "Depth",
+                        "values": ["84.5 cm"]
+                    }, {
+                        "header": "Product weight",
+                        "values": ["580 kg"]
+                    }, {
+                        "header": "Mounting mode",
+                        "values": ["Not rack-mountable"]
+                    }
+                ]
+            }, {
+                "caption": "Environmental",
+                "tableContent": [
+                    {
+                        "header": "Ambient air temperature for operation",
+                        "values": ["0…40 °C"]
+                    }, {
+                        "header": "Ambient air temperature for storage",
+                        "values": ["-15…40 °C"]
+                    }
+                ]
+            }, {
+                "caption": "Packing Units",
+                "tableContent": [
+                    {
+                        "header": "Unit Type of Package 1",
+                        "values": ["PCE"]
+                    }, {
+                        "header": "Number of Units in Package 1",
+                        "values": ["1"]
+                    }, {
+                        "header": "Package 1 Height",
+                        "values": ["190 cm"]
+                    }, {
+                        "header": "Package 1 Width",
+                        "values": ["84.5 cm"]
+                    }, {
+                        "header": "Package 1 Length",
+                        "values": ["71 cm"]
+                    }, {
+                        "header": "Package 1 Weigh",
+                        "values": ["580 kg"]
+                    }
+                ]
+            }
+        ]
+    }
+}

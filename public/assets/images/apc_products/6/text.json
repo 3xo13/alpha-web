@@ -1,0 +1,299 @@
+{
+    "name": "Galaxy-VM-160-kVA-UPS-Single-400-400-V-with-Backfeed-protection,-Start-up-5x8",
+    "category": "Uninterruptible Power Supply (UPS)",
+    "subCategory": "Three-Phase-UPS",
+    "subSubCategory": null,
+    "partNumber": "GVMSB160KHS",
+    "images": [],
+    "details": [],
+    "options": {
+        "tableStyle": "single multiple",
+        "tables": [
+            {
+                "caption": "Overview",
+                "tableContent": [
+                    {
+                        "header": "Lead time",
+                        "values": ["Usually Ships within 2 Weeks"]
+                    }
+                ]
+            }, {
+
+                "caption": "Main",
+                "tableContent": [
+                    {
+                        "header": "Main Input Voltage",
+                        "values": ["400 V 3 phases"]
+                    }, {
+                        "header": "Main Output Voltage",
+                        "values": ["400 V 3 phases"]
+                    }, {
+                        "header": "Other Output Voltage",
+                        "values": ["380 V", "415 V"]
+                    }, {
+                        "header": "rated power in W",
+                        "values": ["144 kW"]
+                    }, {
+                        "header": "Rated power in VA",
+                        "values": ["160 kVA"]
+                    }, {
+                        "header": "Output connector type",
+                        "values": ["Hard wire 4-wire (3P + E) 1", "Hard wire 5-wire (3P + N + E) 1"]
+                    }, {
+                        "header": "Battery type",
+                        "values": ["External battery system"]
+                    }, {
+                        "header": "Provided equipment",
+                        "values": [
+                            "Built-in modbus protocol adapter",
+                            "Dust filter",
+                            "Installation guide",
+                            "Integrated network management",
+                            "Seismic compliance",
+                            "Top and bottom cable entry"
+                        ]
+                    }
+                ]
+            }, {
+                "caption": "Batteries & Runtime",
+                "tableContent": [
+                    {
+                        "header": "Number of battery filled slots",
+                        "values": ["0"]
+                    }, {
+                        "header": "Battery voltage",
+                        "values": ["480 V"]
+                    }, {
+                        "header": "Discharge battery voltage",
+                        "values": ["384 V"]
+                    }, {
+                        "header": "Max current discharge",
+                        "values": ["314 A"]
+                    }, {
+                        "header": "Battery power in VAH",
+                        "values": ["0 VAh runtime"]
+                    }, {
+                        "header": "Extended runtime",
+                        "values": ["0"]
+                    }
+                ]
+            }, {
+                "caption": "General",
+                "tableContent": [
+                    {
+                        "header": "Bypass voltage tolerance",
+                        "values": ["+/- 10 % settable from +/- 4/6/8 and 10 %"]
+                    }, {
+                        "header": "Max bypass input current",
+                        "values": ["231 A"]
+                    }, {
+                        "header": "Bypass current protection",
+                        "values": ["400 A"]
+                    }, {
+                        "header": "Redundant",
+                        "values": ["No"]
+                    }
+                ]
+            }, {
+                "caption": "Physical",
+                "tableContent": [
+                    {
+                        "header": "Colour",
+                        "values": ["White"]
+                    }, {
+                        "header": "Height",
+                        "values": ["197 cm"]
+                    }, {
+                        "header": "Width",
+                        "values": ["105.2 cm"]
+                    }, {
+                        "header": "Depth",
+                        "values": ["85.4 cm"]
+                    }, {
+                        "header": "Product weight",
+                        "values": ["699 kg"]
+                    }, {
+                        "header": "USB compatible",
+                        "values": ["No"]
+                    }
+                ]
+            }, {
+                "caption": "Input",
+                "tableContent": [
+                    {
+                        "header": "Network frequency",
+                        "values": ["40...70 Hz"]
+                    }, {
+                        "header": "Number of input connectors",
+                        "values": ["1 hard wire 3-wire (3P + E)"]
+                    }, {
+                        "header": "Input voltage limits",
+                        "values": ["250...600 V adjustable", "320...456 V 380 V", "320...480 V 400 V", "320...498 V 415 V"]
+                    }, {
+                        "header": "Maximum input current",
+                        "values": ["262 A"]
+                    }, {
+                        "header": "Switching current capacity",
+                        "values": ["400 A"]
+                    }, {
+                        "header": "Max short time withstand current",
+                        "values": ["65 kA"]
+                    }, {
+                        "header": "Input harmonic distortion",
+                        "values": ["Less than 3 % for full load"]
+                    }, {
+                        "header": "Input protection type",
+                        "values": ["GL fuse"]
+                    }, {
+                        "header": "Inrush current",
+                        "values": ["200 A peak"]
+                    }, {
+                        "header": "Load power factor",
+                        "values": ["0.5 leading to 0.5 lagging"]
+                    }, {
+                        "header": "Input Power Factor at Full Load",
+                        "values": ["1"]
+                    }
+                ]
+            }, {
+                "caption": "Output",
+                "tableContent": [
+                    {
+                        "header": "Maximum configurable power in W",
+                        "values": ["144 kW"]
+                    }, {
+                        "header": "Harmonic distortion",
+                        "values": ["Less than 2 %"]
+                    }, {
+                        "header": "Output frequency",
+                        "values": ["50/60 Hz +/- 1 Hz sync to mains", "50/60 Hz +/- 1 Hz unsynchronised"]
+                    }, {
+                        "header": "Crest factor",
+                        "values": ["Unlimited"]
+                    }, {
+                        "header": "Wave type",
+                        "values": ["Sine wave"]
+                    }, {
+                        "header": "Output voltage tolerance",
+                        "values": ["+/- 1% static and +/- 3% at 100% load step"]
+                    }, {
+                        "header": "Output harmonic distortion",
+                        "values": ["< 2% linear load and < 3% non-linear load"]
+                    }, {
+                        "header": "Output overload operation",
+                        "values": ["10 minutes at 125% and 60 seconds at 150%"]
+                    }, {
+                        "header": "Required output current protection",
+                        "values": ["400 A"]
+                    }, {
+                        "header": "Neutral output current",
+                        "values": ["231 A"]
+                    }, {
+                        "header": "bypass type",
+                        "values": ["Built-in static bypass"]
+                    }, {
+                        "header": "Maximum configurable power in VA",
+                        "values": ["160 kVA"]
+                    }
+                ]
+            }, {
+                "caption": "Conformance",
+                "tableContent": [
+                    {
+                        "header": "Product certifications",
+                        "values": ["C-Tick", "CE", "RCM"]
+                    }, {
+                        "header": "standards",
+                        "values": [
+                            "EN/IEC 62040-1",
+                            "EN/IEC 62040-2",
+                            "EN/IEC 62040-3",
+                            "IBC 2012 and CBC2013 to Sds=2.02g",
+                            "ISTA 2B",
+                            "OSHPD",
+                            "UL 1778",
+                            "VFI-SS-111"
+                        ]
+                    }
+                ]
+            }, {
+                "caption": "Environmental",
+                "tableContent": [
+                    {
+                        "header": "Ambient air temperature for operation",
+                        "values": ["0…40 °C"]
+                    }, {
+                        "header": "Relative humidity",
+                        "values": ["0…95 %"]
+                    }, {
+                        "header": "Operating altitude",
+                        "values": ["0...3333 ft"]
+                    }, {
+                        "header": "Ambient air temperature for storage",
+                        "values": ["-25…55 °C"]
+                    }, {
+                        "header": "Storage Relative Humidity",
+                        "values": ["0…95 %"]
+                    }, {
+                        "header": "Storage altitude",
+                        "values": ["0.00…14999.82 m"]
+                    }, {
+                        "header": "Acoustic level",
+                        "values": ["65 dBA"]
+                    }, {
+                        "header": "Heat dissipation",
+                        "values": ["19650 Btu/h"]
+                    }, {
+                        "header": "IP degree of protection",
+                        "values": ["IP20"]
+                    }
+                ]
+            }, {
+                "caption": "Communications & Management",
+                "tableContent": [
+                    {
+                        "header": "Free slots",
+                        "values": ["2"]
+                    }, {
+                        "header": "Control panel",
+                        "values": ["7 touch screen display"]
+                    }, {
+                        "header": "Emergency power off",
+                        "values": ["Yes"]
+                    }
+                ]
+            }, {
+                "caption": "Packing Units",
+                "tableContent": [
+                    {
+                        "header": "Unit Type of Package 1",
+                        "values": ["PCE"]
+                    }, {
+                        "header": "Number of Units in Package 1",
+                        "values": ["1"]
+                    }, {
+                        "header": "Package 1 Height",
+                        "values": ["215.6 cm"]
+                    }, {
+                        "header": "Package 1 Width",
+                        "values": ["105.2 cm"]
+                    }, {
+                        "header": "Package 1 Length",
+                        "values": ["149 cm"]
+                    }, {
+                        "header": "Package 1 Weight",
+                        "values": ["744.5 kg"]
+                    }
+                ]
+            }, {
+                "caption": "Contractual warranty",
+                "tableContent": [
+                    {
+                        "header": "Warranty",
+                        "values": ["1 year on-site repair or replace with factory authorized Start-Up"]
+                    }
+                ]
+            }
+        ]
+    }
+}

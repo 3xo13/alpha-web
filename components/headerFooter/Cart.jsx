@@ -49,7 +49,7 @@ const Cart = ({show,set}) => {
 
     return (
         <div key={uuidv4()} // cart container
-            className={`lg:w-120 w-110 h-fit absolute z-20 flex bg-white/90 flex-col z-10 ${!activeCart
+            className={`lg:w-120 w-110 h-fit absolute z-50 flex bg-white/90 flex-col z-10 ${!activeCart
                 ? '-translate-x-120'
                 : null} duration-500`}>
                     <div key={uuidv4()} className='lg:w-120 h-30 flex justify-end '>

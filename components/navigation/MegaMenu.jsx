@@ -5,11 +5,12 @@ import Link from 'next/link';
 const MegaMenu = ({TreeData}) => {
 
     const menu = TreeData.map(category => {
+        const cat = encodeURIComponent(category.name)
 
         return (
             <div className='cinzel text-xl '>
                 <Link
-                    href={`/categories/${category.name}`}
+                    href={`/categories/${cat}`}
                     key={uuidv4()}
                     className='hover:bg-blue-100 mb-5'>
                     <h3 key={uuidv4()} className="flex capitalize font-bold mb-3">{
@@ -23,8 +24,9 @@ const MegaMenu = ({TreeData}) => {
                     category
                         .subCategories
                         .map(sub => {
+                            const encodedSub = encodeURIComponent(encodeURIComponent(sub.name))
                             return (
-                                <Link href={`/categories/${category.name}/${sub.name}`} key={uuidv4()}>
+                                <Link href={`/category/${cat}/${encodedSub}`} key={uuidv4()}>
                                     <div className="flex flex-row w-full items-center" key={uuidv4()}>
                                         <h4 className=" capitalize text-lg" >
                                             {sub.name.split('-').join(' ')}

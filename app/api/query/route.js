@@ -21,6 +21,8 @@ export async function POST(request) {
                     partNumber: regexQuery
                 }, {
                     name: regexQuery
+                },{
+                    "tables.tableContent.value": regexQuery
                 }
             ]
         }); // const products = await Product.find(query);

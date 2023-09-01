@@ -1,13 +1,60 @@
-import React from 'react'
-import {v4 as uuidv4} from 'uuid';
-import Form from '@/components/pagesComponents/quotation/Form';
+"use client";
+import {useState, useEffect} from "react"; 
+import {useRouter} from "next/navigation";
+import Form from '@/components/pagesComponents/quotation/Form'
+import useBasketData from "@/dataMangment/basketData";
+import {v4 as uuidv4} from 'uuid'; 
 
 const Contact = () => {
+    const router = useRouter();
+    const [submitting, setIsSubmitting] = useState(false);
+    const {
+        Basket,
+        removeItem,
+        decreaseQuantity,
+        clearQuantity,
+        clearBasket,
+        setPruductQuantity
+    } = useBasketData();
+
+
+
+    const createQuote = async (e,post) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+
+        const items = Basket.map((item) => {
+            return {name: item.name, partNumber: item.partNumber, quantity: item.quantity, options: item.options, headers: item.headers}
+        });
+
+        try {
+            const response = await fetch("/submit", {
+                method: "POST",
+                body: JSON.stringify(
+                    {name: post.name, email: post.email, phone: post.phone, items: JSON.stringify(items), message: post.message}
+                )
+            });
+            // console.log(response);
+            if (response.ok) {
+                clearBasket();
+                clearQuantity();
+                router.push("/success");
+            }
+        } catch (error) {
+            console.log(error);
+        } finally {
+            setIsSubmitting(false);
+
+        }
+    };
     return (
-        <div className='w-screen h-[160dvh] mb-10'>
+        <div className='w-screen h-[160dvh] mb-10 mt-16'>
             <div className='flex-row-center h-3/5 w-full'>
                 <div className='w-1/2 h-full flex-col-center'>
-                    <Form/>
+                <Form
+                    submitting={submitting}
+                    handleSubmit={createQuote}
+                    items={Basket}/>
                 </div>
                 <div className='w-1/2 h-full flex items-center'>
                     <div className=''>

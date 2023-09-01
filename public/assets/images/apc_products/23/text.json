@@ -1,0 +1,112 @@
+{
+    "name": "APC-Smart-UPS-SRT-19-inch-Rail-Kit-for-Smart-UPS-SRT-5/6/8/10kVA",
+    "category": "Uninterruptible Power Supply (UPS)",
+    "subCategory": "Single-Phase-UPS",
+    "subSubCategory": null,
+    "partNumber": "SRTRK2",
+    "images": [],
+    "details": [
+        {
+            "tagName": "h4",
+            "text": "Presentation"
+        }, {
+            "tagName": "p",
+            "text": "Accessory solutions to tailor the Smart-UPS to meet your specific needs."
+        }
+    ],
+    "options": {
+        "tableStyle": "single multiple",
+        "tables": [
+            {
+                "caption": "Overview",
+                "tableContent": [
+                    {
+                        "header": "Lead time",
+                        "values": ["Usually in Stock"]
+                    }
+                ]
+            }, {
+                "caption": "Main",
+                "tableContent": [
+                    {
+                        "header": "Provided equipment",
+                        "values": ["Installation guide", "Mounting hardware"]
+                    }
+                ]
+            }, {
+                "caption": "Physical",
+                "tableContent": [
+                    {
+                        "header": "Colour",
+                        "values": ["Grey"]
+                    }, {
+                        "header": "Height",
+                        "values": ["4.4 cm"]
+                    }, {
+                        "header": "Width",
+                        "values": ["52.7 cm"]
+                    }, {
+                        "header": "Depth",
+                        "values": ["8.9 cm"]
+                    }, {
+                        "header": "Product weight",
+                        "values": ["2.73 kg"]
+                    }, {
+                        "header": "Mounting mode",
+                        "values": ["Rack-mounted"]
+                    }
+                ]
+            }, {
+                "caption": "Packing Units",
+                "tableContent": [
+                    {
+                        "header": "Unit Type of Package 1",
+                        "values": ["PCE"]
+                    }, {
+                        "header": "Number of Units in Package 1",
+                        "values": ["1"]
+                    }, {
+                        "header": "Package 1 Height",
+                        "values": ["7.1 cm"]
+                    }, {
+                        "header": "Package 1 Width",
+                        "values": ["69.6 cm"]
+                    }, {
+                        "header": "Package 1 Length",
+                        "values": ["14.2 cm"]
+                    }, {
+                        "header": "Package 1 Weight",
+                        "values": ["3.64 kg"]
+                    }, {
+                        "header": "Unit Type of Package 2",
+                        "values": ["P12"]
+                    }, {
+                        "header": "Number of Units in Package 2",
+                        "values": ["10"]
+                    }, {
+                        "header": "Package 2 Height",
+                        "values": ["50 cm"]
+                    }, {
+                        "header": "Package 2 Width",
+                        "values": ["80 cm"]
+                    }, {
+                        "header": "Package 2 Length",
+                        "values": ["120 cm"]
+                    }, {
+                        "header": "Package 2 Weight",
+                        "values": ["64.65 kg"]
+                    }
+                ]
+            }, {
+
+                "caption": "Contractual warranty",
+                "tableContent": [
+                    {
+                        "header": "Warranty",
+                        "values": ["2 years repair or replace"]
+                    }
+                ]
+            }
+        ]
+    }
+}
