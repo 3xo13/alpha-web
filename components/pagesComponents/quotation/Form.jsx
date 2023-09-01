@@ -118,12 +118,12 @@ const Form = ({submitting, handleSubmit, items}) => {
                                         className='flex flex-row justify-between items-center border-1 solid border rounded-lg p-2'
                                         key={uuidv4()}>
                                         <p className='w-64 text-gray-700 capitalize'>{item.name}</p>
-                                        <p className="min-w-fit mr-2">Part No:{item.partNumber}</p>
+                                        <p className="min-w-fit mr-2">Part No: {item.partNumber}</p>
                                         <button
-                                            className=' w-fit hover:bg-gray-300 cursor-pointer rounded-full '
+                                            className=' w-fit cursor-pointer rounded-full '
                                             onClick={() => {
                                                 decreaseQuantity()
-                                                removeItem(item.partNumber || ''.item.name)
+                                                removeItem(item.partNumber || '', item.name)
                                             }}>
                                             <img src='/assets/icons/close.png' alt='delete product' className='w-4 h-4'/>
                                         </button>

@@ -91,7 +91,7 @@ const Product = ({params}) => {
     }
         // add to the baskit if it's a sinle product page
         useEffect(() => {
-            if (options?.tableStyle === 'single multiple' || options?.tableStyle === 'single' || !options) {
+            if (options?.tableStyle === 'single multiple' || options?.tableStyle === 'single' || options?.tableStyle === 'none') {
                 setUseSingleProductBtn(true)
             }
         }, [options])

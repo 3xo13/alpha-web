@@ -3,8 +3,10 @@ import {useState, useEffect} from 'react';
 import {v4 as uuidv4} from 'uuid';
 import useBasketData from '@/dataMangment/basketData';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const Cart = ({show,set}) => {
+    const router = useRouter();
     const [activeCart, setActiveCart] = useState(false);
 
     useEffect(() => {
@@ -63,9 +65,12 @@ const Cart = ({show,set}) => {
                     
                 {cart} 
 
-                <Link href='/quote'>
-                    <button className='lg:w-120 w-110 h-14 bg-yellow-600/90 hover:bg-yellow-600/80 flex items-center justify-center text-white text-xl font-bold capitalize'>check out</button>
-                </Link>
+                
+                    <button className='lg:w-120 w-110 h-14 bg-yellow-600/90 hover:bg-yellow-600/80 flex items-center justify-center text-white text-xl font-bold capitalize' onClick={()=>{
+                        setActiveCart(false);
+                        router.push("/quote");
+                    }}>check out</button>
+                
         </div>
     )
 }

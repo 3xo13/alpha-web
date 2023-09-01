@@ -13,7 +13,7 @@ const useBasketData = create((set) => ({
     removeItem: (partNumber, name) => set((state) => ({
         Basket: state
             .Basket
-            .filter((item) => item.partNumber !== partNumber || item.name != name)
+            .filter((item) => item.partNumber !== partNumber || item.name !== name)
     })),
     increaseQuantity: () => set((state) => ({
         itemsQuantity: state.itemsQuantity + 1

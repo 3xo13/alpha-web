@@ -55,17 +55,17 @@ const quote = () => {
     const cartItems = Basket.map((item) => ProductReviwe({item, removeItem, decreaseQuantity, setPruductQuantity}));
     
     return (
-        <div className="w-screen h-fit flex lg:flex-row flex-col items-center justify-center" key={uuidv4()}>
+        <div className={`w-screen h-fit flex lg:flex-row flex-col items-center justify-center mb-8 ${cart?.length ? 'mt-32' : 'mt-24'}`} key={uuidv4()}>
             <div // cart content
-                className={`${cart?.length > 0
+                className={`${cart?.length
                     ? 'lg:w-2/3 w-screen flex flex-col self-start'
-                    : 'hidden'} h-fit flex flex-col p-10`}>
+                    : 'hidden'} h-fit flex flex-col p-10 pt-24`}>
                 {cartItems}
             </div>
             <div key={uuidv4()} // form content
-                className={`${cart
-                    ? 'lg:w-1/3 w-screen p-5 mb-10 lg:mb-0'
-                    : 'w-screen'}  flex items-start justify-center`}>
+                className={`${cart?.length
+                    ? 'lg:w-1/3 w-screen p-5 mb-10 lg:mb-0 flex-col-start'
+                    : 'w-screen flex-col-center'}`}>
                 <Form
                     submitting={submitting}
                     handleSubmit={createQuote}
