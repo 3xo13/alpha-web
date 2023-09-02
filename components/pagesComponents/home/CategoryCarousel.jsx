@@ -56,9 +56,9 @@ const CategoryCarousel = () => {
             </div>
             <div className="w-90% h-full flex flex-col items-center justify-between">
                 <div className="w-full h-full flex-center">
-                    <div className="w-fit h-max my-10 bg-black/50 backdrop-lg rounded-xl flex-col-evenly">
-                        <h4 className="my-5 mx-10 cinzel text-4xl capitalize text-yellow-500 font-bold text-center">{categorriesObjects[count].title}</h4>
-                        <p className="my-5 mx-10 cinzel text-2xl capitalize text-white font-bold text-center">{categorriesObjects[count].text}</p>
+                    <div className="w-fit h-max my-10 bg-black/50 backdrop-lg rounded-xl flex-col-evenly p-10">
+                        <h4 className="my-5 mx-10 title text-4xl capitalize text-white font-bold text-center">{categorriesObjects[count].title}</h4>
+                        <p className="my-5 mx-10 cinzel text-2xl  text-white font-bold text-center">{categorriesObjects[count].text}</p>
                         <div>
                             <Link href={categorriesObjects[count].pageLink}>
                                 <button

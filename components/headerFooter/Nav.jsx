@@ -32,11 +32,11 @@ const  Nav = () => {
 
                 <header className=" h-[110px]">
                     <div key={uuidv4()} className="flex h-[110px] w-screen justify-between ">
-                        <div className="w-1/3 h-full flex flex-row items-center justify-between">
+                        <div className="w-1/4 h-full flex flex-row items-center justify-between">
                             {/* this is the cart btn */}
                             <button
                                 onClick={() => setShowCart(!showCart)}
-                                className='lg:ml-14 ml-5 mt-8 lg:mt-3'>
+                                className='lg:ml-14 ml-5 mr-5 mt-8 lg:mt-3'>
                                 <img
                                     src="/assets/icons/shopping-cart.png"
                                     alt="Cart Icon"
@@ -53,7 +53,7 @@ const  Nav = () => {
                             </button>
                             <SearchBar/>
                         </div>
-                        <div key={uuidv4()} className="flex justify-center items-center w-1/3">
+                        <div key={uuidv4()} className="flex flex-row items-center pl-20 w-2/4">
                             {/* this is the logo */}
                             <Link
                                 href="/"
@@ -64,13 +64,14 @@ const  Nav = () => {
                                     alt="Alpha limit Logo"/>
                                 <p className="text-2xl lg:h-0.5 mb-7 font-bold uppercase  ">Alpha Limit</p>
                             </Link>
+                            <img src="/assets/images/roia2030.png" alt="" className="w-18 h-16"/>
                         </div>
-                        <div key={uuidv4()} className="w-1/3 h-full  flex justify-end h-[110px]">
+                        <div key={uuidv4()} className="w-1/4 h-full  flex justify-end h-[110px]">
 
                             <nav
                                 // this is the menu on desktop screens
-                                className={` flex-row mr-5 h-[110px]
-                             gap-5 items-center pr-4 justify-evenly 
+                                className={` flex-row-evenly mr-5 h-[110px]
+                             gap-4 pr-4  
                              hidden lg:flex lg-flex`}>
                                 <Link href="/" key={uuidv4()}>
                                     <p className="menu_link_text">home</p>

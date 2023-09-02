@@ -3,14 +3,14 @@ const categorriesObjects = [
         title: 'cloud infrastructure',
         // image: '/assets/images/categoriesCarousel/cloud_infrastrucure.png',
         image: '/assets/images/categoriesBg/1.png',
-        text: 'Get youre Quotation of our portable and ready to install data centers now',
+        text: 'Get youre Quotation of our portable and ready to install data centers',
         pageLink: '/categories/Cloud-Infrastructure',
         formLink: '/quote'
     },
     {
         title: 'earthing and bonding',
         // image: '/assets/images/categoriesCarousel/earthing.png',
-        image: '/assets/images/categoriesBg/2.png',
+        image: '/assets/images/backgrounds/1.png',
         text: 'Get youre Quotation of our vast collection of earthing & bonding parts',
         pageLink: '/categories/Earthing-And-Bonding',
         formLink: '/quote'

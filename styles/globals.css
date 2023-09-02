@@ -91,6 +91,13 @@
   animation-timing-function: linear;
 }
 
+.zoomOut{
+  animation-name: zoomOut;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: normal;
+}
+
 @keyframes slider {
   0% {transform: translateX(0);}
   100% {transform: translateX(-100%);}
@@ -104,6 +111,11 @@
   100% { left:0px; top:0px;}
 }
 
+@keyframes zoomOut {
+  0%   { transform: scale(1.2);}
+  100% { transform: scale(1);}
+}
+
 /* Tailwind Styles */
 
 .app {
@@ -111,7 +123,7 @@
 } 
 
 .menu_link_text{
-  @apply text-xl cursor-pointer hover:drop-shadow-md font-bold text-gray-600 hover:text-gray-700 active:underline-offset-8 hover:text-gray-800 p-1 uppercase
+  @apply text-lg cursor-pointer hover:drop-shadow-md font-bold text-black hover:text-gray-700 active:underline-offset-8 hover:text-gray-400 p-1 uppercase
 }
 
 .green{
@@ -180,4 +192,15 @@
 
 .flex-col-end{
   @apply flex flex-col justify-end items-center
+}
+
+.flex-col-start{
+  @apply flex flex-row justify-start items-start  }
+
+.title{
+  font-family: 'open sans' sans-serif;
+}
+
+.before-after {
+  @apply before:content-[''] before:mr-4 before:w-[30%] before:h-full before:border-b-4 after:content-[''] after:ml-4 after:w-[30%] after:h-full after:border-b-4
 }

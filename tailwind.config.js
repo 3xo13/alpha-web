@@ -60,7 +60,7 @@ module.exports = {
         'cables-dark': "url('/assets/images/backgrounds/cables-dark.png')",
         'cables-orange': "url('/assets/images/backgrounds/cables-orange.png')",
         'earth-connect': "url('/assets/images/backgrounds/earth-connect.png')",
-
+        'blueprint': "url(/assets/images/backgrounds/blueprints.jpg)"
       },
       minWidth: {
         'inherit': 'inherit',
