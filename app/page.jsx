@@ -7,6 +7,7 @@ import partnersLinks from "@/public/links/partnersLinks";
 import HeroCarousel from "@/components/pagesComponents/home/HeroCarousel";
 import CategoryCarousel from "@/components/pagesComponents/home/CategoryCarousel";
 import ZoomOutCarousel from "@/components/pagesComponents/home/ZoomOutCarousel";
+import TiltedCards from "@/components/pagesComponents/home/TiltedCards";
 
 export default async function Home() {
 
@@ -19,7 +20,8 @@ export default async function Home() {
                 <ZoomOutCarousel/>
             </section>
             <section className="w-screen h-90 flex-center">
-                <CategoryCarousel/>
+                {/* <CategoryCarousel/> */}
+                <TiltedCards/>
             </section>
             <div className="w-screen h-fit flex-col-center py-16">
                 <video

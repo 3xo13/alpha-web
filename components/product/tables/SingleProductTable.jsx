@@ -2,7 +2,7 @@
 import {v4 as uuidv4} from 'uuid';
 import {useEffect, useState, useRef} from 'react';
 
-const SingleProductTable = ({table, productName, addToBaskit}) => {
+const SingleProductTable = ({table}) => {
     if (!table)return (<div key={uuidv4()}></div>);
     const [quantity,setQuantity] = useState(0);
     const [singleTable, setSingleTable] = useState(table)
@@ -40,7 +40,7 @@ const SingleProductTable = ({table, productName, addToBaskit}) => {
     
     return (
         <div key={uuidv4()} className='flex flex-col items-start justify-center pl-10 w-full '>
-            <div key={uuidv4()} className='flex flex-row items-start justify-evenly p-5 m-5 w-80% h-fit'>
+            {/* <div key={uuidv4()} className='flex flex-row items-start justify-evenly p-5 m-5 w-80% h-fit'>
                 <h3 key={uuidv4()} className='capitalize text-3xl mb-10 text-center'>
                     Add <span key={uuidv4()} className='text-yellow-500'>{productName}</span> to Bakit :
                 </h3>
@@ -59,7 +59,7 @@ const SingleProductTable = ({table, productName, addToBaskit}) => {
                     >
                         Add
                 </button>
-            </div>
+            </div> */}
             <div key={uuidv4()}>
                 <h4 key={uuidv4()} className='capitalize text-2xl'>{caption} :</h4>
             </div>

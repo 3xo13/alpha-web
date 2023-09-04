@@ -59,10 +59,10 @@ const  Nav = () => {
                                 href="/"
                                 className="flex gap-2 flex-col lg:flex-row items-center justify-end mr-7">
                                 <img
-                                    className="w-18 h-16"
-                                    src="/assets/images/logo.png"
+                                    className="w-56 h-24"
+                                    src="/assets/images/logo_wide_noBg.png"
                                     alt="Alpha limit Logo"/>
-                                <p className="text-2xl lg:h-0.5 mb-7 font-bold uppercase  ">Alpha Limit</p>
+                                {/* <p className="text-2xl lg:h-0.5 mb-7 font-bold uppercase  ">Alpha Limit</p> */}
                             </Link>
                             <img src="/assets/images/roia2030.png" alt="" className="w-18 h-16"/>
                         </div>

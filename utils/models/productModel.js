@@ -7,6 +7,8 @@ const product = new Schema({
   category: String,
   subCategory: String,
   subSubCategory: String,
+  brand: String,
+  documentType: String,
   images: [String],
   details: [{
       tagName: String,

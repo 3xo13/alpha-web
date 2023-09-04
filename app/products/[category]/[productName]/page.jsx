@@ -19,7 +19,7 @@ const Product = ({params}) => {
     const [useSingleProductBtn, setUseSingleProductBtn] = useState(false);
 
     // destructure & variables
-    const {name, images, details, options, partNumber} = product || {};
+    const {name, images, details, options, partNumber, brand, documentType} = product || {};
     const tables = options
         ?.tables || [];
     // console.log(tables); wait for the product to be fetched from the server
@@ -91,7 +91,7 @@ const Product = ({params}) => {
     }
         // add to the baskit if it's a sinle product page
         useEffect(() => {
-            if (options?.tableStyle === 'single multiple' || options?.tableStyle === 'single' || options?.tableStyle === 'none') {
+            if (documentType == 'single') { 
                 setUseSingleProductBtn(true)
             }
         }, [options])
@@ -138,9 +138,12 @@ const Product = ({params}) => {
     // decides which table (if any) to render and create a list of table elements
     // from table array
     let optionsTable;
-    if (options?.tableStyle === 'multiple multiple') {
-        optionsTable = tables.map(table => <MultipleProductTable table={table} addToBasket={addProductFromMultiTable}/>)
-    } else {
+    if (documentType === 'multiple') {
+        optionsTable = tables.map(table => <MultipleProductTable table={table} addToBasket={addProductFromMultiTable} multi={true}/>)
+    } else if (documentType === 'single' && options?.tableStyle == 'multiple multiple') {
+        optionsTable = tables.map(table => <MultipleProductTable table={table} addToBasket={addProductFromMultiTable} multi={false}/>)
+    }else{
+        
         optionsTable = tables.map(table => <SingleColMultiRowsTable table={table}/>)
     }
  
@@ -159,8 +162,8 @@ const Product = ({params}) => {
                                     setMainImg={setMainImg}
                                     name={name}/>
 
-                                <div className='flex flex-col items-center justify-start '>
-                                    <h3 className='justify-self-start mt-10 m-5 text-xl capitalize'>
+                                <div className='flex flex-col items-start justify-start pt-7'>
+                                    <h3 className='justify-self-start mt-10 my-5 text-xl capitalize'>
                                         {
                                             product
                                                 .category
@@ -168,7 +171,7 @@ const Product = ({params}) => {
                                                 .join(' ')
                                         }
                                     </h3>
-                                    <h4 className='m-5 mt-0 text-lg capitalize'>
+                                    <h4 className='my-5 mt-0 text-lg capitalize'>
                                         {
                                             product
                                                 .subCategory
@@ -177,12 +180,13 @@ const Product = ({params}) => {
                                         }
                                     </h4>
                                     <h1
-                                        className='text-3xl font-bold capitalize m-5 lg:m-0 text-center lg:text-start'>{
+                                        className='text-3xl font-bold capitalize m-5 lg:m-0 text-center lg:text-start lg:max-w-[700px]'>{
                                             name
                                                 .split('-')
                                                 .join(' ')
                                         }</h1>
                                     <h2 className='text-lg black mt-3'>{partNumber}</h2>
+                                    <h5 className='text-lg text-black mt-3'>Brand: <span className='text-lg black'>{brand}</span></h5>
                                 </div>
                             </div>
                             <div className='flex flex-col w-screen '>

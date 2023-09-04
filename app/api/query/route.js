@@ -7,8 +7,8 @@ export async function POST(request) {
         const res = await request.json();
         const namePart = res
             .query
-            .split(' ')
-            .join('-')
+            .split('-')
+            .join(' ')
         
         await connectToDB();
         // Use a regular expression to perform a case-insensitive search
@@ -22,7 +22,7 @@ export async function POST(request) {
                 }, {
                     name: regexQuery
                 },{
-                    "tables.tableContent.value": regexQuery
+                    "options.tables.tableContent.values": regexQuery
                 }
             ]
         }); // const products = await Product.find(query);

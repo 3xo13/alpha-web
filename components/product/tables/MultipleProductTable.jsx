@@ -2,7 +2,7 @@
 import {v4 as uuidv4} from 'uuid';
 import {useEffect, useState} from 'react';
 
-const MultipleProductTable = ({table, addToBasket}) => {
+const MultipleProductTable = ({table, addToBasket, multi}) => {
     const caption = table.caption;
     const tableContent = table.tableContent;
     const renderTableHeader = () => {
@@ -13,8 +13,8 @@ const MultipleProductTable = ({table, addToBasket}) => {
                         <th key={uuidv4()} className="border px-4 py-2 text-center">{rowData.header}</th>
                     ))
                 }
-                <th key={uuidv4()} className="border px-4 py-2 text-center">Quantity</th>
-                <th key={uuidv4()} className="border px-4 py-2 text-center">Add To Baskit</th>
+                {(multi ? <th key={uuidv4()} className="border px-4 py-2 text-center">Quantity</th> : '')}
+                {(multi ? <th key={uuidv4()} className="border px-4 py-2 text-center">Add To Baskit</th> : '')}
             </tr>
         );
     };
@@ -42,15 +42,15 @@ const MultipleProductTable = ({table, addToBasket}) => {
                             </td>
                         ))
                     }
-                    <td key={uuidv4()} className="border px-4 py-2 text-center">{quantityInput()}</td>
-                    <td key={uuidv4()} className="border px-4 py-2 text-center">
+                    {(multi ? <td key={uuidv4()} className="border px-4 py-2 text-center">{quantityInput()}</td> : '')}
+                    {(multi ? <td key={uuidv4()} className="border px-4 py-2 text-center">
                         <button
                             key={uuidv4()}
                             className="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded-full text-center"
                             onClick={(e) => addToBasket(e)}>
                             Add
                         </button>
-                    </td>
+                    </td> : '')}
                 </tr>
             );
         }

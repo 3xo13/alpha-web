@@ -43,7 +43,7 @@ const CategoryCarousel = () => {
             style={{
                 backgroundImage: `url(${categorriesObjects[count].image})` 
             }}
-            className='group w-screen h-90% bg-cover bg-no-repeat bg-center flex justify-between'>
+            className='group w-screen h-90% bg-cover bg-no-repeat bg-center bg-fixed flex justify-between'>
             <div className="flex-row-center w-14 h-full">
                 <button
                     id="left"
