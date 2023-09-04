@@ -15,15 +15,15 @@ export default async function Home() {
 
         <div className="w-screen title" key={uuidv4()}>
 
-            <section key={uuidv4()} className="lg:screen mb-14">
+            <section key={uuidv4()} className="screen mb-14">
                 {/* <HeroCarousel />  */}
                 <ZoomOutCarousel/>
             </section>
-            <section className="w-screen h-90 flex-center">
+            <section className="w-screen lg:h-90 h-fit flex-center">
                 {/* <CategoryCarousel/> */}
                 <TiltedCards/>
             </section>
-            <div className="w-screen h-fit flex-col-center py-16">
+            <div className="w-screen h-fit lg:flex-col-center hidden py-16">
                 <video
                     src="/assets/video/electricalBG.mp4"
                     type="video/mp4"
@@ -39,7 +39,7 @@ export default async function Home() {
                     <div
                         className="w-full h-full p-5 flex-col-evenly
                         bg-black/80 text-center">
-                        <div className="w-[80vw] h-fit">
+                        <div className="w-[80vw] h-fit mt-5">
                             <h2
                                 className="lg:text-6xl text-3xl font-bold text-center text-white
                                     min-w-max capitalize title before-after flex-row-center
@@ -49,7 +49,8 @@ export default async function Home() {
 
                         </div>
                         <p
-                            className="capitalize mt-5 w-4/5  max-w-[60%] leading-9 text-white text-2xl text-justify">Alpha
+                            className="capitalize mt-5 my-5 lg:w-4/5 lg:max-w-[60%] w-full  leading-9 
+                            text-white text-lg lg:text-2xl lg:text-justify ">Alpha
                             Limit Company is the distributor in the Middle East for electrical construction
                             material & supplies. We offer a wide range of electrical, industrial,
                             instrumentation and automation products from many of the world's leading
@@ -59,7 +60,7 @@ export default async function Home() {
                             handover process. And continue to share the success with our clients in the
                             after-sale services</p>
                         <Link href='/about'>
-                            <button className="text-lg bg-yellow-400 capitalize px-3 py-1 mt-3 rounded-lg">read more</button>
+                            <button className="text-lg bg-yellow-400 capitalize px-3 py-1 mt-3 rounded-lg title mb-5">read more</button>
                         </Link>
                     </div>
                 </div>

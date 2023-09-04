@@ -6,7 +6,7 @@ const ProductImages = ({images,mainImg,setMainImg,name}) => {
 
             <div key={uuidv4()} className='flex lg:flex-col m-5'>
                 {
-                    images.length < 2 ? null : images
+                    images?.length < 2 ? null : images
                     ?.map((img, index) => {
                         return <img
                         key={uuidv4()}

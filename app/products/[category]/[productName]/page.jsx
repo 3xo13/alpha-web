@@ -19,7 +19,15 @@ const Product = ({params}) => {
     const [useSingleProductBtn, setUseSingleProductBtn] = useState(false);
 
     // destructure & variables
-    const {name, images, details, options, partNumber, brand, documentType} = product || {};
+    const {
+        name,
+        images,
+        details,
+        options,
+        partNumber,
+        brand,
+        documentType
+    } = product || {};
     const tables = options
         ?.tables || [];
     // console.log(tables); wait for the product to be fetched from the server
@@ -67,8 +75,6 @@ const Product = ({params}) => {
             return (<p key={uuidv4()} className='m-5 text-gray-700 text-lg'>{obj.text}</p>)
         })
 
-
-
     // add the product data to the Baskit ( data mangment store from zustand )
     const addToBasketHandler = (inputValue) => {
 
@@ -89,22 +95,20 @@ const Product = ({params}) => {
         addItem(basketProduct);
         increaseQuantity(basketProduct);
     }
-        // add to the baskit if it's a sinle product page
-        useEffect(() => {
-            if (documentType == 'single') { 
-                setUseSingleProductBtn(true)
-            }
-        }, [options])
-        const addToBasketBtn = product
-            ?.name
-                ? <AddSingleProductToBaskit
-                        productName={name
-                            .split('-')
-                            .join(' ')}
-                        addToBaskit={addToBasketHandler}/>
-                : 'error  loading'
-
-
+    // add to the baskit if it's a sinle product page
+    useEffect(() => {
+        if (documentType == 'single') {
+            setUseSingleProductBtn(true)
+        }
+    }, [options])
+    const addToBasketBtn = product
+        ?.name
+            ? <AddSingleProductToBaskit
+                    productName={name
+                        .split('-')
+                        .join(' ')}
+                    addToBaskit={addToBasketHandler}/>
+            : 'error  loading'
 
     // add to baskit if it's a multi-product-page
     const addProductFromMultiTable = (e) => {
@@ -139,20 +143,39 @@ const Product = ({params}) => {
     // from table array
     let optionsTable;
     if (documentType === 'multiple') {
-        optionsTable = tables.map(table => <MultipleProductTable table={table} addToBasket={addProductFromMultiTable} multi={true}/>)
-    } else if (documentType === 'single' && options?.tableStyle == 'multiple multiple') {
-        optionsTable = tables.map(table => <MultipleProductTable table={table} addToBasket={addProductFromMultiTable} multi={false}/>)
-    }else{
-        
+        optionsTable = tables.map(
+            table => <MultipleProductTable
+                table={table}
+                addToBasket={addProductFromMultiTable}
+                multi={true}/>
+        )
+    } else if (
+        documentType === 'single' && options
+            ?.tableStyle == 'multiple multiple'
+    ) {
+        optionsTable = tables.map(
+            table => <MultipleProductTable
+                table={table}
+                addToBasket={addProductFromMultiTable}
+                multi={false}/>
+        )
+    } else {
+
         optionsTable = tables.map(table => <SingleColMultiRowsTable table={table}/>)
     }
- 
+
     return (
         <div key={uuidv4()} className='flex flex-col items-center w-screeen pt-24'>
 
             {
                 isLoading
-                    ? <p className='my-8 text-3xl text-gray-400'>Loading...</p>
+                    ? <div className="flex flex-row-center screen">
+                            <p className="text-6xl mr-10 text-yellow-500">Loading...</p>
+                            <img
+                                src="/assets/icons/loading.png"
+                                alt="lodaing"
+                                className="w-16 h-16 animate-spin"/>
+                        </div>
                     : (
                         <div key={uuidv4()}>
                             <div className='flex lg:flex-row flex-col-reverse w-screen pt-10'>
@@ -186,14 +209,18 @@ const Product = ({params}) => {
                                                 .join(' ')
                                         }</h1>
                                     <h2 className='text-lg black mt-3'>{partNumber}</h2>
-                                    <h5 className='text-lg text-black mt-3'>Brand: <span className='text-lg black'>{brand}</span></h5>
+                                    <h5 className='text-lg text-black mt-3'>Brand:
+                                        <span className='text-lg black'>{brand}</span>
+                                    </h5>
                                 </div>
                             </div>
                             <div className='flex flex-col w-screen '>
                                 <div
                                     className='w-screen flex flex-col items-start justify-center overflow-x-scroll lg:overflow-x-hidden pt-10 '>
                                     {
-                                        useSingleProductBtn ? addToBasketBtn : 'hi'
+                                        useSingleProductBtn
+                                            ? addToBasketBtn
+                                            : 'hi'
                                     }
 
                                     {optionsTable}

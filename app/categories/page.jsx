@@ -9,7 +9,7 @@ const categories = async () => {
         const name = category.name;
         const product = await getOneProduct({category: name});
         const image = product.images[0]
-        return (<CategoryCard   key={uuidv4()}
+        return (<CategoryCard
             categoryObject={{
                 name: name,
                 image: image

@@ -10,7 +10,7 @@ async function subCategoriesProducts({params}) {
   // console.log(decodedSub);
     if(category && subCategory){
         const products = await getProducts({category: decodedCat, subCategory: decodedSub});
-        productCards = products?.map(product => <ProductCard key={uuidv4()} product={product} />)
+        productCards = products?.map(product => <ProductCard product={product} />)
       }else{
         productCards = (<p>"Error fitshing Products Data"</p>)
       }

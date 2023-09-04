@@ -8,7 +8,7 @@ const MegaMenu = ({TreeData}) => {
         const cat = encodeURIComponent(category.name)
 
         return (
-            <div className='cinzel text-xl '>
+            <div className='cinzel text-xl' key={uuidv4()}>
                 <Link
                     href={`/categories/${cat}`}
                     key={uuidv4()}
@@ -42,7 +42,7 @@ const MegaMenu = ({TreeData}) => {
     })
 
     return (
-        <div className='group w-screen h-fit flex-col-center absolute top-[150px] z-50 '>
+        <div className='group w-screen h-fit flex-col items-center justify-center absolute top-[150px] z-50  lg:block hidden'>
             <img
                 src="/assets/icons/down-arrow.png"
                 alt=""

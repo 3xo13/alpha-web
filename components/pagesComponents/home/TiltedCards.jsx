@@ -2,12 +2,13 @@
 import {Tilt} from "react-tilt";
 import categorriesObjects from "@/public/links/categoriesCarouselObjects";
 import Link from "next/link";
+import {v4 as uuidv4} from 'uuid';
 
 const TiltedCards = () => {
     const cards = categorriesObjects.map((obj) => {
         
         return (
-            <div className="w-64 cursor-pointer">
+            <div className="w-64 cursor-pointer" key={uuidv4()}>
                 <Link href={obj.pageLink}>
                     <Tilt className='xs:w-[250px] w-full'>
                         <div
@@ -27,8 +28,8 @@ const TiltedCards = () => {
         )
     })
     return (
-        <div className="w-screen h-[80dvh] flex-col-center">
-            <div className="w-[80dvw] h-1/3">
+        <div className="w-screen lg:h-[80dvh] h-fit flex-col-center">
+            <div className="lg:w-[80dvw] h-1/3">
                 <h2
                     className="lg:text-6xl text-3xl font-bold text-center text-black
                                     min-w-max capitalize title before-after flex-row-center
@@ -36,7 +37,7 @@ const TiltedCards = () => {
                     check out our products
                 </h2>
             </div>
-            <div className=" flex-row-center gap-5">{cards}</div>
+            <div className=" lg:flex-row-center flex-col-center gap-5 lg:p-0 py-10">{cards}</div>
 
         </div>
     )

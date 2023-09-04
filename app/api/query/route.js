@@ -26,7 +26,7 @@ export async function POST(request) {
                 }
             ]
         }); // const products = await Product.find(query);
-        // console.log(matchingProducts);
+        console.log(matchingProducts);
         return NextResponse.json({products: matchingProducts})
     } catch (error) {
         console.log(error);

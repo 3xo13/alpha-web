@@ -5,11 +5,10 @@ import {v4 as uuidv4} from 'uuid';
 
 function searchquery({params}) {
     const [products, setProducts] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
 
     const fetchHandler = async () => {
         try {
-            setIsLoading(true)
+            
             const {query} = params;
             const res = await fetch(`/api/query`, {
                 method: 'POST',
@@ -21,7 +20,6 @@ function searchquery({params}) {
             setProducts(
                 data.products.map(item => <ProductCard product={item}/>)
             )
-            setIsLoading(false)
         } catch (e) {
             console.log(e.message)
         }
@@ -38,9 +36,7 @@ function searchquery({params}) {
                 products
                     ?.length
                         ? products
-                        : isLoading
-                            ? (<p className="pt-10 text-4xl text-gray-700/50">Loading ...</p>)
-                            : (<p className="pt-10 text-2xl text-orange-700">No Products Found</p>)
+                        : (<p className="pt-10 text-2xl text-orange-700">No Products Found</p>)
             }
         </div>
     )

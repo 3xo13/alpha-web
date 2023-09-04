@@ -4,7 +4,7 @@ import {v4 as uuidv4} from 'uuid';
 const AnouncmentBar = () => {
     return (
         <div
-            className='w-screen h-10 bg-black text-white flex flex-row items-center justify-evenly hidden lg:flex '
+            className='w-screen h-10 bg-black text-white flex flex-row items-center justify-evenly flex '
             key={uuidv4()}
             >
             <div key={uuidv4()}>
