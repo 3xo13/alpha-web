@@ -59,7 +59,7 @@ const Nav = () => {
                         </div>
                         <div
                             key={uuidv4()}
-                            className="flex flex-row items-center justify-center lg:pl-20  lg:w-2/4 w-1/3">
+                            className="flex flex-row items-center lg:justify-start justfy-center lg:pl-20  lg:w-2/4 w-1/3">
                             {/* this is the logo */}
                             <Link href="/" className="flex gap-2 flex-row items-center justify-end lg:mr-7">
                                 <img
@@ -67,7 +67,7 @@ const Nav = () => {
                                     src="/assets/images/logo_wide_noBg.png"
                                     alt="Alpha limit Logo"/> {/* <p className="text-2xl lg:h-0.5 mb-7 font-bold uppercase  ">Alpha Limit</p> */}
                             </Link>
-                            <img src="/assets/images/roia2030.png" alt="" className="w-18 h-16 hidden"/>
+                            <img src="/assets/images/roia2030.png" alt="roia2030" className="w-18 h-16 hidden lg:block"/>
                         </div>
                         <div key={uuidv4()} className="w-1/4 h-full  flex justify-end h-[110px] ">
 
@@ -123,7 +123,7 @@ const Nav = () => {
                             <Link className="text-2xl font-bold uppercase hover:text-gray-500 text-black title" href="/about" key={uuidv4()}>
                                 <p>About</p>
                             </Link>
-                            <Link className="text-2xl font-bold uppercase hover:text-gray-500 text-black title" href="/products" key={uuidv4()}>
+                            <Link className="text-2xl font-bold uppercase hover:text-gray-500 text-black title" href="/categories" key={uuidv4()}>
                                 <p>products</p>
                             </Link>
                             <Link className="text-2xl font-bold uppercase hover:text-gray-500 text-black title" href="/articles" key={uuidv4()}>

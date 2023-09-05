@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 
 export async function GET(request) {
   try {
-    console.log(request.url);
+    
     // get name and category from request params
     const { searchParams } = new URL(request.url)
     const name = searchParams.get('name')

@@ -23,9 +23,9 @@ const singleColMultiRowsTable = ({table}) => {
     
     
   return (
-    <div className='flex flex-col items-start justify-center pl-10 w-full ' key={uuidv4()}>
+    <div className='flex flex-col items-start justify-center lg:pl-10 w-full ' key={uuidv4()}>
         <div key={uuidv4()}>
-           <h4 className='capitalize text-2xl'>{table.caption}</h4> 
+           <h4 className='capitalize text-2xl pl-5 lg:pl-0'>{table.caption}</h4> 
         </div>
         
         <table className='table-auto mt-5 ml-5 shadow  min-w-90% m-5'>

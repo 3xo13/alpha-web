@@ -65,12 +65,12 @@ const MultipleProductTable = ({table, addToBasket, multi}) => {
 
     return (
         <div
-            className='flex flex-col items-start justify-center pl-10 w-full '
+            className='flex flex-col items-start justify-center lg:pl-10 w-full '
             key={uuidv4()}>
             <div key={uuidv4()}>
                 <h4 key={uuidv4()} className='capitalize text-2xl'>{caption}</h4>
             </div>
-            <table key={uuidv4()} className='table-auto mt-5 ml-5 shadow  min-w-90% m-5'>
+            <table key={uuidv4()} className='table-auto shadow-xl  min-w-90% m-5'>
                 <thead>{renderTableHeader()}</thead>
                 <tbody>{renderTableRows()}</tbody>
             </table>

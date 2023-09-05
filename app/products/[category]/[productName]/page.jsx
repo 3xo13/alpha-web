@@ -72,7 +72,7 @@ const Product = ({params}) => {
                     )
                 return (<ul key={uuidv4()}>{list}</ul>)
             }
-            return (<p key={uuidv4()} className='m-5 text-gray-700 text-lg'>{obj.text}</p>)
+            return (<p key={uuidv4()} className='my-5 text-gray-700 lg:text-lg'>{obj.text}</p>)
         })
 
     // add the product data to the Baskit ( data mangment store from zustand )
@@ -165,7 +165,7 @@ const Product = ({params}) => {
     }
 
     return (
-        <div key={uuidv4()} className='flex flex-col items-center w-screeen pt-24'>
+        <div key={uuidv4()} className='flex flex-col items-center w-screeen lg:pt-24'>
 
             {
                 isLoading
@@ -185,7 +185,7 @@ const Product = ({params}) => {
                                     setMainImg={setMainImg}
                                     name={name}/>
 
-                                <div className='flex flex-col items-start justify-start pt-7'>
+                                <div className='flex flex-col lg:items-start items-center justify-start pt-7'>
                                     <h3 className='justify-self-start mt-10 my-5 text-xl capitalize'>
                                         {
                                             product
@@ -203,7 +203,8 @@ const Product = ({params}) => {
                                         }
                                     </h4>
                                     <h1
-                                        className='text-3xl font-bold capitalize m-5 lg:m-0 text-center lg:text-start lg:max-w-[700px]'>{
+                                        className='text-3xl font-bold capitalize lg:m-5 lg:m-0 
+                                        text-center lg:text-start lg:max-w-[700px] '>{
                                             name
                                                 .split('-')
                                                 .join(' ')
@@ -214,18 +215,18 @@ const Product = ({params}) => {
                                     </h5>
                                 </div>
                             </div>
-                            <div className='flex flex-col w-screen '>
+                            <div className='flex flex-col w-screen overflow-x-scroll lg:overflow-x-hidden items-center justify-center'>
                                 <div
                                     className='w-screen flex flex-col items-start justify-center overflow-x-scroll lg:overflow-x-hidden pt-10 '>
                                     {
                                         useSingleProductBtn
                                             ? addToBasketBtn
-                                            : 'hi'
+                                            : ''
                                     }
 
                                     {optionsTable}
                                 </div>
-                                <div className='w-11/12 flex flex-col p-10'>
+                                <div className='lg:w-11/12 w-full flex flex-col p-5 lg:p-10'>
 
                                     {detailedText}
                                 </div>

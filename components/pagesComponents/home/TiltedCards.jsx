@@ -8,11 +8,11 @@ const TiltedCards = () => {
     const cards = categorriesObjects.map((obj) => {
         
         return (
-            <div className="w-64 cursor-pointer" key={uuidv4()}>
+            <div className="w-64 cursor-pointer lg:m-0 m-5" key={uuidv4()}>
                 <Link href={obj.pageLink}>
                     <Tilt className='xs:w-[250px] w-full'>
                         <div
-                            className='w-full p-[1px] rounded-[20px] bg-cover bg-center bg-no-repeat'
+                            className='w-full p-[1px] rounded-[20px] bg-cover bg-center bg-no-repeat drop-shadow-lg'
                             style={{
                                 backgroundImage: `url(${obj.image})`
                             }}>
@@ -37,7 +37,7 @@ const TiltedCards = () => {
                     check out our products
                 </h2>
             </div>
-            <div className=" lg:flex-row-center flex-col-center gap-5 lg:p-0 py-10">{cards}</div>
+            <div className=" lg:flex-row flex-col flex items-center justify-center gap-5 lg:p-0 py-10">{cards}</div>
 
         </div>
     )

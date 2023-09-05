@@ -28,8 +28,13 @@ const MegaMenu = ({TreeData}) => {
                             return (
                                 <Link href={`/category/${cat}/${encodedSub}`} key={uuidv4()}>
                                     <div className="flex flex-row w-full items-center" key={uuidv4()}>
-                                        <h4 className=" capitalize text-lg" >
-                                            {sub.name.split('-').join(' ')}
+                                        <h4 className=" capitalize text-lg">
+                                            {
+                                                sub
+                                                    .name
+                                                    .split('-')
+                                                    .join(' ')
+                                            }
                                         </h4>
 
                                     </div>
@@ -42,14 +47,18 @@ const MegaMenu = ({TreeData}) => {
     })
 
     return (
-        <div className='group w-screen h-fit flex-col items-center justify-center absolute top-[150px] z-50  lg:block hidden'>
-            <img
-                src="/assets/icons/down-arrow.png"
-                alt=""
-                style={{
-                    animationIterationCount: 3
-                }}
-                className='w-5 group-hover:hidden animate-ping'/>
+        <div
+            className='group w-screen h-fit flex-col items-center justify-center absolute top-[150px] z-50  lg:block hidden'>
+            <div className='w-full h-fit flex-center'>
+                <img
+                    src="/assets/icons/down-arrow.png"
+                    alt=""
+                    style={{
+                        animationIterationCount: 3
+                    }}
+                    className='w-5 group-hover:hidden animate-ping '/>
+
+            </div>
 
             <div
                 className='w-screen h-fit flex flex-row items-start justify-evenly flex-no-wrap hidden group-hover:flex bg-white/80 p-5 pt-0'>

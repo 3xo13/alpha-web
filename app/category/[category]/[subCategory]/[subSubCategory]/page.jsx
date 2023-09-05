@@ -19,7 +19,7 @@ const subSubCategoriesProducts = async ({params}) => {
   }
   
 return (
-    <div key={uuidv4()} className="w-screen flex flex-row flex-wrap pl-5 pt-40">
+    <div key={uuidv4()} className="w-screen flex flex-row flex-wrap items-center justify-center pl-5 pt-40">
       {productCards}
     </div>
   )

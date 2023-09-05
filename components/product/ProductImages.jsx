@@ -18,7 +18,7 @@ const ProductImages = ({images,mainImg,setMainImg,name}) => {
                     })
                 }
             </div>
-            <img src={mainImg} alt={name} className='w-96 h-96'/>
+            <img src={mainImg} alt={name} className='w-96 h-96 hover:object-cover object-contain'/>
         </div>
     )
 }
