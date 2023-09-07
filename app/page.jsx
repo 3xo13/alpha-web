@@ -15,7 +15,7 @@ export default async function Home() {
 
         <div className="w-screen title" key={uuidv4()}>
 
-            <section key={uuidv4()} className="screen mb-14">
+            <section key={uuidv4()} className="screen mb-14 ">
                 {/* <HeroCarousel />  */}
                 <ZoomOutCarousel/>
             </section>
