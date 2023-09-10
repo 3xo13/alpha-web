@@ -60,7 +60,13 @@ module.exports = {
         'cables-dark': "url('/assets/images/backgrounds/cables-dark.png')",
         'cables-orange': "url('/assets/images/backgrounds/cables-orange.png')",
         'earth-connect': "url('/assets/images/backgrounds/earth-connect.png')",
-        'blueprint': "url(/assets/images/backgrounds/blueprints.jpg)"
+        'blueprint': "url(/assets/images/backgrounds/blueprints.jpg)",
+        'kingsmill-flyer' : "url('/assets/images/backgrounds/flyers/4.svg')",
+        'apc-flyer' : "url('/assets/images/backgrounds/flyers/5.svg')",
+        'optima-flyer' : "url('/assets/images/backgrounds/flyers/4.svg')",
+        'kingsmill-mobile-flyer' : "url('/assets/images/backgrounds/flyers/kingsmill_mobile-flyer.svg')",
+        'apc-mobile-flyer' : "url('/assets/images/backgrounds/flyers/apc_mobile-flyer.svg')",
+        'optima-mobile-flyer' : "url('/assets/images/backgrounds/flyers/optima_mobile-flyer.svg')",
       },
       minWidth: {
         'inherit': 'inherit',

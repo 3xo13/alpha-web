@@ -17,13 +17,13 @@ const Footer = () => {
                         <p className="text-xl black">Trading and Contracting</p>
                     </div>
                     <div key={uuidv4()} className='ml-10 mr-10 flex lg:flex-row flex-col'>
-                        <Link href="https://www.linkedin.com/" className='z-50'>
+                        <Link href="https://www.linkedin.com/company/alpha-limit-for-trading-contracting/" target="_blank" className='z-50'>
                             <img alt='linkedin' src={'/assets/icons/social/1.svg'} className='w-9 h-9 m-2'/>
                         </Link>
-                        <Link href="https://www.instagram.com/" className='z-50'>
+                        <Link href="https://www.instagram.com/" target="_blank" className='z-50'>
                             <img alt='instagram' src={'/assets/icons/social/2.svg'} className='w-9 h-9 m-2'/>
                         </Link>
-                        <Link href="https://www.facebook.com/" className='z-50'>
+                        <Link href="https://www.facebook.com/people/Alpha-Limit/100090403432158/" target="_blank" className='z-50'>
                             <img alt='facebook' src={'/assets/icons/social/3.svg'} className='w-9 h-9 m-2'/>
                         </Link>
                     </div>

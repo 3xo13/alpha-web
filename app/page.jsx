@@ -13,7 +13,7 @@ export default async function Home() {
 
     return (
 
-        <div className="w-screen title" key={uuidv4()}>
+        <div className="w-screen title h-fit" key={uuidv4()}>
 
             <section key={uuidv4()} className="screen mb-14 ">
                 {/* <HeroCarousel />  */}

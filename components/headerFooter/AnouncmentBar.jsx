@@ -48,13 +48,13 @@ const AnouncmentBar = () => {
                 </Link>
             </div>
             <div key={uuidv4()} className="flex flex-row items-center ">
-                <Link target="_blank" href='https://www.linkedin.com/' className="m-2">
+                <Link target="_blank" href='https://www.linkedin.com/company/alpha-limit-for-trading-contracting/' className="m-2">
                     <img src={'/assets/icons/social/1.svg'} alt='linkedin' className="w-5 h-5"/>
                 </Link>
                 <Link target="_blank" href='https://www.instagram.com/' className="m-2">
                     <img src={'/assets/icons/social/2.svg'} alt='instagram' className="w-5 h-5"/>
                 </Link>
-                <Link target="_blank" href='https://www.facebook.com/' className="m-2">
+                <Link target="_blank" href='https://www.facebook.com/people/Alpha-Limit/100090403432158/' className="m-2">
                     <img src={'/assets/icons/social/3.svg'} alt='facebook' className="w-5 h-5"/>
                 </Link>
             </div>
