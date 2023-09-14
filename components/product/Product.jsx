@@ -12,12 +12,12 @@ const Product = ({productObject}) => {
     // const [mainImg, setMainImg] = useState(images[0]);
     // console.log(values);
     const optionsTable = (
-        <table className="table-auto mt-5 ml-5 shadow" key={uuidv4()}>
+        <table key={uuidv4()} className="table-auto mt-5 ml-5 shadow">
             <thead>
                 <tr key={uuidv4()}>
                     {
                         headers.map((header, index) => {
-                            return <th className="px-4 py-2" key={uuidv4()}
+                            return <th key={uuidv4()} className="px-4 py-2"
                                 data-value={header}
                             >{header}</th>
                         })

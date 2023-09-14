@@ -3,19 +3,16 @@ import Link from 'next/link'
 import {v4 as uuidv4} from 'uuid';
 
 
-// product card component
+// product card component used to display a product's image and name
 const ProductCard = ({product}) => {
-   // this component is used to display a product's image and name
-//    console.log('product id', product._id.toString());
-//    let id = product?._id.toString() || ''
-//    console.log('category', product.category);
    const encodedCat = encodeURIComponent(product.category)
    const encodedProductName = encodeURIComponent(product.name)
     const name = product?.name.split('-').join(' ') || ''
     return (
         // when the product card is clicked, the user is redirected to the product's page
-        <Link href={`/products/${encodedCat}/${encodedProductName}`} key={uuidv4()}> 
-        <div key={uuidv4()}
+        <div key={uuidv4()}>
+        <Link href={`/products/${encodedCat}/${encodedProductName}`}> 
+        <div
             className="flex flex-col justify-end items-center w-64 h-64 bg-contain bg-center bg-no-repeat m-5"
             style={{'backgroundImage': `url(${product.images[0]}`}}
             >
@@ -25,6 +22,7 @@ const ProductCard = ({product}) => {
 
         </div>
         </Link>
+    </div>
     )
 }
 

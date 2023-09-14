@@ -4,15 +4,15 @@ import {v4 as uuidv4} from 'uuid';
 const singleColMultiRowsTable = ({table}) => { 
     const headers = table.tableContent.map(obj => {
         return(
-            <td className="border px-4 py-2 text-center" key={uuidv4()}>
+            <td key={uuidv4()} className="border px-4 py-2 text-center">
                 {obj.header}
             </td>
         )
     })
     const rows = headers.map((header,i) => {
-        const vals = table.tableContent[i].values.map(val => [val,<br  key={uuidv4()}/>])
+        const vals = table.tableContent[i].values.map(val => [val,<br key={uuidv4()}/>])
         return(
-            <tr className={`${i % 2 > 0 ? 'transparent' : 'bg-slate-100'} text-gray-700 text-lg`} key={uuidv4()}>
+            <tr key={uuidv4()} className={`${i % 2 > 0 ? 'transparent' : 'bg-slate-100'} text-gray-700 text-lg`}>
                 {header}
                 <td key={uuidv4()} className="border px-4 py-2 text-center">
                     {vals}
@@ -23,8 +23,8 @@ const singleColMultiRowsTable = ({table}) => {
     
     
   return (
-    <div className='flex flex-col items-start justify-center lg:pl-10 w-full ' key={uuidv4()}>
-        <div key={uuidv4()}>
+    <div key={uuidv4()} className='flex flex-col items-start justify-center lg:pl-10 w-full '>
+        <div>
            <h4 className='capitalize text-2xl pl-5 lg:pl-0'>{table.caption}</h4> 
         </div>
         

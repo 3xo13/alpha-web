@@ -16,7 +16,7 @@ async function subCategoriesProducts({params}) {
       }
       
     return (
-        <div key={uuidv4()} className="w-screen flex flex-row flex-wrap pl-5 pt-24 mt-10">
+        <div className="w-screen flex flex-row flex-wrap pl-5 pt-24 mt-10">
           {productCards}
         </div>
       )

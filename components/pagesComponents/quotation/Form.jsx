@@ -114,9 +114,12 @@ const Form = ({submitting, handleSubmit, items}) => {
                         items
                             ? items.map((item) => {
                                 return (
-                                    <div
-                                        className='flex flex-row justify-between items-center border-1 solid border rounded-lg p-2'
-                                        key={uuidv4()}>
+                                    <div 
+                                        key={uuidv4()}
+                                        className='flex flex-row justify-between 
+                                        items-center border-1 solid border rounded-lg 
+                                        p-2'
+                                        >
                                         <p className='w-64 text-gray-700 capitalize'>{item.name}</p>
                                         <p className="min-w-fit mr-2">Part No: {item.partNumber}</p>
                                         <button

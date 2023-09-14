@@ -13,9 +13,9 @@ export default async function Home() {
 
     return (
 
-        <div className="w-screen title h-fit" key={uuidv4()}>
+        <div className="w-screen title h-fit">
 
-            <section key={uuidv4()} className="screen mb-14 ">
+            <section className="screen mb-14 ">
                 {/* <HeroCarousel />  */}
                 <ZoomOutCarousel/>
             </section>
@@ -32,7 +32,7 @@ export default async function Home() {
                     className="w-120%"></video>
                 <img src="/assets/images/logo.png" alt="logo" className="w-54 h-40 absolute"/>
             </div>
-            <section key={uuidv4()} className="about lg:screen ">
+            <section className="about lg:screen ">
                 <div
                     className='w-screen lg:h-screen h-fit bg-riadh-day bg-cover bg-fixed bg-no-repeat
                      flex items-center justify-end lg:justify-between'>

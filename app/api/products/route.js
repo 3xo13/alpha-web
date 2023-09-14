@@ -4,11 +4,13 @@ import { NextResponse } from 'next/server';
 
 export async function GET(request) {
   try {
-    
+    // console.log(new URL(request.url));
     // get name and category from request params
     const { searchParams } = new URL(request.url)
     const name = searchParams.get('name')
+    // console.log('name', name);
     const category = searchParams.get('category')
+    // console.log('category', category);
 
     if (!name || !category) return NextResponse.json({ error: 'name and category are required' }, { status: 400 })
     await connectToDB(); // connect to dataBase

@@ -30,7 +30,7 @@ const Product = ({params}) => {
     } = product || {};
     const tables = options
         ?.tables || [];
-    // console.log(tables); wait for the product to be fetched from the server
+    // wait for the product to be fetched from the server
     const fetchHandler = async () => {
         try {
             const {category, productName} = params;
@@ -48,7 +48,7 @@ const Product = ({params}) => {
             setIsLoading(false)
         }
     }
-    // call the setch handler
+    // call the fetch handler
     useEffect(() => {
         fetchHandler()
     }, [])
@@ -56,7 +56,8 @@ const Product = ({params}) => {
     // create the UI for each text
     const detailedText = details
         ?.map((obj, index) => {
-            if (obj === []) 
+            
+            if (!obj.length) 
                 return false;
             const tagName = obj.tagName;
             if (tagName == 'h4') {
@@ -110,7 +111,7 @@ const Product = ({params}) => {
                     addToBaskit={addToBasketHandler}/>
             : 'error  loading'
 
-    // add to baskit if it's a multi-product-page
+    // using this function to add products to the baskit if it's a multi-product-page
     const addProductFromMultiTable = (e) => {
         const selectedOption = e.target.parentNode.parentNode.childNodes;
         const selectedOptionValues = [];
@@ -134,7 +135,7 @@ const Product = ({params}) => {
             id: product._id,
             image: mainImg
         }
-        console.log(basketProduct.partNumber);
+        // console.log(basketProduct.partNumber);
         addItem(basketProduct);
         increaseQuantity(basketProduct);
     }
@@ -145,6 +146,7 @@ const Product = ({params}) => {
     if (documentType === 'multiple') {
         optionsTable = tables.map(
             table => <MultipleProductTable
+                key={uuidv4()}
                 table={table}
                 addToBasket={addProductFromMultiTable}
                 multi={true}/>
@@ -155,13 +157,14 @@ const Product = ({params}) => {
     ) {
         optionsTable = tables.map(
             table => <MultipleProductTable
+                key={uuidv4()}
                 table={table}
                 addToBasket={addProductFromMultiTable}
                 multi={false}/>
         )
     } else {
 
-        optionsTable = tables.map(table => <SingleColMultiRowsTable table={table}/>)
+        optionsTable = tables.map(table => <SingleColMultiRowsTable key={uuidv4()} table={table}/>)
     }
 
     return (
@@ -180,6 +183,7 @@ const Product = ({params}) => {
                         <div key={uuidv4()}>
                             <div className='flex lg:flex-row flex-col-reverse w-screen pt-10'>
                                 <ProductImages
+                                    key={uuidv4()}
                                     images={images}
                                     mainImg={mainImg}
                                     setMainImg={setMainImg}

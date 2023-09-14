@@ -26,7 +26,7 @@ const MegaMenu = ({TreeData}) => {
                         .map(sub => {
                             const encodedSub = encodeURIComponent(encodeURIComponent(sub.name))
                             return (
-                                <Link href={`/category/${cat}/${encodedSub}`} key={uuidv4()}>
+                                <Link key={uuidv4()} href={`/category/${cat}/${encodedSub}`}>
                                     <div className="flex flex-row w-full items-center" key={uuidv4()}>
                                         <h4 className=" capitalize text-lg">
                                             {

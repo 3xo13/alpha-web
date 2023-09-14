@@ -8,7 +8,7 @@ const TiltedCards = () => {
     const cards = categorriesObjects.map((obj) => {
         
         return (
-            <div className="w-64 cursor-pointer lg:m-0 m-5" key={uuidv4()}>
+            <div key={uuidv4()} className="w-64 cursor-pointer lg:m-0 m-5">
                 <Link href={obj.pageLink}>
                     <Tilt className='xs:w-[250px] w-full'>
                         <div
@@ -28,7 +28,7 @@ const TiltedCards = () => {
         )
     })
     return (
-        <div className="w-screen lg:h-[80dvh] h-fit flex-col-center">
+        <div key={uuidv4()} className="w-screen lg:h-[80dvh] h-fit flex-col-center">
             <div className="lg:w-[80dvw] h-1/3">
                 <h2
                     className="lg:text-6xl text-3xl font-bold text-center text-black

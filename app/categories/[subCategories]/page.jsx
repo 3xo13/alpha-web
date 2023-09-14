@@ -15,7 +15,7 @@ const subCategories = async ({params}) => {
         const product = await getOneProduct({subCategory: name});
         // console.log(product.name);
         const image = product.images[0]
-        return (<SubCategoryCard key={uuidv4()}
+        return (<SubCategoryCard
             categoryObject={{
                 category: category.name,
                 subCategory: encodedName,
