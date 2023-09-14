@@ -1,11 +1,10 @@
-import {connectToDB} from "@/utils/database";
+
 import getCategories from './getCategories'
 import getProducts from "./getProducts";
 
 export default async function creatTree() {
 
-    try {
-        await connectToDB(); // connect to dataBase
+    try { // connect to dataBase
         // get all categories where subCategories is null
         const categories = await getCategories(
             {"subCategories.name": null, "subCategories.parent": null}

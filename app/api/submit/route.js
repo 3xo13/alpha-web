@@ -40,7 +40,7 @@ export const POST = async (request) => {
 
     try {
         const {name, email, items, message, phone} = await request.json();
-        await connectToDB();
+        // await connectToDB();
         const newQuote = new Quote({name, email, items, message, phone});
 
         await newQuote.save();

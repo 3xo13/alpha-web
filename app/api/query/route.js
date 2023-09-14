@@ -10,7 +10,7 @@ export async function POST(request) {
             .split('-')
             .join(' ')
         
-        await connectToDB();
+        // await connectToDB();
         // Use a regular expression to perform a case-insensitive search
         const regexQuery = new RegExp(namePart, 'i');
 

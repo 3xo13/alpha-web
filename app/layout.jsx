@@ -6,6 +6,7 @@ import createTree from "@/functions/createTree";
 import Footer from "@/components/headerFooter/Footer";
 import AnouncmentBar from "@/components/headerFooter/AnouncmentBar";
 import MegaMenu from '@/components/navigation/MegaMenu';
+import {connectToDB} from "@/utils/database";
 
 export const metadata = {
     title: 'ALPHA LIMIT',
@@ -18,8 +19,14 @@ export const metadata = {
 }
 
 export default async function RootLayout({children}) {
-
-    const tree = await createTree();
+    let tree;
+    try {
+        await connectToDB();
+        
+        tree = await createTree();
+    } catch (error) {
+        console.log(error);
+    }
 
     return (
         <html lang="en">
@@ -44,7 +51,7 @@ export default async function RootLayout({children}) {
                     <div className="flex flex-col items-center ">
 
                         {/* <ProductsNavigation TreeData={tree}/> */}
-                        <MegaMenu TreeData={tree}/> 
+                        {tree && <MegaMenu TreeData={tree}/>} 
                         {children}
 
                         <Footer/>

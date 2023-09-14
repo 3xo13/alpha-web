@@ -30,6 +30,7 @@ const Product = ({params}) => {
     } = product || {};
     const tables = options
         ?.tables || [];
+        
     // wait for the product to be fetched from the server
     const fetchHandler = async () => {
         try {
