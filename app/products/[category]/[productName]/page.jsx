@@ -104,7 +104,7 @@ const Product = ({params}) => {
     }, [options])
     const addToBasketBtn = product
         ?.name
-            ? <AddSingleProductToBaskit
+            ? <AddSingleProductToBaskit key={uuidv4()}
                     productName={name
                         .split('-')
                         .join(' ')}

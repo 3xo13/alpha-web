@@ -66,7 +66,7 @@ const  ProductsNavigation = async ({TreeData}) => {
                                                 {subCategory.subSubCategories.map((subSub, i) => {
                                                   return(
                                                     <div key={uuidv4()}>
-                                                      <ClickableCategory catName={category.name} subName={subCategory.name} subSubName={subSub.name} />
+                                                      <ClickableCategory key={uuidv4()} catName={category.name} subName={subCategory.name} subSubName={subSub.name} />
                                                     </div> 
                                                   )
                                                 })}</div>

@@ -8,7 +8,7 @@ const MegaMenu = ({TreeData}) => {
         const cat = encodeURIComponent(category.name)
 
         return (
-            <div className='cinzel text-xl' key={uuidv4()}>
+            <div key={uuidv4()} className='cinzel text-xl'>
                 <Link
                     href={`/categories/${cat}`}
                     key={uuidv4()}
