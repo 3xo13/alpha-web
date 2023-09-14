@@ -40,8 +40,8 @@ const Product = ({params}) => {
             const data = await res.json()
             if (!res.ok) 
                 throw new Error(data.error || 'Something went wrong')
-            setProduct(data.product)
-            setMainImg(data.product.images[0])
+            setProduct(data?.product)
+            setMainImg(data?.product?.images[0])
         } catch (e) {
             setError(e.message)
         } finally {
@@ -57,16 +57,15 @@ const Product = ({params}) => {
     const detailedText = details
         ?.map((obj, index) => {
             
-            if (!obj.length) 
+            if (!obj?.length) 
                 return false;
-            const tagName = obj.tagName;
+            const tagName = obj?.tagName;
             if (tagName == 'h4') {
                 return (<h4 key={uuidv4()} className='text-gray-700 text-2xl'>{obj.text}</h4>)
             }
             if (tagName == 'ul') {
                 // console.log('obj',obj);
-                const list = obj
-                    .text
+                const list = obj?.text
                     .split('//')
                     .map(
                         text => text !== '' && <li key={uuidv4()} className='list-disc ml-5'>{text}</li>
@@ -82,14 +81,13 @@ const Product = ({params}) => {
         if (inputValue == 0) 
             return;
         const basketProduct = {
-            name: name
-                .split('-')
+            name: name?.split('-')
                 .join(' '),
             headers: null,
             options: null,
             quantity: parseInt(inputValue),
             partNumber: partNumber,
-            id: product._id,
+            id: product?._id,
             image: mainImg
         }
 
@@ -102,8 +100,7 @@ const Product = ({params}) => {
             setUseSingleProductBtn(true)
         }
     }, [options])
-    const addToBasketBtn = product
-        ?.name
+    const addToBasketBtn = product?.name
             ? <AddSingleProductToBaskit key={uuidv4()}
                     productName={name
                         .split('-')
@@ -127,12 +124,11 @@ const Product = ({params}) => {
         if (selectedOptionValues.at(-1) == 0) 
             return;
         const basketProduct = {
-            name: name
-                .split('-')
+            name: name?.split('-')
                 .join(' '),
             quantity: parseInt(selectedOptionValues.at(-1)),
             partNumber: selectedOptionValues.at(-2),
-            id: product._id,
+            id: product?._id,
             image: mainImg
         }
         // console.log(basketProduct.partNumber);
@@ -143,19 +139,19 @@ const Product = ({params}) => {
     // decides which table (if any) to render and create a list of table elements
     // from table array
     let optionsTable;
-    if (documentType === 'multiple') {
-        optionsTable = tables.map(
+    if (documentType && documentType === 'multiple') {
+        optionsTable = tables?.map(
             table => <MultipleProductTable
                 key={uuidv4()}
                 table={table}
                 addToBasket={addProductFromMultiTable}
                 multi={true}/>
         )
-    } else if (
+    } else if (documentType &&  
         documentType === 'single' && options
             ?.tableStyle == 'multiple multiple'
     ) {
-        optionsTable = tables.map(
+        optionsTable = tables?.map(
             table => <MultipleProductTable
                 key={uuidv4()}
                 table={table}
@@ -164,7 +160,7 @@ const Product = ({params}) => {
         )
     } else {
 
-        optionsTable = tables.map(table => <SingleColMultiRowsTable key={uuidv4()} table={table}/>)
+        optionsTable = tables?.map(table => <SingleColMultiRowsTable key={uuidv4()} table={table}/>)
     }
 
     return (
@@ -193,7 +189,7 @@ const Product = ({params}) => {
                                     <h3 className='justify-self-start mt-10 my-5 text-xl capitalize'>
                                         {
                                             product
-                                                .category
+                                                ?.category
                                                 .split('-')
                                                 .join(' ')
                                         }
@@ -201,7 +197,7 @@ const Product = ({params}) => {
                                     <h4 className='my-5 mt-0 text-lg capitalize'>
                                         {
                                             product
-                                                .subCategory
+                                                ?.subCategory
                                                 .split('-')
                                                 .join(' ')
                                         }
@@ -210,7 +206,7 @@ const Product = ({params}) => {
                                         className='text-3xl font-bold capitalize lg:m-5 lg:m-0 
                                         text-center lg:text-start lg:max-w-[700px] '>{
                                             name
-                                                .split('-')
+                                                ?.split('-')
                                                 .join(' ')
                                         }</h1>
                                     <h2 className='text-lg black mt-3'>{partNumber}</h2>

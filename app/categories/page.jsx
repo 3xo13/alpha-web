@@ -5,10 +5,10 @@ import { v4 as uuidv4 } from 'uuid';
 
 const categories = async () => {
     const categories = await getCategories({'subCategories.name': null});
-    const cards = await categories.map(async (category) => {
+    const cards = await categories?.map(async (category) => {
         const name = category.name;
         const product = await getOneProduct({category: name});
-        const image = product.images[0]
+        const image = product?.images[0] || '/assets/images/logo.png'
         return (<CategoryCard
             key={uuidv4()}
             categoryObject={{

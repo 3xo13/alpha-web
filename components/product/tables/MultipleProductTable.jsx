@@ -7,8 +7,8 @@ import {useEffect, useState} from 'react';
 // the handling functionality
 const MultipleProductTable = ({table, addToBasket, multi}) => {
 
-    const caption = table.caption;
-    const tableContent = table.tableContent;
+    const caption = table?.caption;
+    const tableContent = table?.tableContent;
     const renderTableHeader = () => {
         return (
             <tr key={uuidv4()} className='text-gray-700 text-lg'>
@@ -41,7 +41,7 @@ const MultipleProductTable = ({table, addToBasket, multi}) => {
 
     const renderTableRows = () => {
         const maxValuesLength = Math.max(
-            ...tableContent.map((rowData) => rowData.values.length)
+            ...tableContent?.map((rowData) => rowData.values.length)
         );
         const rows = [];
         for (let i = 0; i < maxValuesLength; i++) {
@@ -52,7 +52,7 @@ const MultipleProductTable = ({table, addToBasket, multi}) => {
                         ? 'transparent'
                         : 'bg-slate-100'} text-gray-700 text-lg`}>
                     {
-                        tableContent.map((rowData) => (
+                        tableContent?.map((rowData) => (
                             <td key={uuidv4()} className="border px-4 py-2 text-center">
                                 {
                                     rowData.values[i] !== undefined

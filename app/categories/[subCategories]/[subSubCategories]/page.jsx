@@ -10,7 +10,7 @@ const subSubCategories = async ({params}) => {
   // console.log(decodedSubSub);
   const categories = await getCategories({name: subCategories, 'subCategories.name': decodedSubSub, 'subSubCategories.name': {$ne: null}});
   
-    const cards = await categories.map(async (category) => {
+    const cards = await categories?.map(async (category) => {
         const name = category.subSubCategories.name;
         const encodedName = encodeURIComponent(name)
         const product = await getOneProduct({subSubCategory: name});

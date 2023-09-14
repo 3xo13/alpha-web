@@ -8,13 +8,13 @@ const subCategories = async ({params}) => {
   const categories = await getCategories({'subCategories.parent': subCategories, 'subSubCategories.name': null});
   // console.log(categories);
 
-    const cards = await categories.map(async (category) => {
+    const cards = await categories?.map(async (category) => {
         const name = category.subCategories.name;
         const encodedName = encodeURIComponent(name)
         // console.log('subname:', name);
         const product = await getOneProduct({subCategory: name});
         // console.log(product.name);
-        const image = product.images[0]
+        const image = product?.images[0] || '/assets/images/logo.png'
         return (<SubCategoryCard key={uuidv4()}
             categoryObject={{
                 category: category.name,
