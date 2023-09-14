@@ -12,7 +12,6 @@ const categories = async () => {
             const product = await getOneProduct({category: name});
             const image = product?.images[0] || '/assets/images/logo.png'
             return (<CategoryCard
-                key={uuidv4()}
                 categoryObject={{
                     name: name,
                     image: image

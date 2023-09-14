@@ -18,7 +18,7 @@ const subSubCategories = async ({params}) => {
           const product = await getOneProduct({subSubCategory: name});
           // console.log(product.name); 
           const image = product?.images[0] || '/assets/images/logo.png' 
-          return (<SubSubCategoryCard key={uuidv4()}
+          return (<SubSubCategoryCard
             categoryObject={{
                 category: category.name,
                 subCategory: category.subCategories.name, 

@@ -8,6 +8,7 @@ async function subCategoriesProducts({params}) {
   const decodedCat = decodeURIComponent(category) 
   const decodedSub = decodeURIComponent(decodeURIComponent(subCategory))
   // console.log(decodedSub);
+  try {
     if(category && subCategory){
         const products = await getProducts({category: decodedCat, subCategory: decodedSub});
         productCards = products?.map(product => <ProductCard key={uuidv4()} product={product} />)
@@ -15,6 +16,10 @@ async function subCategoriesProducts({params}) {
         productCards = (<p>"Error fitshing Products Data"</p>)
       }
       
+    
+  } catch (error) {
+    productCards = <p>{error}</p>
+  }
     return (
         <div className="w-screen flex flex-row flex-wrap pl-5 pt-24 mt-10">
           {productCards}

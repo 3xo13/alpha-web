@@ -36,7 +36,10 @@ const Product = ({params}) => {
         try {
             const {category, productName} = params;
             const res = await fetch(
-                `/api/products?category=${category}&name=${productName}`
+                `/api/products`, {
+                    method: 'POST',
+                    body: JSON.stringify({category: category, name: productName})
+                }
             )
             const data = await res.json()
             if (!res.ok) 
