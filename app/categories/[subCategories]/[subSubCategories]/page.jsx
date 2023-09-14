@@ -8,22 +8,29 @@ const subSubCategories = async ({params}) => {
   const {subCategories, subSubCategories} = params;
   const decodedSubSub = decodeURIComponent(decodeURIComponent(subSubCategories))
   // console.log(decodedSubSub);
-  const categories = await getCategories({name: subCategories, 'subCategories.name': decodedSubSub, 'subSubCategories.name': {$ne: null}});
-  
-    const cards = await categories?.map(async (category) => {
-        const name = category.subSubCategories.name;
-        const encodedName = encodeURIComponent(name)
-        const product = await getOneProduct({subSubCategory: name});
-        // console.log(product.name); 
-        const image = product?.images[0] || '/assets/images/logo.png' 
-        return (<SubSubCategoryCard key={uuidv4()}
-          categoryObject={{
-              category: category.name,
-              subCategory: category.subCategories.name, 
-              subSubCategory: encodedName, 
-              image: image,
-          }}/>)
-    }); 
+  let cards;
+  try {
+    const categories = await getCategories({name: subCategories, 'subCategories.name': decodedSubSub, 'subSubCategories.name': {$ne: null}});
+    
+      cards = await categories?.map(async (category) => {
+          const name = category.subSubCategories.name;
+          const encodedName = encodeURIComponent(name)
+          const product = await getOneProduct({subSubCategory: name});
+          // console.log(product.name); 
+          const image = product?.images[0] || '/assets/images/logo.png' 
+          return (<SubSubCategoryCard key={uuidv4()}
+            categoryObject={{
+                category: category.name,
+                subCategory: category.subCategories.name, 
+                subSubCategory: encodedName, 
+                image: image,
+            }}/>)
+      }); 
+    
+  } catch (error) {
+    console.log(error);
+    cards = <p>{error}</p>
+  }
     
   return (
     <div key={uuidv4()} className="w-screen h-fit flex flex-row flex-wrap p-10 pt-36">{cards}</div>  
