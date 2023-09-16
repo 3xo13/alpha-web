@@ -9,13 +9,13 @@ const subSubCategoriesProducts = async ({params}) => {
   const decodedCat = decodeURIComponent(category)
   const decodedSub = decodeURIComponent(decodeURIComponent(subCategory))
   const decodedSubSub = decodeURIComponent(decodeURIComponent(subSubCategory))
-  // console.log(decodedCat, decodedSub, decodedSubSub);
+  // // console.log(decodedCat, decodedSub, decodedSubSub);
 
   if(category && subCategory && subSubCategory){
     const products = await getProducts({category: decodedCat, subCategory: decodedSub, subSubCategory: decodedSubSub});
-    productCards = products?.map(product => <ProductCard key={uuidv4()} product={product} />)
+    productCards = products?.map(product => <ProductCard  key={uuidv4()} product={product} />)
   }else{
-    productCards = (<p  key={uuidv4()}>"Error fitshing Products Data"</p>)
+    productCards = (<p  key={uuidv4()}>"Error fetching Products Data"</p>)
   }
   
 return (

@@ -6,7 +6,7 @@ const  ProductsNavigation = async ({TreeData}) => {
    
 
  const categories = TreeData.map((category, index) => {
-  // console.log(category);
+  // // console.log(category);
     return (
       <div key={uuidv4()} className="group w-1/4 h-12 text-center flex justify-evenly 
       items-center text-lg cursor-pointer hover:bg-gray-100 lg:flex" 
@@ -66,7 +66,7 @@ const  ProductsNavigation = async ({TreeData}) => {
                                                 {subCategory.subSubCategories.map((subSub, i) => {
                                                   return(
                                                     <div key={uuidv4()}>
-                                                      <ClickableCategory key={uuidv4()} catName={category.name} subName={subCategory.name} subSubName={subSub.name} />
+                                                      <ClickableCategory catName={category.name} subName={subCategory.name} subSubName={subSub.name} />
                                                     </div> 
                                                   )
                                                 })}</div>

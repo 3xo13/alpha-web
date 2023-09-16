@@ -8,6 +8,6 @@ export default async function getOneCategory(query){
     const category = await Category.findOne(query)
     return category
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 }

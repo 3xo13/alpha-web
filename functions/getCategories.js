@@ -9,7 +9,7 @@ import { Category } from '@/utils/models/categoreyModel';
         return categories
         
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         return error
     }
 }

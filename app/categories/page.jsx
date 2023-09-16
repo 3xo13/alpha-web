@@ -19,7 +19,7 @@ const categories = async () => {
         });
         
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         cards = <p>{error}</p>
     }
 

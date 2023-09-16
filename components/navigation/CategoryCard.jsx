@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 const CategoryCard = ({categoryObject}) => {
-    console.log(categoryObject);
+    // console.log(categoryObject);
     const cat = encodeURIComponent(categoryObject?.name)
   return (
     <div key={uuidv4()} className="w-64 h-90 m-4 cursor-pointer 

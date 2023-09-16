@@ -32,7 +32,7 @@ const ProductReviwe = (
                     min={1}
                     onChange={(e) => {
                         setPruductQuantity(item.name, e.target.value)
-                        // console.log(item.name, e.target.value);
+                        // // console.log(item.name, e.target.value);
                     }}/>
             </div>
 

@@ -16,7 +16,7 @@ const Cart = ({show, set}) => {
     const {Basket, decreaseQuantity, removeItem} = useBasketData();
 
     const switchCart = () => setActiveCart(prev => !prev)
-    // console.log(Basket);
+    // // console.log(Basket);
     const cart = Basket.map(item => {
         return (
             <div

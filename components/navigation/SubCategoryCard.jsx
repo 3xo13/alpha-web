@@ -12,7 +12,7 @@ const SubCategoryCard = async ({categoryObject}) => {
     const encodedCat = encodeURIComponent(categoryObject.category)
     const decodedSub = decodeURIComponent(categoryObject.subCategory)
     const encodedSub = encodeURIComponent(categoryObject.subCategory)
-    // console.log(encodedSub); console.log(decodedSub);
+    // // console.log(encodedSub); // console.log(decodedSub);
     return (
         <div key={uuidv4()} className="w-64 h-fit m-4 cursor-pointer">
             <Link

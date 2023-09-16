@@ -48,6 +48,7 @@ const Product = ({params}) => {
             setMainImg(data?.product?.images[0])
         } catch (e) {
             setError(e.message)
+            // console.log(error);
         } finally {
             setIsLoading(false)
         }
@@ -68,7 +69,7 @@ const Product = ({params}) => {
                 return (<h4 key={uuidv4()} className='text-gray-700 text-2xl'>{obj.text}</h4>)
             }
             if (tagName == 'ul') {
-                // console.log('obj',obj);
+                // // console.log('obj',obj);
                 const list = obj?.text
                     .split('//')
                     .map(
@@ -105,7 +106,7 @@ const Product = ({params}) => {
         }
     }, [options])
     const addToBasketBtn = product?.name
-            ? <AddSingleProductToBaskit key={uuidv4()}
+            ? <AddSingleProductToBaskit
                     productName={name
                         .split('-')
                         .join(' ')}
@@ -135,37 +136,35 @@ const Product = ({params}) => {
             id: product?._id,
             image: mainImg
         }
-        // console.log(basketProduct.partNumber);
+        // // console.log(basketProduct.partNumber);
         addItem(basketProduct);
         increaseQuantity(basketProduct);
     }
 
     // decides which table (if any) to render and create a list of table elements
     // from table array
-    let optionsTable;
-    if (documentType && documentType === 'multiple') {
-        optionsTable = tables?.map(
-            table => <MultipleProductTable
-                key={uuidv4()}
-                table={table}
-                addToBasket={addProductFromMultiTable}
-                multi={true}/>
-        )
-    } else if (documentType &&  
-        documentType === 'single' && options
-            ?.tableStyle == 'multiple multiple'
-    ) {
-        optionsTable = tables?.map(
-            table => <MultipleProductTable
-                key={uuidv4()}
-                table={table}
-                addToBasket={addProductFromMultiTable}
-                multi={false}/>
-        )
-    } else {
+    // let optionsTable;
+    // if (documentType && documentType === 'multiple') {
+    //     optionsTable = tables?.map(
+    //         table => <MultipleProductTable
+    //             table={table}
+    //             addToBasket={addProductFromMultiTable}
+    //             multi={true}/>
+    //     )
+    // } else if (documentType &&  
+    //     documentType === 'single' && options
+    //         ?.tableStyle == 'multiple multiple'
+    // ) {
+    //     optionsTable = tables?.map(
+    //         table => <MultipleProductTable
+    //             table={table}
+    //             addToBasket={addProductFromMultiTable}
+    //             multi={false}/>
+    //     )
+    // } else {
 
-        optionsTable = tables?.map(table => <SingleColMultiRowsTable key={uuidv4()} table={table}/>)
-    }
+    //     optionsTable = tables?.map(table => <SingleColMultiRowsTable table={table}/>)
+    // }
 
     return (
         <div key={uuidv4()} className='flex flex-col items-center w-screeen lg:pt-24'>
@@ -183,7 +182,6 @@ const Product = ({params}) => {
                         <div key={uuidv4()}>
                             <div className='flex lg:flex-row flex-col-reverse w-screen pt-10'>
                                 <ProductImages
-                                    key={uuidv4()}
                                     images={images}
                                     mainImg={mainImg}
                                     setMainImg={setMainImg}
@@ -228,7 +226,7 @@ const Product = ({params}) => {
                                             : ''
                                     }
 
-                                    {optionsTable}
+                                    {/* {optionsTable} */}
                                 </div>
                                 <div className='lg:w-11/12 w-full flex flex-col p-5 lg:p-10'>
 

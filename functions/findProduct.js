@@ -1,7 +1,7 @@
 export default async function findProduct ({category,productName,dataArray}) {
     let result = null;
-    console.log('category',category);
-    console.log('productName',productName);
+    // console.log('category',category);
+    // console.log('productName',productName);
     return result;
     // const categoryObject = dataArray.find((item) => item.name === category);
     // const sub = categoryObject.subCategories.forEach((item) => {

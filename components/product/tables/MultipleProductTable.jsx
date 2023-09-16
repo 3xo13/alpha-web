@@ -13,9 +13,9 @@ const MultipleProductTable = ({table, addToBasket, multi}) => {
         return (
             <tr key={uuidv4()} className='text-gray-700 text-lg'>
                 {
-                    tableContent.map((rowData) => (
+                    tableContent.map((rowData) => { return(
                         <th key={uuidv4()} className="border px-4 py-2 text-center">{rowData.header}</th>
-                    ))
+                    )})
                 }
                 {/*  only add the addetional headers if the product document contain more than on
  * e product 

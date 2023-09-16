@@ -18,10 +18,10 @@ function searchquery({params}) {
             if (!res.ok) 
                 throw new Error(data.error || 'Something went wrong')
             setProducts(
-                data.products.map(item => <ProductCard key={uuidv4()} product={item}/>)
+                data.products.map(item => <ProductCard product={item}/>)
             )
         } catch (e) {
-            console.log(e.message)
+            // console.log(e.message)
         }
     }
 

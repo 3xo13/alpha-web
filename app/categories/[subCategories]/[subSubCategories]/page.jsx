@@ -4,10 +4,10 @@ import getOneProduct from "@/functions/getOneProduct";
 import { v4 as uuidv4 } from 'uuid';
 
 const subSubCategories = async ({params}) => {
-  // console.log(params);
+  // // console.log(params);
   const {subCategories, subSubCategories} = params;
   const decodedSubSub = decodeURIComponent(decodeURIComponent(subSubCategories))
-  // console.log(decodedSubSub);
+  // // console.log(decodedSubSub);
   let cards;
   try {
     const categories = await getCategories({name: subCategories, 'subCategories.name': decodedSubSub, 'subSubCategories.name': {$ne: null}});
@@ -16,7 +16,7 @@ const subSubCategories = async ({params}) => {
           const name = category.subSubCategories.name;
           const encodedName = encodeURIComponent(name)
           const product = await getOneProduct({subSubCategory: name});
-          // console.log(product.name); 
+          // // console.log(product.name); 
           const image = product?.images[0] || '/assets/images/logo.png' 
           return (<SubSubCategoryCard
             categoryObject={{
@@ -28,7 +28,7 @@ const subSubCategories = async ({params}) => {
       }); 
     
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     cards = <p>{error}</p>
   }
     

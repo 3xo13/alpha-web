@@ -17,7 +17,7 @@ const SearchBar = () => {
         // names in the database are all hyphen sepratedlo
         const searchQuery = inputRef.current.trim().split(' ').join('-'); 
         if(!searchQuery)return;
-        console.log("🚀 ~ file: SearchBar.jsx:19 ~ handleSubmit ~ searchQuery:", searchQuery)
+        // console.log("🚀 ~ file: SearchBar.jsx:19 ~ handleSubmit ~ searchQuery:", searchQuery)
         
         router.push(`/search/${searchQuery}`)
     }

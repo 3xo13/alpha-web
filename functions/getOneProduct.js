@@ -8,6 +8,6 @@ export default async function getOneProduct(query){
     const product = await Product.findOne(query)
     return product
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 }
