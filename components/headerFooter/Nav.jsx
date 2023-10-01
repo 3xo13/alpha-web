@@ -34,15 +34,15 @@ const Nav = () => {
                 <header className=" h-[110px]">
                     <div key={uuidv4()} className="flex h-[110px] w-screen justify-between ">
                         <div
-                            className="w-1/4 h-full flex lg:flex-row flex-col items-center justify-between">
+                            className="w-1/4 h-full flex lg:flex-row flex-col items-center ">
                             {/* this is the cart btn */}
                             <button
                                 onClick={() => setShowCart(!showCart)}
-                                className='lg:ml-14 ml-5 mr-5 mt-8 lg:mt-3'>
+                                className='w-3/12 h-full flex-center'>
                                 <img
                                     src="/assets/icons/shopping-cart.png"
                                     alt="Cart Icon"
-                                    className="w-8 h-8 object-contain cursor-pointer"/> {
+                                    className="w-8 h-8  min-h-8 min-w-8 object-contain cursor-pointer "/> {
                                     quantity > 0
                                         ? (
                                             <span
@@ -53,7 +53,7 @@ const Nav = () => {
                                         : null
                                 }
                             </button>
-                            <div className=" hidden lg:block">
+                            <div className=" hidden lg:block w-10/12">
                                 <SearchBar/>
                             </div>
                         </div>

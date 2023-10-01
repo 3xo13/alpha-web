@@ -143,28 +143,28 @@ const Product = ({params}) => {
 
     // decides which table (if any) to render and create a list of table elements
     // from table array
-    // let optionsTable;
-    // if (documentType && documentType === 'multiple') {
-    //     optionsTable = tables?.map(
-    //         table => <MultipleProductTable
-    //             table={table}
-    //             addToBasket={addProductFromMultiTable}
-    //             multi={true}/>
-    //     )
-    // } else if (documentType &&  
-    //     documentType === 'single' && options
-    //         ?.tableStyle == 'multiple multiple'
-    // ) {
-    //     optionsTable = tables?.map(
-    //         table => <MultipleProductTable
-    //             table={table}
-    //             addToBasket={addProductFromMultiTable}
-    //             multi={false}/>
-    //     )
-    // } else {
+    let optionsTable;
+    if (documentType && documentType === 'multiple') {
+        optionsTable = tables?.map(
+            table => <MultipleProductTable key={uuidv4()}
+                table={table}
+                addToBasket={addProductFromMultiTable}
+                multi={true}/>
+        )
+    } else if (documentType &&  
+        documentType === 'single' && options
+            ?.tableStyle == 'multiple multiple'
+    ) {
+        optionsTable = tables?.map(
+            table => <MultipleProductTable key={uuidv4()}
+                table={table}
+                addToBasket={addProductFromMultiTable}
+                multi={false}/>
+        )
+    } else {
 
-    //     optionsTable = tables?.map(table => <SingleColMultiRowsTable table={table}/>)
-    // }
+        optionsTable = tables?.map(table => <SingleColMultiRowsTable key={uuidv4()} table={table}/>)
+    }
 
     return (
         <div key={uuidv4()} className='flex flex-col items-center w-screeen lg:pt-24'>
@@ -226,7 +226,7 @@ const Product = ({params}) => {
                                             : ''
                                     }
 
-                                    {/* {optionsTable} */}
+                                    {optionsTable}
                                 </div>
                                 <div className='lg:w-11/12 w-full flex flex-col p-5 lg:p-10'>
 

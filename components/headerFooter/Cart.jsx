@@ -16,7 +16,7 @@ const Cart = ({show, set}) => {
     const {Basket, decreaseQuantity, removeItem} = useBasketData();
 
     const switchCart = () => setActiveCart(prev => !prev)
-    // // console.log(Basket);
+ 
     const cart = Basket.map(item => {
         return (
             <div
@@ -25,7 +25,7 @@ const Cart = ({show, set}) => {
                 <img
                     src={item.image}
                     alt={item.name}
-                    className="w-16 h-16 mr-3 border-4 border-solid box-border "/>
+                    className="w-16 h-16 green mr-3 border-4 border-solid box-border "/>
                 <p className='w-64 text-gray-700 capitalize' key={uuidv4()}>{item.name}</p>
                 <p key={uuidv4()}>{item.partNumber}</p>
                 <p className='m-2 border p-1 border-solid box-border bg-white'>{item.quantity}</p>
@@ -58,7 +58,7 @@ const Cart = ({show, set}) => {
                     src="/assets/icons/close.png"
                     alt="close"
                     className='w-7 h-7 cursor-pointer mt-2 mb-2 mr-3'
-                    onClick={() => set(false)}/>
+                    onClick={switchCart}/>
 
             </div>
 

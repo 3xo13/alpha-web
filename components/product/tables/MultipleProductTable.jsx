@@ -17,10 +17,7 @@ const MultipleProductTable = ({table, addToBasket, multi}) => {
                         <th key={uuidv4()} className="border px-4 py-2 text-center">{rowData.header}</th>
                     )})
                 }
-                {/*  only add the addetional headers if the product document contain more than on
- * e product 
- */
-                }
+                {/*  only add the addetional headers if the product document contain more than one product */}
                 {
                     (
                         multi
@@ -63,10 +60,7 @@ const MultipleProductTable = ({table, addToBasket, multi}) => {
                         ))
                     }
 
-                    {/*  only add the addetional headers if the product document contain more than on
- * e product 
- */
-                    }
+                    {/*  only add the addetional headers if the product document contain more than one product*/}
                     {
                         (
                             multi

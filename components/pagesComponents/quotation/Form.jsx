@@ -41,7 +41,7 @@ const Form = ({submitting, handleSubmit, items}) => {
     // // console.log('form rerendered');
     return (
         <div
-            className="lg:w-96 w-screen lg:mt-20 felx items-center justify-start "
+            className="lg:w-96 w-full lg:mt-20 felx items-center justify-start "
             key={uuidv4()}>
             <form
                 className="flex flex-col gap-2  mx-auto"

@@ -2,7 +2,7 @@
 import { Product } from '@/utils/models/productModel';
 import { NextResponse } from 'next/server';
 
-export default async function POST(request) {
+export async function POST(request) {
   try {
     // // console.log(new URL(request.url));
     // get name and category from request params

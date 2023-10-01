@@ -59,7 +59,7 @@ const quote = () => {
         key={uuidv4()}>
             <div // cart content
                 className={`${cart?.length
-                    ? 'lg:w-2/3 w-screen flex flex-col self-start'
+                    ? 'lg:w-2/3 w-full flex flex-col self-start'
                     : 'hidden'} h-fit flex flex-col p-10 pt-24`}>
                 {cartItems}
             </div>
