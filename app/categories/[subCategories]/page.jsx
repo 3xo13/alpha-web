@@ -14,7 +14,7 @@ const subCategories = async ({params}) => {
           const encodedName = encodeURIComponent(name)
           const product = await getOneProduct({subCategory: name});
           const image = product?.images[0] || '/assets/images/logo.png'
-          return (<SubCategoryCard
+          return (<SubCategoryCard key={uuidv4()}
               categoryObject={{
                   category: category.name,
                   subCategory: encodedName,

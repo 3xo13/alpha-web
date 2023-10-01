@@ -104,7 +104,6 @@ const MultipleProductTable = ({table, addToBasket, multi}) => {
 
     return (
         <div
-            key={uuidv4()}
             className='flex flex-col items-start justify-center lg:pl-10 w-full '>
 
             {

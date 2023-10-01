@@ -52,7 +52,12 @@ const quote = () => {
         }
     };
 
-    const cartItems = Basket.map((item) => ProductReviwe({item, removeItem, decreaseQuantity, setPruductQuantity}));
+    const cartItems = Basket.map((item) => 
+    <ProductReviwe  key={uuidv4()}
+    item={item} 
+    removeItem={removeItem} 
+    decreaseQuantity={decreaseQuantity} 
+    setPruductQuantity={setPruductQuantity}/> );
     
     return (
         <div className={`w-screen h-fit flex lg:flex-row flex-col items-center justify-center mb-8 ${cart?.length ? 'mt-32' : 'mt-24'}`} 

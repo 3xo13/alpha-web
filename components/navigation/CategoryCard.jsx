@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 const CategoryCard = ({categoryObject}) => {
     const cat = encodeURIComponent(categoryObject?.name)
   return (
-    <div key={uuidv4()} className="w-64 h-90 m-4 cursor-pointer 
+    <div className="w-64 h-90 m-4 cursor-pointer 
     flex flex-col items-end justify-end">
       <Link href={`/categories/${cat}`}>
         <img src={categoryObject.image} className="w-64 h-90 "/> 

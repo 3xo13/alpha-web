@@ -38,7 +38,7 @@ const Nav = () => {
                             {/* this is the cart btn */}
                             <button
                                 onClick={() => setShowCart(!showCart)}
-                                className='w-3/12 h-full flex-center'>
+                                className='w-3/12 h-full flex-col-center'>
                                 <img
                                     src="/assets/icons/shopping-cart.png"
                                     alt="Cart Icon"
