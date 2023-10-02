@@ -1,30 +1,42 @@
-import getCategories from "@/functions/getCategories";
-import getOneProduct from "@/functions/getOneProduct";
+'use client';
 import CategoryCard from "@/components/navigation/CategoryCard";
-import { v4 as uuidv4 } from 'uuid';
+import {v4 as uuidv4} from 'uuid';
+import {useState, useEffect} from "react";
 
-const categories = async () => {
-    let cards;
-    try {
-        const categories = await getCategories({'subCategories.name': null});
-        cards = await categories?.map(async (category) => {
-            const name = category.name;
-            const product = await getOneProduct({category: name});
-            const image = product?.images[0] || '/assets/images/logo.png'
-            return (<CategoryCard key={uuidv4()}
-                categoryObject={{
-                    name: name,
-                    image: image
-                }}/>)
-        });
-        
-    } catch (error) {
-        // console.log(error);
-        cards = <p>{error}</p>
-    }
+const categories = () => {
+    const [categories, setCategories] = useState();
+    const cards = categories && categories
+        .categories
+        .map((cat, i) => {
+            
+            return (
+                <CategoryCard
+                    key={uuidv4()}
+                    categoryObject={{
+                        name: cat.name,
+                        image: categories
+                            .products[i]
+                            .images[0]
+                    }}/>
+            )
+        })
+
+    useEffect(() => {
+        const fetchHandler = async () => {
+            await fetch('/api/cats', {
+                method: "POST",
+                body: JSON.stringify({"subCategories.name": null})
+            })
+                .then(data => data.json())
+                .then(data => setCategories(data))
+        }
+        fetchHandler()
+    }, [])
 
     return (
-        <div key={uuidv4()} className="w-screen h-fit flex flex-row flex-wrap p-10 pt-36">
+        <div
+            key={uuidv4()}
+            className="w-screen h-fit flex flex-row flex-wrap p-10 pt-36">
             {cards}
         </div>
     )

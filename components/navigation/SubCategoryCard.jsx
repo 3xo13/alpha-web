@@ -1,31 +1,20 @@
 import Link from "next/link";
-import getOneCategory from "@/functions/getOneCategory";
+// import getOneCategory from "@/functions/getOneCategory";
 import {v4 as uuidv4} from 'uuid';
 
-const SubCategoryCard = async ({categoryObject}) => {
-    const subSub = await getOneCategory({
-        name: decodeURIComponent(categoryObject.category),
-        'subSubCategories.name': {
-            $ne: null
-        }
-    });
-    const encodedCat = encodeURIComponent(categoryObject.category)
-    const decodedSub = decodeURIComponent(categoryObject.subCategory)
-    const encodedSub = encodeURIComponent(categoryObject.subCategory)
-    // // console.log(encodedSub); // console.log(decodedSub);
+const SubCategoryCard = ({categoryObject}) => {
+
     return (
         <div className="w-64 h-fit m-4 cursor-pointer">
             <Link
-                href={!subSub
-                    ? `/category/${encodedCat}/${encodedSub}`
-                    : `/categories/${encodedCat}/${encodedSub}`
+                href={ `/categories/${categoryObject.category}/${categoryObject.subCategory}`
+                    
 }>
                 <img src={categoryObject.image} className="w-64 h-90 "/>
-                <p className="font-bold w-full text-center text-xl black bg-white capitalize">{
-                        decodedSub
-                            .split('-')
-                            .join(' ')
-                    }</p>
+                <p className="font-bold w-full text-center text-xl black bg-white capitalize">
+                    
+                            {categoryObject.subCategory}
+                    </p>
             </Link>
         </div>
     )
