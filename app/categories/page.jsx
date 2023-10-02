@@ -21,17 +21,32 @@ const categories = () => {
             )
         })
 
-    useEffect(() => {
-        const fetchHandler = async () => {
-            await fetch('/api/cats', {
-                method: "POST",
-                body: JSON.stringify({"subCategories.name": null})
-            })
-                .then(data => data.json())
-                .then(data => setCategories(data))
-        }
-        fetchHandler()
-    }, [])
+        useEffect(() => {
+            const fetchHandler = async () => {
+                try {
+                    const response = await fetch('/api/cats', {
+                        method: "POST",
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(
+                            {"subCategories.name": null}
+                        )
+                    });
+        
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+        
+                    const data = await response.json();
+                    setCategories(data);
+                } catch (error) {
+                    console.error('Error:', error);
+                }
+            }
+        
+            fetchHandler();
+        }, []);
 
     return (
         <div
