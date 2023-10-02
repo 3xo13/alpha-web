@@ -1,22 +1,40 @@
+'use client'
 import ProductCard from "@/components/navigation/ProductCard";
-import getProducts from "@/functions/getProducts";
 import { v4 as uuidv4 } from 'uuid';
+import { useState, useEffect } from "react";
 
 // this page is used to display all the products in a subCategory | subSubCategory
-const subSubCategoriesProducts = async ({params}) => {
-  let productCards = [];
+const subSubCategoriesProducts = ({params}) => {
   const { category, subCategory, subSubCategory} = params; 
-  const decodedCat = decodeURIComponent(category)
-  const decodedSub = decodeURIComponent(decodeURIComponent(subCategory))
-  const decodedSubSub = decodeURIComponent(decodeURIComponent(subSubCategory))
-  // // console.log(decodedCat, decodedSub, decodedSubSub);
+  const [products, setProducts] = useState();
+  const productCards = products?.map(product => <ProductCard  key={uuidv4()} product={product} />)
+  useEffect(() => {
+    const fetchHandler = async () => {
+        try {
+            const response = await fetch('/api/products/categoryProducts', {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(
+                  {category: category, subCategory: subCategory, subSubCategory: subSubCategory}
+                )
+            });
 
-  if(category && subCategory && subSubCategory){
-    const products = await getProducts({category: decodedCat, subCategory: decodedSub, subSubCategory: decodedSubSub});
-    productCards = products?.map(product => <ProductCard  key={uuidv4()} product={product} />)
-  }else{
-    productCards = (<p  key={uuidv4()}>"Error fetching Products Data"</p>)
-  }
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            const data = await response.json();
+            setProducts(data);
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+
+    fetchHandler();
+}, []);
+
   
 return (
     <div key={uuidv4()} className="w-screen flex flex-row flex-wrap items-center justify-center pl-5 pt-40">
