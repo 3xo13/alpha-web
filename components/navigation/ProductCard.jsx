@@ -4,9 +4,8 @@ import {v4 as uuidv4} from 'uuid';
 // product card component used to display a product's image and name
 const ProductCard = ({product}) => {
    const encodedCat = encodeURIComponent(product.category)
-   const encodedProductName = encodeURIComponent(product.name)
-    // // console.log("🚀 ~ file: ProductCard.jsx:10 ~ ProductCard ~ encodedProductName:", encodedProductName)
-    // // console.log("🚀 ~ file: ProductCard.jsx:10 ~ ProductCard ~ product.name:", product.name)
+   const encodedProductName = encodeURIComponent(encodeURIComponent(product.name))
+
     const name = product?.name.split('-').join(' ') || ''
     return (
         <div>

@@ -5,9 +5,8 @@ const SubSubCategoryCard = ({categoryObject}) => {
     const {category, subCategory, subSubCategory, image} = categoryObject
     const encodedCat = encodeURIComponent(category)
     const encodedSub = encodeURIComponent(encodeURIComponent(subCategory))
-    const encodedSubSub = encodeURIComponent(subSubCategory)
-    const decodedSubSub = decodeURIComponent(subSubCategory)
-    // // console.log(encodedSubSub);
+    const encodedSubSub = encodeURIComponent(encodeURIComponent(subSubCategory))
+    const decodedSubSub = decodeURIComponent(subSubCategory) 
     return (
         <div className="w-64 h-fit m-4 cursor-pointer">
             <Link href={`/category/${encodedCat}/${encodedSub}/${encodedSubSub}`}>

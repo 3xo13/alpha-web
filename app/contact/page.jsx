@@ -34,14 +34,12 @@ const Contact = () => {
                     {name: post.name, email: post.email, phone: post.phone, items: JSON.stringify(items), message: post.message}
                 )
             });
-            // // console.log(response);
             if (response.ok) {
                 clearBasket();
                 clearQuantity();
                 router.push("/success");
             }
         } catch (error) {
-            // console.log(error);
         } finally {
             setIsSubmitting(false);
 

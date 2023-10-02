@@ -4,14 +4,15 @@ import {useState, useEffect} from "react";
 import {v4 as uuidv4} from 'uuid';
 
 const subSubCategories = ({params}) => {
-    //  console.log(params);
+
     const {subCategories, subSubCategories} = params;
+    const sub = decodeURIComponent(subCategories)
+    const subSub = decodeURIComponent(decodeURIComponent(subSubCategories))
 
     const [categories, setCategories] = useState();
     const cards = categories && categories
         .categories
         .map((cat, i) => {
-            // console.log(cat, i);
             return (
                 <SubSubCategoryCard
                     key={uuidv4()}
@@ -21,7 +22,7 @@ const subSubCategories = ({params}) => {
                         subSubCategory: cat.subSubCategories.name,
                         image: categories
                             .products[i]
-                            .images[0]
+                            .images[0] || '/assets/images/logo.png'
                     }}/>
             )
         })
@@ -35,7 +36,7 @@ const subSubCategories = ({params}) => {
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify(
-                      {name: subCategories, 'subCategories.name': subSubCategories, 'subSubCategories.name': {$ne: null}}
+                      {name: sub, 'subCategories.name': subSub, 'subSubCategories.name': {$ne: null}}
                     )
                 });
 
@@ -52,23 +53,6 @@ const subSubCategories = ({params}) => {
 
         fetchHandler();
     }, []);
-    // const decodedSubSub =
-    // decodeURIComponent(decodeURIComponent(subSubCategories))
-    // console.log(decodedSubSub); let cards; try {   const categories = await
-    // getCategories({name: subCategories, 'subCategories.name': decodedSubSub,
-    // 'subSubCategories.name': {$ne: null}});     cards = await
-    // categories?.map(async (category) => {         const name =
-    // category.subSubCategories.name;         const encodedName =
-    // encodeURIComponent(name)         const product = await
-    // getOneProduct({subSubCategory: name});           console.log(product.name);
-    // const image = product?.images[0] || '/assets/images/logo.png'         return
-    // (<SubSubCategoryCard key={uuidv4()}           categoryObject={{
-    // category: category.name,               subCategory:
-    // category.subCategories.name,               subSubCategory: encodedName,
-    // image: image,           }}/>)     }); } catch (error) {
-    // console.log(error);   cards = <p>{error}</p> }
-
-
     return (
         <div
             key={uuidv4()}

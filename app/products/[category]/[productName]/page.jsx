@@ -35,10 +35,11 @@ const Product = ({params}) => {
     const fetchHandler = async () => {
         try {
             const {category, productName} = params;
+            const product = decodeURIComponent(productName)
             const res = await fetch(
                 `/api/products`, {
                     method: 'POST',
-                    body: JSON.stringify({category: category, name: productName})
+                    body: JSON.stringify({category: category, name: product})
                 }
             )
             const data = await res.json()
@@ -48,7 +49,6 @@ const Product = ({params}) => {
             setMainImg(data?.product?.images[0])
         } catch (e) {
             setError(e.message)
-            // console.log(error);
         } finally {
             setIsLoading(false)
         }
@@ -69,7 +69,6 @@ const Product = ({params}) => {
                 return (<h4 key={uuidv4()} className='text-gray-700 text-2xl'>{obj.text}</h4>)
             }
             if (tagName == 'ul') {
-                // // console.log('obj',obj);
                 const list = obj?.text
                     .split('//')
                     .map(
@@ -136,7 +135,6 @@ const Product = ({params}) => {
             id: product?._id,
             image: mainImg
         }
-        // // console.log(basketProduct.partNumber);
         addItem(basketProduct);
         increaseQuantity(basketProduct);
     }

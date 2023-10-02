@@ -21,7 +21,7 @@ function searchquery({params}) {
                 data.products.map(item => <ProductCard key={uuidv4()} product={item}/>)
             )
         } catch (e) {
-            // console.log(e.message)
+            console.log(e.message)
         }
     }
 

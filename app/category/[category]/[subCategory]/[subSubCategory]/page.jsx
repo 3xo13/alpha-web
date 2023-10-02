@@ -6,6 +6,11 @@ import { useState, useEffect } from "react";
 // this page is used to display all the products in a subCategory | subSubCategory
 const subSubCategoriesProducts = ({params}) => {
   const { category, subCategory, subSubCategory} = params; 
+  const cat = decodeURIComponent(category)
+  const sub = decodeURIComponent(decodeURIComponent(subCategory))
+  const subSub = decodeURIComponent(decodeURIComponent(subSubCategory))
+
+
   const [products, setProducts] = useState();
   const productCards = products?.map(product => <ProductCard  key={uuidv4()} product={product} />)
   useEffect(() => {
@@ -17,7 +22,7 @@ const subSubCategoriesProducts = ({params}) => {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(
-                  {category: category, subCategory: subCategory, subSubCategory: subSubCategory}
+                  {category: cat, subCategory: sub, subSubCategory: subSub}
                 )
             });
 
@@ -28,11 +33,11 @@ const subSubCategoriesProducts = ({params}) => {
             const data = await response.json();
             setProducts(data);
         } catch (error) {
-            console.error('Error:', error);
+            console.error('Error:', error); 
         }
     }
-
-    fetchHandler();
+ 
+    fetchHandler(); 
 }, []);
 
   

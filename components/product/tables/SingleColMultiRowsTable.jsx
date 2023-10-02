@@ -4,7 +4,7 @@ import {v4 as uuidv4} from 'uuid';
 const singleColMultiRowsTable = ({table}) => { 
     const headers = table.tableContent.map(obj => {
         return(
-            <td className="border px-4 py-2 text-center">
+            <td key={uuidv4()} className="border px-4 py-2 text-center">
                 {obj.header}
             </td>
         )
@@ -12,7 +12,7 @@ const singleColMultiRowsTable = ({table}) => {
     const rows = headers.map((header,i) => {
         const vals = table.tableContent[i].values.map(val => [val,<br/>])
         return(
-            <tr className={`${i % 2 > 0 ? 'transparent' : 'bg-slate-100'} text-gray-700 text-lg`}>
+            <tr key={uuidv4()} className={`${i % 2 > 0 ? 'transparent' : 'bg-slate-100'} text-gray-700 text-lg`}>
                 {header}
                 <td className="border px-4 py-2 text-center">
                     {vals}

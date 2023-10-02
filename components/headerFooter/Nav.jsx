@@ -71,11 +71,11 @@ const Nav = () => {
                         </div>
                         <div key={uuidv4()} className="w-1/4 h-full  flex justify-end h-[110px] ">
 
-                            <nav className={`mr-5 h-[110px] gap-4 pr-4 hidden lg:flex lg:flex items-center justify-evenly`}
+                            <nav className={`mr-5 h-[110px] gap-4 pr-4 hidden lg:flex items-center justify-evenly `}  
                                 // this is the menu on desktop screens
                             >
                                 <Link href="/" key={uuidv4()}>
-                                    <p className="menu_link_text">home</p>
+                                    <p className="menu_link_text">home</p> 
                                 </Link>
                                 <Link href="/about" key={uuidv4()}>
                                     <p className="menu_link_text">About</p>

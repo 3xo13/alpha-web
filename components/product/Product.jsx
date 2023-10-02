@@ -4,13 +4,10 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 const Product = ({productObject}) => {
-    // // console.log(JSON.stringify(productObject,null,2));
     
     const {name, images , details, options} = productObject;
     const headers = options[0].headers;
     const values = options[0].values;
-    // const [mainImg, setMainImg] = useState(images[0]);
-    // // console.log(values);
     const optionsTable = (
         <table key={uuidv4()} className="table-auto mt-5 ml-5 shadow">
             <thead>

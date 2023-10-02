@@ -8,7 +8,7 @@ const POST = async (req) => {
     try {
         await connectToDB()
         const request = await req.json();
-        console.log("🚀 ~ file: route.js:10 ~ POST ~ request:", request)
+
         let products = [];
         const categories = await Category.find(request)
         for (let index = 0; index < categories.length; index++) {

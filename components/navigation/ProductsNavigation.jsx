@@ -6,7 +6,6 @@ const  ProductsNavigation = async ({TreeData}) => {
    
 
  const categories = TreeData.map((category, index) => {
-  // // console.log(category);
     return (
       <div key={uuidv4()} className="group w-1/4 h-12 text-center flex justify-evenly 
       items-center text-lg cursor-pointer hover:bg-gray-100 lg:flex" 

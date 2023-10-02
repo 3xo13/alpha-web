@@ -7,7 +7,6 @@ async function subCategoriesProducts({params}) {
   const { category, subCategory} = params;
   const decodedCat = decodeURIComponent(category) 
   const decodedSub = decodeURIComponent(decodeURIComponent(subCategory))
-  // // console.log(decodedSub);
   try {
     if(category && subCategory){
         const products = await getProducts({category: decodedCat, subCategory: decodedSub});

@@ -14,12 +14,10 @@ const ZoomOutCarousel = () => {
     );
     const [isMobile, setIsMobile] = useState(false);
 
-    // // console.log(width);
     useEffect(() => {
         const timer = setInterval(() => {
             setLink(prev => {
                 const bg = prev.bglink
-                // console .log(links.indexOf(bg)); // console.log(links[links.indexOf(bg)]);
                 let currentIndex = links.indexOf(bg)
                 if (currentIndex === links.length - 1) {
                     return {bglink: links[0], flyerLink: flyerLinks[0], mobileFlyerLink: mobileFlyerLinks[0]}

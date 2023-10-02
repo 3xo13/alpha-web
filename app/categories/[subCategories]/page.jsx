@@ -5,12 +5,10 @@ import {useState, useEffect} from "react";
 
 const subCategories = ({params}) => {
     const {subCategories} = params;
-    // console.log("🚀 ~ file: page.jsx:8 ", subCategories)
     const [categories, setCategories] = useState();
     const cards = categories && categories
         .categories
         .map((cat, i) => {
-            // console.log(cat, i);
             return (
                 <SubCategoryCard
                     key={uuidv4()}
