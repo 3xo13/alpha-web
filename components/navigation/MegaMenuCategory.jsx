@@ -6,7 +6,7 @@ const MegaMenuCategory = ({category}) => {
 
     const cat = encodeURIComponent(category.name)
   return (
-    <div key={uuidv4()} className='cinzel text-xl'>
+    <div className='cinzel text-xl'>
     <Link
         href={`/categories/${cat}`}
         key={uuidv4()}

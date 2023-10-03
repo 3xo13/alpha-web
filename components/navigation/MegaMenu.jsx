@@ -1,6 +1,4 @@
 import {v4 as uuidv4} from 'uuid';
-import ClickableCategory from "@/components/navigation/ClickableCategory";
-import Link from 'next/link';
 import MegaMenuCategory from './MegaMenuCategory';
 
 const MegaMenu = ({TreeData}) => {
@@ -8,7 +6,10 @@ const MegaMenu = ({TreeData}) => {
     
     const categories = TreeData.map(category => ({name: category.name, subCategories: category.subCategories}))
     
-    const menu = categories.map(category => <MegaMenuCategory category={{name: category.name, subCategories: category.subCategories}} />)
+    const menu = categories.map(category => 
+    <MegaMenuCategory key={uuidv4()}
+    category={{name: category.name, subCategories: category.subCategories}} 
+    />)
     return (
         <div
             className='group w-screen h-fit flex-col items-center justify-center absolute top-[150px] z-50  lg:block hidden'>
