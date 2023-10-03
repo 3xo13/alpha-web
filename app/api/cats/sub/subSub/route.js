@@ -2,11 +2,12 @@ import {NextResponse} from "next/server"
 import {Category} from "@/utils/models/categoreyModel"
 import {Product} from "@/utils/models/productModel";
 import getOneProduct from "@/functions/getOneProduct";
-
+import { connectToDB } from "@/utils/database"
 
 const POST = async (req) => {
 
     try {
+        await connectToDB()
         const request = await req.json();
         let products = [];
         const categories = await Category.find(request)
