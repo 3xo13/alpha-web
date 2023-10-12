@@ -19,8 +19,8 @@ export default async function creatTree() {
         // const products = await getProducts({});
 
         // tree structured categories with subCategories
-        const tree = categories.map(category => {
-            const subCategory = subCategories.filter(
+        const tree = categories && categories.map(category => {
+            const subCategory = subCategories && subCategories.filter(
                 subCategory => subCategory.subCategories.parent === category.name
             )
             return ({

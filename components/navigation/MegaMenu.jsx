@@ -4,9 +4,9 @@ import MegaMenuCategory from './MegaMenuCategory';
 const MegaMenu = ({TreeData}) => {
 
     
-    const categories = TreeData.map(category => ({name: category.name, subCategories: category.subCategories}))
+    const categories = TreeData?.map(category => ({name: category.name, subCategories: category.subCategories}))
     
-    const menu = categories.map(category => 
+    const menu = categories && categories.map(category => 
     <MegaMenuCategory key={uuidv4()}
     category={{name: category.name, subCategories: category.subCategories}} 
     />)
