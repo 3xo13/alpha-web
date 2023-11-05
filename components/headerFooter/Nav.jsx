@@ -22,6 +22,11 @@ const Nav = () => {
         setShowMenu(!showMenuBtn)
     }
 
+    const toggleCart = () => {
+        console.log('cart ');
+        setShowCart(!showCart)
+    }
+
     return (
         <div
             className=" flex-col-center w-screen absolute z-40 bg-white/80 hidden">
@@ -29,7 +34,7 @@ const Nav = () => {
                 <AnouncmentBar/>
             </div>
             <div className="" key={uuidv4()}>
-                <Cart show={showCart} set={setShowCart}/>
+                <Cart show={showCart} setMenu={setShowCart} setCart={setShowCart} />
 
                 <header className=" h-[110px]">
                     <div key={uuidv4()} className="flex h-[110px] w-screen justify-between ">
@@ -37,7 +42,7 @@ const Nav = () => {
                             className="w-1/4 h-full flex lg:flex-row flex-col items-center ">
                             {/* this is the cart btn */}
                             <button
-                                onClick={() => setShowCart(!showCart)}
+                                onClick={toggleCart}
                                 className='w-3/12 h-full flex-col-center'>
                                 <img
                                     src="/assets/icons/shopping-cart.png"

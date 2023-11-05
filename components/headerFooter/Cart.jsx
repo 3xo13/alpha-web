@@ -5,7 +5,7 @@ import useBasketData from '@/dataMangment/basketData';
 import Link from 'next/link';
 import {useRouter} from 'next/navigation';
 
-const Cart = ({show, set}) => {
+const Cart = ({show, setMenu, setCart}) => {
     const router = useRouter();
     const [activeCart, setActiveCart] = useState(false);
 
@@ -58,7 +58,10 @@ const Cart = ({show, set}) => {
                     src="/assets/icons/close.png"
                     alt="close"
                     className='w-7 h-7 cursor-pointer mt-2 mb-2 mr-3'
-                    onClick={switchCart}/>
+                    onClick={() => {
+                        switchCart()
+                        setCart(false)
+                    }}/>
 
             </div>
 
@@ -68,7 +71,7 @@ const Cart = ({show, set}) => {
                 <button
                     className='lg:w-120 w-64 h-14 bg-yellow-600/90 hover:bg-yellow-600/80 flex items-center justify-center text-white text-xl font-bold capitalize rounded-lg'
                     onClick={() => {
-                        set(false);
+                        setMenu();
                         router.push("/quote");
                     }}>check out</button>
 

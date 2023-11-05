@@ -60,7 +60,7 @@ const ZoomOutCarousel = () => {
                 {
                     isMobile
                         ? <div
-                                className='bg-white/50 w-screen h-screen absolute flex items-center justify-center '>
+                                className='bg-white/20 w-[100dvw] h-[100dvh] absolute flex items-center justify-center '>
                                 <div
                                     className={` w-full h-full bg-contain bg-center bg-no-repeat`}
                                     style={{
@@ -68,7 +68,7 @@ const ZoomOutCarousel = () => {
                                     }}></div>
                             </div>
                         : <div
-                                className='bg-white/50 w-screen h-screen absolute flex items-center justify-center '>
+                                className='bg-white/40 w-[100dvw] h-[100dvh] absolute flex items-center justify-center '>
                                 <div
                                     className={` w-full h-full bg-contain bg-center bg-no-repeat`}
                                     style={{

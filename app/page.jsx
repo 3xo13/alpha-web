@@ -14,31 +14,22 @@ export default async function Home() {
     return (
 
         <div className="w-screen title h-fit">
-
+            {/* hero section */}
             <section className="screen mb-14 ">
-                {/* <HeroCarousel />  */}
                 <ZoomOutCarousel/>
             </section>
+            {/* categories cards section */}
             <section className="w-screen lg:h-90 h-fit flex-center">
-                {/* <CategoryCarousel/> */}
                 <TiltedCards/>
             </section>
-            <div className="w-screen h-fit lg:flex-col-center hidden py-16">
-                <video
-                    src="/assets/video/electricalBG.mp4"
-                    type="video/mp4"
-                    autoPlay="autoPlay"
-                    loop="loop"
-                    className="w-120%"></video>
-                <img src="/assets/images/logo.png" alt="logo" className="w-54 h-40 absolute"/>
-            </div>
+            {/* about section */}
             <section className="about lg:screen ">
                 <div
                     className='w-screen lg:h-screen h-fit bg-riadh-day bg-cover bg-fixed bg-no-repeat
                      flex items-center justify-end lg:justify-between'>
                     <div
                         className="w-full h-full p-5 flex-col-evenly
-                        bg-black/80 text-center">
+                        bg-black/50 text-center">
                         <div className="w-[80vw] h-fit mt-5">
                             <h2
                                 className="lg:text-6xl text-3xl font-bold text-center text-white
