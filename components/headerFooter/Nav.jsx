@@ -54,7 +54,7 @@ const Nav = () => {
                                 }
                             </button>
                             <div className=" hidden lg:block w-10/12">
-                                <SearchBar/>
+                                <SearchBar  toggleMenu={()=>{return}}/>
                             </div>
                         </div>
                         <div
@@ -115,25 +115,25 @@ const Nav = () => {
                             items-center  bg-white/80  
                             ${showMenuBtn
                                 ? 'flex'
-                                : 'hidden'}`} onClick={toggleMenu}>
+                                : 'hidden'}`}>
 
                             <Link className="text-2xl font-bold uppercase hover:text-gray-500 text-black title" href="/" key={uuidv4()}>
-                                <p>home</p>
+                                <p  onClick={toggleMenu}>home</p>
                             </Link>
                             <Link className="text-2xl font-bold uppercase hover:text-gray-500 text-black title" href="/about" key={uuidv4()}>
-                                <p>About</p>
+                                <p  onClick={toggleMenu}>About</p>
                             </Link>
                             <Link className="text-2xl font-bold uppercase hover:text-gray-500 text-black title" href="/categories" key={uuidv4()}>
-                                <p>products</p>
+                                <p  onClick={toggleMenu}>products</p>
                             </Link>
                             <Link className="text-2xl font-bold uppercase hover:text-gray-500 text-black title" href="/articles" key={uuidv4()}>
-                                <p>Articles</p>
+                                <p  onClick={toggleMenu}>Articles</p>
                             </Link>
                             <Link className="text-2xl font-bold uppercase hover:text-gray-500 text-black title" href="/contact" key={uuidv4()}>
-                                <p>Contact</p>
+                                <p  onClick={toggleMenu}>Contact</p>
                             </Link>
                             <div className="w-full h-fit flex-center mt-5">
-                                <SearchBar/>
+                                <SearchBar toggleMenu={toggleMenu}/>
                             </div>
                         </nav>
                     </div>

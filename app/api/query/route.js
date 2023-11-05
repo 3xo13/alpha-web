@@ -2,13 +2,12 @@ import {connectToDB} from '@/utils/database';
 import {Product} from '@/utils/models/productModel';
 import {NextResponse} from 'next/server';
 
-export async function POST(request) {
+export async function POST(req) {
     try {
-        const res = await request.json();
-        const namePart = res
+        const request = await req.json();
+        const namePart = request
             .query
-            .split('-')
-            .join(' ')
+            
 
         // Use a regular expression to perform a case-insensitive search
         const regexQuery = new RegExp(namePart, 'i');

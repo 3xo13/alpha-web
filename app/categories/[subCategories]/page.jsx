@@ -6,6 +6,8 @@ import {useState, useEffect} from "react";
 const subCategories = ({params}) => {
     const {subCategories} = params;
     const [categories, setCategories] = useState();
+    let loading = !categories && true;
+
     const cards = categories && categories
         .categories
         .map((cat, i) => {
@@ -54,6 +56,15 @@ const subCategories = ({params}) => {
         <div
             key={uuidv4()}
             className="w-screen h-fit flex flex-row flex-wrap p-10 pt-36">
+                {
+                loading && <div className="flex flex-row-center screen">
+                        <p className="text-6xl mr-10 text-yellow-500">Loading...</p>
+                        <img
+                            src="/assets/icons/loading.png"
+                            alt="lodaing"
+                            className="w-16 h-16 animate-spin"/>
+                    </div>
+            }
             {cards}
         </div>
     )
