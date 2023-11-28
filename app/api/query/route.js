@@ -5,8 +5,7 @@ import {NextResponse} from 'next/server';
 export async function POST(req) {
     try {
         const request = await req.json();
-        const namePart = request
-            .query
+        const namePart = request.query
             
 
         // Use a regular expression to perform a case-insensitive search

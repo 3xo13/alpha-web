@@ -19,6 +19,8 @@ module.exports = {
       },
       colors: {
         'primary-orange': '#FF5722',
+        'white': '#fff',
+        'black': '#000'
       },
       width: {
         '120': '30rem',

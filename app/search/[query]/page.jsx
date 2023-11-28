@@ -24,6 +24,7 @@ function searchquery({params}) {
             )
         } catch (e) {
             console.log(e.message)
+            setLoading(false)
         }
     }
 

@@ -4,9 +4,9 @@ import links from '@/public/links/pgLinks';
 import {use, useEffect, useState} from 'react';
 
 
-const flyerLinks = ['/assets/images/backgrounds/flyers/4.svg', '/assets/images/backgrounds/flyers/5.svg', '/assets/images/backgrounds/flyers/6.svg']
+const flyerLinks = ['/assets/images/backgrounds/flyers/4.png', '/assets/images/backgrounds/flyers/5.png', '/assets/images/backgrounds/flyers/6.png']
 
-const mobileFlyerLinks = ['/assets/images/backgrounds/flyers/kingsmill_mobile-flyer.svg', '/assets/images/backgrounds/flyers/apc_mobile-flyer.svg', '/assets/images/backgrounds/flyers/optima_mobile-flyer.svg']
+const mobileFlyerLinks = ['/assets/images/backgrounds/flyers/kingsmill_mobile-flyer.png', '/assets/images/backgrounds/flyers/apc_mobile-flyer.png', '/assets/images/backgrounds/flyers/optima_mobile-flyer.png']
 
 const ZoomOutCarousel = () => {
     const [link, setLink] = useState(
@@ -60,7 +60,7 @@ const ZoomOutCarousel = () => {
                 {
                     isMobile
                         ? <div
-                                className='bg-white/20 w-[100dvw] h-[100dvh] absolute flex items-center justify-center '>
+                                className='bg-white/70 w-[100dvw] h-[100dvh] absolute flex items-center justify-center'>
                                 <div
                                     className={` w-full h-full bg-contain bg-center bg-no-repeat`}
                                     style={{
@@ -68,7 +68,7 @@ const ZoomOutCarousel = () => {
                                     }}></div>
                             </div>
                         : <div
-                                className='bg-white/40 w-[100dvw] h-[100dvh] absolute flex items-center justify-center '>
+                                className='bg-white/70 w-[100dvw] h-[100dvh] absolute flex items-center justify-center '>
                                 <div
                                     className={` w-full h-full bg-contain bg-center bg-no-repeat`}
                                     style={{
