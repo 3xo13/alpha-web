@@ -15,11 +15,8 @@ const SearchBar = ({toggleMenu}) => {
         e.preventDefault()
         if (!inputRef.current){return;}
         
-        const searchQuery = inputRef
-            .current
-            .trim()
-            .split(' ')
-            .join('-');
+        const searchQuery = encodeURIComponent(encodeURIComponent(inputRef.current.trim()))
+
         if (!searchQuery) 
             return;
         toggleMenu()

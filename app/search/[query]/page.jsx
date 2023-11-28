@@ -6,25 +6,29 @@ import {v4 as uuidv4} from 'uuid';
 function searchquery({params}) {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true)
+    const [message, setMessage] = useState('No Products Found')
 
     const fetchHandler = async () => {
         try {
 
             const {query} = params;
+            const encodedQuery = encodeURIComponent(query)
             const res = await fetch(`/api/query`, {
                 method: 'POST',
-                body: JSON.stringify({query: query})
+                body: JSON.stringify({query: encodedQuery})
             })
             const data = await res.json()
             
-            if (!res.ok) {
-                throw new Error(data.error || 'Something went wrong')
-            }
+            // if (!res?.products) {
+            //     setMessage('Something went wrong')
+            //     throw new Error(data.error || 'Something went wrong')
+            // }
 
             setProducts(data.products)
             setLoading(false)
         } catch (e) {
             console.log(e.message)
+            setMessage('Something went wrong')
             setLoading(false)
         }
     }
@@ -52,7 +56,7 @@ function searchquery({params}) {
             {
                 !products
                     ?.length && !loading
-                        ? (<p className="pt-10 h-[50vh] text-2xl text-orange-700">No Products Found</p>)
+                        ? (<p className="pt-10 h-[50vh] text-2xl text-orange-700">{message}</p>)
                         : productsFound
             }
         </div>
