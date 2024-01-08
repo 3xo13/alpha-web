@@ -5,6 +5,7 @@ import createTemplate from '@/functions/template';
 
 // async..await is not allowed in global scope, must use a wrapper
 async function mail(name, email, phone, items, message) {
+    try {
         const plainTextMsg = `Name: ${name}\nEmail: ${email}\nPhone: ${phone} \nItems: ${items}\nMessage: ${message}`;
         const htmlMsg = createTemplate(name, email, phone, items, message);
         // Generate test SMTP service account from ethereal.email Only needed if you
@@ -32,6 +33,11 @@ async function mail(name, email, phone, items, message) {
             text: plainTextMsg, // plain text body
             html: htmlMsg, // html body
         });
+        return true
+    } catch (error) {
+        console.log("🚀 ~ file: route.js:38 ~ mail ~ error:", error)
+        return error
+    }
 
 
 
@@ -46,7 +52,7 @@ export async function POST(request){
 
         await newQuote.save();
 
-        mail(name, email, phone, items, message).catch(err => console.error(`Error occured while sending your email, Error:${err}`));
+        await mail(name, email, phone, items, message).catch(err => console.error(`Error occured while sending your email, Error:${err}`));
 
         return new Response(JSON.stringify(newQuote), {status: 201})
     } catch (error) {
