@@ -9,7 +9,7 @@ const Articles = () => {
   const articleList = articles.map(art => {
     return(
       <Link href={`/articles/${art.id}`}>
-      <div className='articleBtn max-w-64 w-[40dvw] border-2 border-black rounded-lg flex flex-row p-5 gap-5 ml-10'>
+      <div className='articleBtn max-w-64 lg:w-[40dvw] w-[80dvw] border-2 border-black rounded-lg flex flex-row p-3 gap-5 ml-10 hover:bg-gray-100'>
         <Image
           width={50}
           height={50}

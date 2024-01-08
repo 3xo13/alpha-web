@@ -8,8 +8,8 @@ const success = () => {
       <h3 className="mb-5 capitalize text-3xl black">your email has been sent</h3>
       <p className="mb-5 capitalize text-2xl black">We will get back to you as soon as possible</p>
       <Link key={uuidv4()} href="/">
-        <button className="mb-5 capitalize text-2xl  bg-yellow-400 p-2 hove:bg-yellow-600/80 
-        hover:text-gray-300 rounded-xl drop-shadow-2xl">Go back home</button>
+        <button className="mb-5 capitalize text-xl  bg-yellow-400 py-3 px-5 hover:bg-yellow-300 
+        hover:text-gray-500 rounded-xl drop-shadow-2xl border-2 border-white">home</button>
       </Link>
     </div>
   )
