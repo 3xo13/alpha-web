@@ -52,6 +52,7 @@ const ZoomOutCarousel = () => {
                 className='slider flex flex-row  flex-nowrap overflow-hidden red w-fit h-screen'>
                 <div className='w-[110vw] h-screen min-w-screen flex-row-center'>
                     <img
+                        alt='flyer image for existing products'
                         src={link.bglink}
                         className='w-[110vw] h-screen min-w-screen zoomOut object-cover'
                         key={uuidv4()}/>

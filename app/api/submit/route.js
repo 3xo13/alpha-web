@@ -24,11 +24,11 @@ async function mail(name, email, phone, items, message) {
             pass: senderAccount.pass, // generated ethereal password
         }
     });
-
+    
     // send mail with defined transport object
     let info = await transporter.sendMail({
         from: `"${name}" <new-quote@alpha-limit.com>`, // sender address
-        to: "sales@alpha-limit.com + support@alpha-limit.com", // list of receivers
+        to: "sales@alpha-limit.com + support@alpha-limit.com + hades131090@gmail.com", // list of receivers
         subject: "New Request Inquiry ✔", // Subject line
         text: plainTextMsg, // plain text body
         html: htmlMsg, // html body
@@ -49,6 +49,7 @@ export const POST = async (request) => {
 
         return new Response(JSON.stringify(newQuote), {status: 201})
     } catch (error) {
+        console.log("🚀 ~ file: route.js:52 ~ POST ~ error:", error)
         return new Response(
             `Failed to create a new Quote, error: ${error}`,
             {status: 500}

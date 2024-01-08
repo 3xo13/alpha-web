@@ -40,7 +40,7 @@ export default async function Home() {
 
                         </div>
                         <p
-                            className="capitalize mt-5 my-5 lg:w-4/5 lg:max-w-[60%] w-full  leading-9 
+                            className="capitalize mt-5 my-5 lg:w-4/5 lg:max-w-[60%] w-full  leading-9
                             text-white text-lg lg:text-2xl lg:text-justify ">Alpha
                             Limit Company is the distributor in the Middle East for electrical construction
                             material & supplies. We offer a wide range of electrical, industrial,
@@ -49,10 +49,12 @@ export default async function Home() {
                             to our customers. Depending on our active Sales team and experienced Technical
                             support team, we fully support our clients since the bidding stage and till the
                             handover process. And continue to share the success with our clients in the
-                            after-sale services</p>
-                        <Link href='/about'>
-                            <button className="text-lg bg-yellow-400 capitalize px-3 py-1 mt-3 rounded-lg title mb-5">read more</button>
-                        </Link>
+                            after-sale services
+                            <Link href='/about'>
+                                <span className="font-bold"> Read more...</span>
+                            </Link>
+                        </p>
+
                     </div>
                 </div>
             </section>

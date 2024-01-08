@@ -34,7 +34,7 @@ const TiltedCards = () => {
                     className="lg:text-6xl text-3xl font-bold text-center text-black
                                     min-w-max capitalize title before-after flex-row-center
                                     before:border-black after:border-black">
-                    check out our products
+                    check out our products 
                 </h2>
             </div>
             <div className=" lg:flex-row flex-col flex items-center justify-center gap-5 lg:p-0 py-10">{cards}</div>

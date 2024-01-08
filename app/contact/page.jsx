@@ -28,7 +28,7 @@ const Contact = () => {
         });
 
         try {
-            const response = await fetch("/submit", {
+            const response = await fetch("/api/submit", {
                 method: "POST",
                 body: JSON.stringify(
                     {name: post.name, email: post.email, phone: post.phone, items: JSON.stringify(items), message: post.message}

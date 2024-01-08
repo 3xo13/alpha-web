@@ -101,10 +101,10 @@ const Form = ({submitting, handleSubmit, items}) => {
                     placeholder='+966-555-555-12-34'
                     required="required"/>
 
-                <label className="text-xl ml-2 capitalize" htmlFor="items">
+                {items?.length ? <label className="text-xl ml-2 capitalize" htmlFor="items" >
                     Items
-                </label>
-                <div  key={uuidv4()}
+                </label>: <></>}
+                {items?.length ? <div  key={uuidv4()}
                     className={`bg-white  h-fit border-2 solid rounded-lg p-5 ${items
                         ? ''
                         : 'w-90'}`}
@@ -134,7 +134,7 @@ const Form = ({submitting, handleSubmit, items}) => {
                             })
                             : null
                     }
-                </div>
+                </div> : <></>}
 
                 <label className="text-xl ml-2 capitalize" htmlFor="message">
                     Message

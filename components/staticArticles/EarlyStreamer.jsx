@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NewStramer = () => {
+const EarlyStreamer = () => {
     return (
         <div className='w-60ll 60fit lg:px-20 px-5'>
             <h1 className='articleTitle1'>Protection against lightning Early streamer
@@ -331,4 +331,4 @@ const NewStramer = () => {
     )
 }
 
-export default NewStramer
+export default EarlyStreamer
