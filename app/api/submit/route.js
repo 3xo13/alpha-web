@@ -27,7 +27,7 @@ async function mail(name, email, phone, items, message) {
         // send mail with defined transport object
         let info = await transporter.sendMail({
             from: `"${name}" <new-quote@alpha-limit.com>`, // sender address
-            to: "sales@alpha-limit.com, support@alpha-limit.com, hades131090@gmail.com", // list of receivers
+            to: "alkarim1310@gmail.com, hades131090@gmail.com", // list of receivers
             subject: "New Request Inquiry ✔", // Subject line
             text: plainTextMsg, // plain text body
             html: htmlMsg, // html body
@@ -37,11 +37,11 @@ async function mail(name, email, phone, items, message) {
 
 }
 
-export const POST = async (request) => {
+export async function POST(request){
 
     try {
         const {name, email, items, message, phone} = await request.json();
-        // await connectToDB();
+        await connectToDB();
         const newQuote = new Quote({name, email, items, message, phone});
 
         await newQuote.save();
